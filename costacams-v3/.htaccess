@@ -1,4 +1,27 @@
+Options -Indexes
 RewriteEngine On
+
+# Friendly aliases
+RewriteRule ^spit/?$ index.php?slug=the-spit [QSA,L]
+RewriteRule ^surfers/?$ index.php?slug=surfers-paradise [QSA,L]
+RewriteRule ^mermaid/?$ index.php?slug=mermaid-beach [QSA,L]
+RewriteRule ^snapper/?$ index.php?slug=snapper-rocks [QSA,L]
+RewriteRule ^(dbah|d-bah)/?$ index.php?slug=duranbah [QSA,L]
+RewriteRule ^byron/?$ index.php?slug=byron-bay [QSA,L]
+RewriteRule ^thepass/?$ index.php?slug=the-pass [QSA,L]
+RewriteRule ^main-beach-byron/?$ index.php?slug=byron-main-beach [QSA,L]
+RewriteRule ^contact/?$ contact.php [QSA,L]
+RewriteRule ^admin/?$ admin.php [QSA,L]
+
+# Dynamic beach pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z0-9-]+)/?$ index.php?slug=$1 [QSA,L]
+
+# Internal implementation files are never served directly
+<FilesMatch "^(bootstrap|server-config)\.php$">
+  Require all denied
+</FilesMatch>
+<Files "schema.sql">
+  Require all denied
+</Files>
