@@ -1,5 +1,5 @@
 Options -Indexes
-DirectoryIndex site.php
+DirectoryIndex app.php
 RewriteEngine On
 
 # Compress HTML/JSON/text responses when supported by the host.
@@ -34,22 +34,22 @@ RewriteRule ^contact/?$ contact.php [QSA,L]
 RewriteRule ^admin/?$ admin.php [QSA,L]
 
 # Friendly aliases
-RewriteRule ^spit/?$ site.php?slug=the-spit [QSA,L]
-RewriteRule ^surfers/?$ site.php?slug=surfers-paradise [QSA,L]
-RewriteRule ^mermaid/?$ site.php?slug=mermaid-beach [QSA,L]
-RewriteRule ^snapper/?$ site.php?slug=snapper-rocks [QSA,L]
-RewriteRule ^(dbah|d-bah)/?$ site.php?slug=duranbah [QSA,L]
-RewriteRule ^byron/?$ site.php?slug=byron-bay [QSA,L]
-RewriteRule ^thepass/?$ site.php?slug=the-pass [QSA,L]
-RewriteRule ^main-beach-byron/?$ site.php?slug=byron-main-beach [QSA,L]
+RewriteRule ^spit/?$ app.php?slug=the-spit [QSA,L]
+RewriteRule ^surfers/?$ app.php?slug=surfers-paradise [QSA,L]
+RewriteRule ^mermaid/?$ app.php?slug=mermaid-beach [QSA,L]
+RewriteRule ^snapper/?$ app.php?slug=snapper-rocks [QSA,L]
+RewriteRule ^(dbah|d-bah)/?$ app.php?slug=duranbah [QSA,L]
+RewriteRule ^byron/?$ app.php?slug=byron-bay [QSA,L]
+RewriteRule ^thepass/?$ app.php?slug=the-pass [QSA,L]
+RewriteRule ^main-beach-byron/?$ app.php?slug=byron-main-beach [QSA,L]
 
 # Dynamic beach pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-z0-9-]+)/?$ site.php?slug=$1 [QSA,L]
+RewriteRule ^([a-z0-9-]+)/?$ app.php?slug=$1 [QSA,L]
 
 # Internal implementation files are never served directly
-<FilesMatch "^(bootstrap|server-config|health)\.php$">
+<FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest)\.php$">
   Require all denied
 </FilesMatch>
 <Files "schema.sql">
