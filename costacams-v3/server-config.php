@@ -10,7 +10,7 @@ if(is_file($privateKeyPath) && $encryptedPassword!==false){
 }
 return [
   'alert_email' => 'support@costacams.com',
-  'db_name' => 'u751177156_costav3prod',
+  'db_name' => 'u751177156_costav3prod;host=srv929.hstgr.io',
   'db_user' => 'u751177156_costav3prod',
   'db_pass' => $dbPass,
 ];
