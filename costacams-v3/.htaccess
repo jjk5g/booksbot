@@ -1,5 +1,5 @@
 Options -Indexes
-DirectoryIndex render-fast.php
+DirectoryIndex render-stable.php
 RewriteEngine On
 
 # Never expose generated cache files as duplicate public URLs. Internal rewrites
@@ -94,7 +94,7 @@ RewriteRule ^([a-z0-9-]+)/?$ cache/$1.html [L]
 
 # Dynamic fallbacks. These run only if the static cache is absent or a query
 # string requires a fresh response.
-RewriteRule ^map/?$ map-health.php [QSA,L]
+RewriteRule ^map/?$ map-clean.php [QSA,L]
 RewriteRule ^contact/?$ contact-fast.php [QSA,L]
 RewriteRule ^admin/?$ admin.php [QSA,L]
 
