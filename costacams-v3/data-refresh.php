@@ -67,11 +67,13 @@ function cc_http_json(string $url,int $timeout=18): ?array {
   return is_array($j)&&empty($j['error'])?$j:null;
 }
 function cc_reachable(string $url): bool {
-  $ctx=stream_context_create(['http'=>['timeout'=>8,'user_agent'=>'CostaCamsData/1.0 (+https://costacams.com)','ignore_errors'=>true]]);
-  $h=@get_headers($url,true,$ctx);
-  if(!$h)return false;
-  $line=is_array($h[0]??null)?end($h[0]):($h[0]??'');
-  return is_string($line)&&preg_match('~\s(2\d\d|3\d\d)\s~',$line)===1;
+  if(!function_exists('curl_init')) return true;
+  $ch=curl_init($url);
+  curl_setopt_array($ch,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_FOLLOWLOCATION=>true,CURLOPT_CONNECTTIMEOUT=>5,CURLOPT_TIMEOUT=>10,CURLOPT_USERAGENT=>'Mozilla/5.0 CostaCamsData/1.0',CURLOPT_NOBODY=>true,CURLOPT_SSL_VERIFYPEER=>true]);
+  curl_exec($ch);$code=(int)curl_getinfo($ch,CURLINFO_HTTP_CODE);
+  if($code===403||$code===405||$code===0){curl_setopt($ch,CURLOPT_NOBODY,false);curl_setopt($ch,CURLOPT_RANGE,'0-1023');curl_exec($ch);$code=(int)curl_getinfo($ch,CURLINFO_HTTP_CODE);}
+  curl_close($ch);
+  return $code>=200&&$code<400;
 }
 
 $locations=$pdo->query("SELECT slug,name,region,lat,lon,timezone FROM locations WHERE active=1 ORDER BY id")->fetchAll();
