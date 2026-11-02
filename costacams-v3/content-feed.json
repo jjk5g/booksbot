@@ -1,7 +1,50 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T20:00:00+10:00",
+  "generated_at": "2026-11-02T21:05:00+10:00",
   "coverage": ["Gold Coast", "Tweed Coast", "Byron Shire"],
   "items": [],
-  "shark_alerts": []
+  "shark_alerts": [
+    {
+      "external_key": "gold-coast-greenmount-20260919-shark-sightings",
+      "region_key": "gold-coast",
+      "locality": "Greenmount Beach",
+      "latitude": -28.1650,
+      "longitude": 153.5460,
+      "alert_type": "shark_sighting_beach_closure",
+      "title": "Multiple sharks sighted near swimmers at Greenmount",
+      "detail": "Greenmount Beach was closed twice after up to five sharks were sighted near swimmers. This is the latest verified Gold Coast report currently stored by CostaCams; it is historical, not a current beach closure.",
+      "observed_at": "2026-09-19 09:30:00",
+      "expires_at": "2026-09-19 14:00:00",
+      "source_name": "Courier Mail / Gold Coast shark sighting report",
+      "source_url": "https://www.couriermail.com.au/news/greenmount-beach-closed-twice-after-pack-of-sharks-spotted-near-swimmers/news-story/c08ae54c3bae36863f64f55311861038"
+    },
+    {
+      "external_key": "tweed-cabarita-20260927-shark-encounter",
+      "region_key": "tweed-coast",
+      "locality": "Cabarita Beach",
+      "latitude": -28.3314,
+      "longitude": 153.5718,
+      "alert_type": "shark_encounter",
+      "title": "Surfer knocked from board by shark at Cabarita",
+      "detail": "A surfer was knocked from his board by a shark at Cabarita Beach around 4pm and returned to shore uninjured. A bull shark was suspected but not confirmed. This is the latest verified Tweed Coast report currently stored by CostaCams; it is historical, not a current alert.",
+      "observed_at": "2026-09-27 16:00:00",
+      "expires_at": "2026-09-27 20:00:00",
+      "source_name": "Pacific Longboarder / 7NEWS report",
+      "source_url": "https://www.pacificlongboarder.com/news/Shark-knocks-surfer-off-his-board-believed-to-be-a-bull-shark-Cabarita-Beach-NSW/"
+    },
+    {
+      "external_key": "byron-clarkes-20261031-bull-shark-detection",
+      "region_key": "byron-shire",
+      "locality": "Clarkes Beach",
+      "latitude": -28.63979,
+      "longitude": 153.62078,
+      "alert_type": "tagged_shark_detection",
+      "title": "Tagged bull shark detected at Clarkes Beach",
+      "detail": "A tagged bull shark was reported detected by the Clarkes Beach, Byron Bay receiver. The detection time has been converted to Brisbane time. This is the latest verified Byron Shire report currently stored by CostaCams; it is historical, not a current alert.",
+      "observed_at": "2026-10-31 02:03:12",
+      "expires_at": "2026-10-31 06:03:12",
+      "source_name": "NSW SharkSmart / DPIRD alert feed (mirrored public advisory)",
+      "source_url": "https://www.sharksmart.nsw.gov.au/shark-activity"
+    }
+  ]
 }
