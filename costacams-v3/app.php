@@ -25,6 +25,17 @@ ob_start();
 require __DIR__.'/site.php';
 $html=ob_get_clean();
 
+// Kingscliff's iframe is useful in the map/channel, but its image quality is not
+// suitable for the homepage hero recommendation. Filter it at the real app
+// controller so no wrapper/cache path can accidentally reintroduce it.
+if($isHome){
+  $html=preg_replace_callback('~const candidates=(\[[^;]*\]);~s',function($m){
+    $rows=json_decode($m[1],true);if(!is_array($rows))return $m[0];
+    $rows=array_values(array_filter($rows,fn($r)=>is_array($r) && (string)($r['slug']??'')!=='kingscliff'));
+    return 'const candidates='.json_encode($rows,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT).';';
+  },$html,1)??$html;
+}
+
 function cc_app_age(?string $dt): string {
   if(!$dt)return 'not available';
   try{$then=new DateTimeImmutable($dt,new DateTimeZone('Australia/Brisbane'));$now=new DateTimeImmutable('now',new DateTimeZone('Australia/Brisbane'));$sec=max(0,$now->getTimestamp()-$then->getTimestamp());}catch(Throwable $e){return 'unknown';}
