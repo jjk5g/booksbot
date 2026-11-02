@@ -14,6 +14,7 @@ function cc_has_index(PDO $pdo,string $table,string $idx): bool {
   $st->execute([$table,$idx]);return (int)$st->fetchColumn()>0;
 }
 function cc_add_col(PDO $pdo,string $table,string $col,string $def): void {if(!cc_has_col($pdo,$table,$col))$pdo->exec("ALTER TABLE `$table` ADD COLUMN `$col` $def");}
+function cc_place_key(string $s): string {return preg_replace('/[^a-z0-9]+/','',strtolower($s))??'';}
 cc_add_col($pdo,'news_items','event_type',"VARCHAR(80) DEFAULT NULL AFTER category");
 cc_add_col($pdo,'news_items','region',"VARCHAR(100) DEFAULT NULL AFTER event_type");
 cc_add_col($pdo,'news_items','locality',"VARCHAR(160) DEFAULT NULL AFTER region");
@@ -44,6 +45,8 @@ $pdo->exec("CREATE TABLE IF NOT EXISTS shark_alerts (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   INDEX idx_shark_active_region(active,region_key,observed_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+cc_add_col($pdo,'shark_alerts','latitude',"DECIMAL(9,6) DEFAULT NULL AFTER locality");
+cc_add_col($pdo,'shark_alerts','longitude',"DECIMAL(9,6) DEFAULT NULL AFTER latitude");
 $pdo->exec("CREATE TABLE IF NOT EXISTS system_data_status (
   dataset VARCHAR(64) PRIMARY KEY,
   source_name VARCHAR(160) DEFAULT NULL,
@@ -54,6 +57,13 @@ $pdo->exec("CREATE TABLE IF NOT EXISTS system_data_status (
   last_checked_at DATETIME NOT NULL,
   last_updated_at DATETIME DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+
+$placeCoords=[];
+foreach($pdo->query("SELECT slug,name,lat,lon FROM locations WHERE active=1")->fetchAll() as $p){
+  $coords=[(float)$p['lat'],(float)$p['lon']];
+  $placeCoords[cc_place_key((string)$p['name'])]=$coords;
+  $placeCoords[cc_place_key(str_replace('-',' ',(string)$p['slug']))]=$coords;
+}
 
 $feedUrl='https://raw.githubusercontent.com/jjk5g/booksbot/costacams-v2-deploy/costacams-v3/content-feed.json';
 $ctx=stream_context_create(['http'=>['timeout'=>20,'user_agent'=>'CostaCamsContent/1.0 (+https://costacams.com)','ignore_errors'=>true]]);
@@ -78,8 +88,16 @@ foreach($items as $i){
 }
 
 $alerts=is_array($data['shark_alerts']??null)?$data['shark_alerts']:[];
-$aup=$pdo->prepare("INSERT INTO shark_alerts(external_key,region_key,locality,alert_type,title,detail,observed_at,expires_at,source_name,source_url,active,verified_at) VALUES(?,?,?,?,?,?,?,?,?,?,1,NOW()) ON DUPLICATE KEY UPDATE region_key=VALUES(region_key),locality=VALUES(locality),alert_type=VALUES(alert_type),title=VALUES(title),detail=VALUES(detail),observed_at=VALUES(observed_at),expires_at=VALUES(expires_at),source_name=VALUES(source_name),source_url=VALUES(source_url),active=1,verified_at=NOW()");
-$acount=0;foreach($alerts as $a){if(!is_array($a))continue;$url=trim((string)($a['source_url']??''));$title=trim((string)($a['title']??''));if(!$url||!$title)continue;$key=substr((string)($a['external_key']??hash('sha256',$url.'|'.$title.'|'.($a['observed_at']??''))),0,190);$aup->execute([$key,substr((string)($a['region_key']??'unknown'),0,64),substr((string)($a['locality']??''),0,160)?:null,substr((string)($a['alert_type']??'shark_alert'),0,80),$title,(string)($a['detail']??''),$a['observed_at']??null,$a['expires_at']??null,substr((string)($a['source_name']??'Official source'),0,160),$url]);$acount++;}
+$aup=$pdo->prepare("INSERT INTO shark_alerts(external_key,region_key,locality,latitude,longitude,alert_type,title,detail,observed_at,expires_at,source_name,source_url,active,verified_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,1,NOW()) ON DUPLICATE KEY UPDATE region_key=VALUES(region_key),locality=VALUES(locality),latitude=VALUES(latitude),longitude=VALUES(longitude),alert_type=VALUES(alert_type),title=VALUES(title),detail=VALUES(detail),observed_at=VALUES(observed_at),expires_at=VALUES(expires_at),source_name=VALUES(source_name),source_url=VALUES(source_url),active=1,verified_at=NOW()");
+$acount=0;
+foreach($alerts as $a){
+  if(!is_array($a))continue;$url=trim((string)($a['source_url']??''));$title=trim((string)($a['title']??''));if(!$url||!$title)continue;
+  $key=substr((string)($a['external_key']??hash('sha256',$url.'|'.$title.'|'.($a['observed_at']??''))),0,190);
+  $locality=substr(trim((string)($a['locality']??'')),0,160)?:null;
+  $lat=is_numeric($a['latitude']??null)?(float)$a['latitude']:null;$lon=is_numeric($a['longitude']??null)?(float)$a['longitude']:null;
+  if(($lat===null||$lon===null)&&$locality){$keys=[cc_place_key($locality)];$first=trim(explode(',',$locality)[0]??'');if($first!=='')$keys[]=cc_place_key($first);foreach($keys as $pk){if(isset($placeCoords[$pk])){[$lat,$lon]=$placeCoords[$pk];break;}}}
+  $aup->execute([$key,substr((string)($a['region_key']??'unknown'),0,64),$locality,$lat,$lon,substr((string)($a['alert_type']??'shark_alert'),0,80),$title,(string)($a['detail']??''),$a['observed_at']??null,$a['expires_at']??null,substr((string)($a['source_name']??'Official source'),0,160),$url]);$acount++;
+}
 
 $pdo->exec("UPDATE news_items SET active=0 WHERE auto_managed=1 AND category='event' AND COALESCE(event_end_date,event_date) IS NOT NULL AND COALESCE(event_end_date,event_date)<DATE_SUB(NOW(),INTERVAL 3 HOUR)");
 $pdo->exec("UPDATE news_items SET active=0 WHERE auto_managed=1 AND category='news' AND published_at IS NOT NULL AND published_at<DATE_SUB(NOW(),INTERVAL 21 DAY)");
@@ -89,4 +107,6 @@ $st=$pdo->prepare("INSERT INTO system_data_status(dataset,source_name,source_url
 $st->execute([$feedUrl,"Imported $count news/events and $acount shark alerts"]);
 @unlink(sys_get_temp_dir().'/costacams-home-v6.html');
 @unlink(sys_get_temp_dir().'/costacams-app-home-v1.html');
+foreach(glob(sys_get_temp_dir().'/costacams-app-channel-*-v2.html')?:[] as $f)@unlink($f);
+@unlink(sys_get_temp_dir().'/costacams-map-home-v2.html');
 echo "items=$count shark_alerts=$acount\n";
