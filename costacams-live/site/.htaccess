@@ -1,0 +1,19 @@
+Options -Indexes
+DirectoryIndex index.php index.html
+RewriteEngine On
+
+# Protect private/server files.
+<FilesMatch "^(config\.php|lib\.php|healthcheck\.php|news_refresh\.php)$">
+  Require all denied
+</FilesMatch>
+
+# Useful canonical endpoints.
+RewriteRule ^admin/?$ admin.php [L,QSA]
+RewriteRule ^sitemap\.xml$ sitemap.php [L,QSA]
+RewriteRule ^contact/?$ index.php?page=contact [L,QSA]
+RewriteRule ^privacy/?$ index.php?page=privacy [L,QSA]
+
+# Pretty beach/channel URLs, e.g. /burleigh-heads
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9-]+)/?$ index.php?slug=$1 [L,QSA]
