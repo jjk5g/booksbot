@@ -1,10 +1,18 @@
 <?php
 declare(strict_types=1);
 if (PHP_SAPI !== 'cli') { http_response_code(403); exit('CLI only'); }
+ini_set('display_errors','1');error_reporting(E_ALL);
 require __DIR__.'/bootstrap.php';
 $pdo=cc_db();if(!$pdo){fwrite(STDERR,"database unavailable\n");exit(1);}
 
-function cc_has_col(PDO $pdo,string $table,string $col): bool {$st=$pdo->prepare("SHOW COLUMNS FROM `$table` LIKE ?");$st->execute([$col]);return (bool)$st->fetch();}
+function cc_has_col(PDO $pdo,string $table,string $col): bool {
+  $st=$pdo->prepare("SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=? AND COLUMN_NAME=?");
+  $st->execute([$table,$col]);return (int)$st->fetchColumn()>0;
+}
+function cc_has_index(PDO $pdo,string $table,string $idx): bool {
+  $st=$pdo->prepare("SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=? AND INDEX_NAME=?");
+  $st->execute([$table,$idx]);return (int)$st->fetchColumn()>0;
+}
 function cc_add_col(PDO $pdo,string $table,string $col,string $def): void {if(!cc_has_col($pdo,$table,$col))$pdo->exec("ALTER TABLE `$table` ADD COLUMN `$col` $def");}
 cc_add_col($pdo,'news_items','event_type',"VARCHAR(80) DEFAULT NULL AFTER category");
 cc_add_col($pdo,'news_items','region',"VARCHAR(100) DEFAULT NULL AFTER event_type");
@@ -16,7 +24,7 @@ cc_add_col($pdo,'news_items','auto_managed',"TINYINT(1) NOT NULL DEFAULT 0 AFTER
 cc_add_col($pdo,'news_items','verified_at',"DATETIME DEFAULT NULL AFTER auto_managed");
 cc_add_col($pdo,'news_items','last_seen_at',"DATETIME DEFAULT NULL AFTER verified_at");
 cc_add_col($pdo,'news_items','updated_at',"TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER created_at");
-try{$pdo->exec("CREATE UNIQUE INDEX uq_news_external_key ON news_items(external_key)");}catch(Throwable $e){}
+if(!cc_has_index($pdo,'news_items','uq_news_external_key'))$pdo->exec("CREATE UNIQUE INDEX uq_news_external_key ON news_items(external_key)");
 
 $pdo->exec("CREATE TABLE IF NOT EXISTS shark_alerts (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -80,4 +88,5 @@ $pdo->exec("UPDATE shark_alerts SET active=0 WHERE active=1 AND expires_at IS NO
 $st=$pdo->prepare("INSERT INTO system_data_status(dataset,source_name,source_url,refresh_minutes,status,detail,last_checked_at,last_updated_at) VALUES('content','CostaCams curated feed',?,1440,'ok',?,NOW(),NOW()) ON DUPLICATE KEY UPDATE source_name=VALUES(source_name),source_url=VALUES(source_url),refresh_minutes=1440,status='ok',detail=VALUES(detail),last_checked_at=NOW(),last_updated_at=NOW()");
 $st->execute([$feedUrl,"Imported $count news/events and $acount shark alerts"]);
 @unlink(sys_get_temp_dir().'/costacams-home-v6.html');
+@unlink(sys_get_temp_dir().'/costacams-app-home-v1.html');
 echo "items=$count shark_alerts=$acount\n";
