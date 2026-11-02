@@ -106,7 +106,6 @@ $pdo->exec("UPDATE shark_alerts SET active=0 WHERE active=1 AND expires_at IS NO
 $st=$pdo->prepare("INSERT INTO system_data_status(dataset,source_name,source_url,refresh_minutes,status,detail,last_checked_at,last_updated_at) VALUES('content','CostaCams curated feed',?,1440,'ok',?,NOW(),NOW()) ON DUPLICATE KEY UPDATE source_name=VALUES(source_name),source_url=VALUES(source_url),refresh_minutes=1440,status='ok',detail=VALUES(detail),last_checked_at=NOW(),last_updated_at=NOW()");
 $st->execute([$feedUrl,"Imported $count news/events and $acount shark alerts"]);
 @unlink(sys_get_temp_dir().'/costacams-home-v6.html');
-@unlink(sys_get_temp_dir().'/costacams-app-home-v1.html');
-foreach(glob(sys_get_temp_dir().'/costacams-app-channel-*-v2.html')?:[] as $f)@unlink($f);
+@unlink(sys_get_temp_dir().'/costacams-app-home-v2.html');
 @unlink(sys_get_temp_dir().'/costacams-map-home-v2.html');
 echo "items=$count shark_alerts=$acount\n";
