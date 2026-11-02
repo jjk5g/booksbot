@@ -79,7 +79,11 @@ if($action==='heartbeat'){
     $tab=preg_replace('/[^a-zA-Z0-9_-]/','',(string)($_POST['tab']??''));
     $channel=preg_replace('/[^a-z0-9-]/','',strtolower((string)($_POST['channel']??'')));
     if(strlen($visitor)<12||strlen($tab)<8){http_response_code(400);echo json_encode(['ok'=>false]);exit;}
-    if($channel!=='' && !cc_location($channel))$channel='';
+    if($channel!==''){
+        $chk=$pdo->prepare("SELECT COUNT(*) FROM locations WHERE slug=? AND active=1");
+        $chk->execute([$channel]);
+        if(!(int)$chk->fetchColumn())$channel='';
+    }
     $vh=hash('sha256',$visitor);$th=hash('sha256',$tab);
     $st=$pdo->prepare("INSERT INTO active_presence(visitor_hash,tab_hash,channel_slug,updated_at) VALUES(?,?,?,NOW()) ON DUPLICATE KEY UPDATE channel_slug=VALUES(channel_slug),updated_at=NOW()");
     $st->execute([$vh,$th,$channel!==''?$channel:null]);
