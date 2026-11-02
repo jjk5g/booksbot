@@ -1,5 +1,5 @@
 Options -Indexes
-DirectoryIndex app.php
+DirectoryIndex home.php app.php
 RewriteEngine On
 
 # Compress HTML/JSON/text responses when supported by the host.
@@ -49,7 +49,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z0-9-]+)/?$ channel.php?slug=$1 [QSA,L]
 
 # Internal implementation files are never served directly
-<FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest|shark-refresh|data-check|page-warm)\.php$">
+<FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest|shark-refresh|data-check|page-warm|health-debug)\.php$">
   Require all denied
 </FilesMatch>
 <Files "schema.sql">
