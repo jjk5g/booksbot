@@ -35,7 +35,6 @@ if (empty($_GET['slug'])) {
 
             $fresh=(int)$pdo->query("SELECT COUNT(*) FROM stream_health WHERE checked_at>=DATE_SUB(NOW(),INTERVAL 10 MINUTE)")->fetchColumn();
 
-            // Fallback self-check if scheduled monitoring has not populated fresh results yet.
             if($fresh===0 && function_exists('curl_multi_init')){
                 $marks=implode(',',array_fill(0,count($healthySlugs),'?'));
                 $q=$pdo->prepare("SELECT s.id,s.stream_type,s.stream_url FROM streams s JOIN locations l ON l.id=s.location_id WHERE l.slug IN ($marks) AND s.active=1 AND s.stream_type IN ('hls','iframe') AND s.stream_url IS NOT NULL AND s.stream_url<>''");
@@ -84,7 +83,7 @@ if (empty($_GET['slug'])) {
     foreach($healthy as $loc){
         $slug=htmlspecialchars((string)$loc['slug'],ENT_QUOTES,'UTF-8');$name=htmlspecialchars((string)$loc['name'],ENT_QUOTES,'UTF-8');$region=htmlspecialchars((string)$loc['region'],ENT_QUOTES,'UTF-8');
         $viewText=((int)$loc['_views']>0)?number_format((int)$loc['_views']).' views · ':'';
-        $cards.='<a class="card" href="/'.$slug.'"><span class="tag"><span class="live-dot"></span>LIVE · '.$region.'</span><h3>'.$name.'</h3><span class="muted">'.$viewText.'Watch →</span></a>';
+        $cards.='<a class="card" href="/'.$slug.'"><span class="tag"><span class="live-dot"></span>LIVE · '.$region.'</span><h3>'.$name.'</h3><span class="muted">'.$viewText.'Watch →</span><span class="cc-live-card" data-live-slug="'.$slug.'">● — watching now</span></a>';
     }
 
     if($cards!==''){
@@ -93,5 +92,32 @@ if (empty($_GET['slug'])) {
         $html=preg_replace('~<section class="section"><div class="section-head"><h2>Most watched</h2>.*?</section>~s',$section,$html,1)??$html;
     }
 }
+
+$presenceCss=<<<'CSS'
+<style id="cc-presence-style">
+.cc-presence-bar{display:flex;justify-content:center;gap:8px;align-items:center;padding:7px 14px;background:#07110d;border-bottom:1px solid #183329;color:#bce7cf;font-size:12px}.cc-presence-dot,.cc-live-card:before{display:inline-block;width:7px;height:7px;border-radius:50%;background:#69e0a0;box-shadow:0 0 8px #69e0a0}.cc-channel-live{display:inline-flex;gap:8px;align-items:center;margin:2px 0 12px;padding:8px 12px;border:1px solid #244936;background:#09140f;border-radius:999px;color:#c7eed6;font-size:13px;font-weight:700}.cc-live-card{display:block;margin-top:8px;color:#8fd8aa;font-size:12px}.cc-live-card:before{content:'';margin-right:6px;width:6px;height:6px}.cc-presence-peak{color:#789c87;font-weight:500}@media(max-width:650px){.cc-presence-bar{font-size:11px}.cc-channel-live{font-size:12px}}
+</style>
+CSS;
+$html=str_replace('</head>',$presenceCss.'</head>',$html);
+
+$channelSlug=preg_replace('/[^a-z0-9-]/','',strtolower((string)($_GET['slug']??'')));
+$presenceBar='<div class="cc-presence-bar"><span class="cc-presence-dot"></span><strong id="ccSiteNow">— watching CostaCams now</strong><span class="cc-presence-peak" id="ccSitePeak"></span></div>';
+$html=str_replace('</header>','</header>'.$presenceBar,$html);
+
+if($channelSlug!==''){
+    $channelBadge='<div class="cc-channel-live" id="ccChannelLive"><span class="cc-presence-dot"></span><span><b id="ccChannelNow">— watching now</b> <span class="cc-presence-peak" id="ccChannelPeak"></span></span></div>';
+    $html=preg_replace('~(<section class="hero">.*?</h1>)~s','$1'.$channelBadge,$html,1)??$html;
+}
+
+$presenceJs='<script>(function(){\n'.
+'const channel='.json_encode($channelSlug,JSON_UNESCAPED_SLASHES).';\n'.
+'function rid(n){const a=new Uint8Array(n);crypto.getRandomValues(a);return Array.from(a,b=>b.toString(16).padStart(2,"0")).join("");}\n'.
+'let visitor=localStorage.getItem("ccVisitorId");if(!visitor){visitor=rid(16);localStorage.setItem("ccVisitorId",visitor);}\n'.
+'let tab=sessionStorage.getItem("ccTabId");if(!tab){tab=rid(10);sessionStorage.setItem("ccTabId",tab);}\n'.
+'function render(d){if(!d||!d.ok)return;const sn=document.getElementById("ccSiteNow"),sp=document.getElementById("ccSitePeak");if(sn)sn.textContent=d.site.now+" watching CostaCams now";if(sp)sp.textContent="· Peak today "+d.site.peak_today;if(channel){const n=(d.channels&&d.channels[channel])||0,p=(d.channel_peaks&&d.channel_peaks[channel])||0,cn=document.getElementById("ccChannelNow"),cp=document.getElementById("ccChannelPeak");if(cn)cn.textContent=n+" watching now";if(cp)cp.textContent="· Peak today "+p;}document.querySelectorAll("[data-live-slug]").forEach(el=>{const s=el.getAttribute("data-live-slug"),n=(d.channels&&d.channels[s])||0;el.textContent=n+" watching now";});document.querySelectorAll("a.card").forEach(card=>{if(card.querySelector("[data-live-slug]"))return;const tag=card.querySelector(".tag");if(!tag||!tag.textContent.includes("LIVE"))return;let href=(card.getAttribute("href")||"").replace(/^\\//,"").split(/[?#]/)[0];if(!href)return;const el=document.createElement("span");el.className="cc-live-card";el.dataset.liveSlug=href;el.textContent=((d.channels&&d.channels[href])||0)+" watching now";card.appendChild(el);});}\n'.
+'async function beat(){try{const body=new URLSearchParams({action:"heartbeat",visitor:visitor,tab:tab,channel:channel});const r=await fetch("/presence.php",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:body,cache:"no-store",credentials:"same-origin"});render(await r.json());}catch(e){}}\n'.
+'beat();setInterval(beat,25000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)beat();});\n'.
+'})();</script>';
+$html=str_replace('</body>',$presenceJs.'</body>',$html);
 
 echo $html;
