@@ -1,0 +1,13 @@
+{
+  "name": "costacams/deploy-helper",
+  "description": "Temporary deployment helper for CostaCams",
+  "require": {},
+  "scripts": {
+    "post-install-cmd": [
+      "cat costacams-live/part*.b64 > /tmp/costa.b64",
+      "base64 -d /tmp/costa.b64 > /tmp/costa.tar.xz",
+      "rm -rf ../ccstage && mkdir -p ../ccstage",
+      "tar -xJf /tmp/costa.tar.xz -C ../ccstage"
+    ]
+  }
+}
