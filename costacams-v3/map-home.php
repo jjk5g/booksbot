@@ -7,7 +7,7 @@ if(is_file($cache) && (time()-filemtime($cache))<$ttl){
     header('Cache-Control: public, max-age=120, stale-while-revalidate=600');
     readfile($cache);exit;
 }
-ob_start();require __DIR__.'/map-health.php';$html=ob_get_clean();
+ob_start();require __DIR__.'/map-clean.php';$html=ob_get_clean();
 // Embedded home map should not create a second Google Analytics page view.
 $html=preg_replace('~<script async src="https://www\.googletagmanager\.com/gtag/js\?id=G-6WLK1YD519"></script>~','',$html)??$html;
 $html=preg_replace('~<script>window\.dataLayer=.*?G-6WLK1YD519.*?</script>~s','',$html)??$html;
