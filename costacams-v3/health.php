@@ -3,14 +3,17 @@ declare(strict_types=1);
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 require __DIR__.'/bootstrap.php';
+$cfg=cc_config();
 $pdo=cc_db();
+$resolved=gethostbyname('srv929.hstgr.io');
 $out=[
   'ok'=>true,
   'config_file'=>is_file(COSTACAMS_CONFIG),
+  'private_key_exists'=>is_file('/home/u751177156/.cckey.pem'),
+  'db_password_ready'=>!empty($cfg['db_pass']),
+  'pdo_mysql'=>extension_loaded('pdo_mysql'),
+  'mysql_host_resolves'=>$resolved!=='srv929.hstgr.io',
   'db_connected'=>$pdo instanceof PDO,
-  'env_db_name'=>getenv('DB_NAME')?true:false,
-  'env_db_user'=>getenv('DB_USER')?true:false,
-  'env_db_password'=>getenv('DB_PASSWORD')?true:false,
   'locations'=>0,
   'streams'=>0,
 ];
