@@ -1,5 +1,13 @@
 <?php
 declare(strict_types=1);
+$cache='/tmp/costacams-map-home-v2.html';
+$ttl=120;
+if(is_file($cache) && (time()-filemtime($cache))<$ttl){
+    header('X-CostaCams-Map-Cache: HIT');
+    header('Cache-Control: public, max-age=60, stale-while-revalidate=180');
+    readfile($cache);
+    exit;
+}
 ob_start();
 require __DIR__.'/map.php';
 $html=ob_get_clean();
@@ -10,4 +18,7 @@ html,body{height:100%;overflow:hidden}.top,.hero,.controls,.legend,.footer{displ
 </style>
 HTML;
 $html=str_replace('</head>',$embedCss.'</head>',$html);
+@file_put_contents($cache,$html,LOCK_EX);
+header('X-CostaCams-Map-Cache: MISS');
+header('Cache-Control: public, max-age=60, stale-while-revalidate=180');
 echo $html;
