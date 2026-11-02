@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://costacams.com/</loc></url><url><loc>https://costacams.com/burleigh</loc></url><url><loc>https://costacams.com/kingscliff</loc></url><url><loc>https://costacams.com/cabarita</loc></url><url><loc>https://costacams.com/tweed-heads</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://costacams.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://costacams.com/the-spit</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/main-beach</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/narrowneck</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/surfers-paradise</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/northcliffe</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/kurrawa</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/broadbeach</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/mermaid-beach</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/miami</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/north-burleigh</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/burleigh</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/tallebudgera</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/palm-beach</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/currumbin</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/tugun</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/bilinga</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/kirra</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/coolangatta</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/greenmount</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/rainbow-bay</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/snapper-rocks</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/duranbah</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/tweed-river</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/fingal</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/dreamtime</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/kingscliff</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/cabarita</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/ocean-shores</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/brunswick-heads</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/byron-bay</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/byron-main-beach</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/the-pass</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/wategos</loc><priority>0.8</priority></url>
+  <url><loc>https://costacams.com/the-wreck</loc><priority>0.8</priority></url>
+</urlset>
