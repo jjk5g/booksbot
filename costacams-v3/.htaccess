@@ -1,13 +1,74 @@
 Options -Indexes
-DirectoryIndex home.php app.php
+DirectoryIndex render-fast.php
 RewriteEngine On
 
-# Compress HTML/JSON/text responses when supported by the host.
+# Never expose generated cache files as duplicate public URLs. Internal rewrites
+# below still work because THE_REQUEST keeps the visitor's original URL.
+RewriteCond %{THE_REQUEST} \s/+cache/ [NC]
+RewriteRule ^cache/ - [F,L]
+
+# Serve pre-generated HTML directly for normal GET requests with no query string.
+# This bypasses PHP/MySQL completely for almost all visitors.
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/home.html -f
+RewriteRule ^$ cache/home.html [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/map.html -f
+RewriteRule ^map/?$ cache/map.html [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/contact.html -f
+RewriteRule ^contact/?$ cache/contact.html [L]
+
+# Friendly aliases can also use the corresponding generated beach page.
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/the-spit.html -f
+RewriteRule ^spit/?$ cache/the-spit.html [L]
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/surfers-paradise.html -f
+RewriteRule ^surfers/?$ cache/surfers-paradise.html [L]
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/mermaid-beach.html -f
+RewriteRule ^mermaid/?$ cache/mermaid-beach.html [L]
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/snapper-rocks.html -f
+RewriteRule ^snapper/?$ cache/snapper-rocks.html [L]
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/duranbah.html -f
+RewriteRule ^(dbah|d-bah)/?$ cache/duranbah.html [L]
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/byron-bay.html -f
+RewriteRule ^byron/?$ cache/byron-bay.html [L]
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/the-pass.html -f
+RewriteRule ^thepass/?$ cache/the-pass.html [L]
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/byron-main-beach.html -f
+RewriteRule ^main-beach-byron/?$ cache/byron-main-beach.html [L]
+
+# Any canonical beach slug with a generated file is served statically.
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/$1.html -f
+RewriteRule ^([a-z0-9-]+)/?$ cache/$1.html [L]
+
+# Compression for dynamic/fallback responses and generated HTML.
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
 </IfModule>
 
-# Static assets rarely change; let the browser keep them locally.
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/png "access plus 30 days"
@@ -26,29 +87,31 @@ RewriteEngine On
   <FilesMatch "\.(?:css|js)$">
     Header set Cache-Control "public, max-age=604800"
   </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=60, stale-while-revalidate=600"
+  </FilesMatch>
 </IfModule>
 
-# Utility pages
+# Dynamic fallbacks. These run only if the static cache is absent or a query
+# string requires a fresh response.
 RewriteRule ^map/?$ map-health.php [QSA,L]
-RewriteRule ^contact/?$ contact.php [QSA,L]
+RewriteRule ^contact/?$ contact-fast.php [QSA,L]
 RewriteRule ^admin/?$ admin.php [QSA,L]
 
-# Friendly aliases
-RewriteRule ^spit/?$ channel.php?slug=the-spit [QSA,L]
-RewriteRule ^surfers/?$ channel.php?slug=surfers-paradise [QSA,L]
-RewriteRule ^mermaid/?$ channel.php?slug=mermaid-beach [QSA,L]
-RewriteRule ^snapper/?$ channel.php?slug=snapper-rocks [QSA,L]
-RewriteRule ^(dbah|d-bah)/?$ channel.php?slug=duranbah [QSA,L]
-RewriteRule ^byron/?$ channel.php?slug=byron-bay [QSA,L]
-RewriteRule ^thepass/?$ channel.php?slug=the-pass [QSA,L]
-RewriteRule ^main-beach-byron/?$ channel.php?slug=byron-main-beach [QSA,L]
+RewriteRule ^spit/?$ render-fast.php?slug=the-spit [QSA,L]
+RewriteRule ^surfers/?$ render-fast.php?slug=surfers-paradise [QSA,L]
+RewriteRule ^mermaid/?$ render-fast.php?slug=mermaid-beach [QSA,L]
+RewriteRule ^snapper/?$ render-fast.php?slug=snapper-rocks [QSA,L]
+RewriteRule ^(dbah|d-bah)/?$ render-fast.php?slug=duranbah [QSA,L]
+RewriteRule ^byron/?$ render-fast.php?slug=byron-bay [QSA,L]
+RewriteRule ^thepass/?$ render-fast.php?slug=the-pass [QSA,L]
+RewriteRule ^main-beach-byron/?$ render-fast.php?slug=byron-main-beach [QSA,L]
 
-# Dynamic beach pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-z0-9-]+)/?$ channel.php?slug=$1 [QSA,L]
+RewriteRule ^([a-z0-9-]+)/?$ render-fast.php?slug=$1 [QSA,L]
 
-# Internal implementation files are never served directly
+# Internal implementation files are never served directly.
 <FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest|shark-refresh|data-check|page-warm|health-debug)\.php$">
   Require all denied
 </FilesMatch>
