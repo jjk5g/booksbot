@@ -101,23 +101,100 @@ CSS;
 $html=str_replace('</head>',$presenceCss.'</head>',$html);
 
 $channelSlug=preg_replace('/[^a-z0-9-]/','',strtolower((string)($_GET['slug']??'')));
-$presenceBar='<div class="cc-presence-bar"><span class="cc-presence-dot"></span><strong id="ccSiteNow">— watching CostaCams now</strong><span class="cc-presence-peak" id="ccSitePeak"></span></div>';
+$presenceBar='<div class="cc-presence-bar"><span class="cc-presence-dot"></span><strong id="ccSiteNow">Checking live viewers…</strong><span class="cc-presence-peak" id="ccSitePeak"></span></div>';
 $html=str_replace('</header>','</header>'.$presenceBar,$html);
 
 if($channelSlug!==''){
-    $channelBadge='<div class="cc-channel-live" id="ccChannelLive"><span class="cc-presence-dot"></span><span><b id="ccChannelNow">— watching now</b> <span class="cc-presence-peak" id="ccChannelPeak"></span></span></div>';
+    $channelBadge='<div class="cc-channel-live" id="ccChannelLive"><span class="cc-presence-dot"></span><span><b id="ccChannelNow">Checking viewers…</b> <span class="cc-presence-peak" id="ccChannelPeak"></span></span></div>';
     $html=preg_replace('~(<section class="hero">.*?</h1>)~s','$1'.$channelBadge,$html,1)??$html;
 }
 
-$presenceJs='<script>(function(){\n'.
-'const channel='.json_encode($channelSlug,JSON_UNESCAPED_SLASHES).';\n'.
-'function rid(n){const a=new Uint8Array(n);crypto.getRandomValues(a);return Array.from(a,b=>b.toString(16).padStart(2,"0")).join("");}\n'.
-'let visitor=localStorage.getItem("ccVisitorId");if(!visitor){visitor=rid(16);localStorage.setItem("ccVisitorId",visitor);}\n'.
-'let tab=sessionStorage.getItem("ccTabId");if(!tab){tab=rid(10);sessionStorage.setItem("ccTabId",tab);}\n'.
-'function render(d){if(!d||!d.ok)return;const sn=document.getElementById("ccSiteNow"),sp=document.getElementById("ccSitePeak");if(sn)sn.textContent=d.site.now+" watching CostaCams now";if(sp)sp.textContent="· Peak today "+d.site.peak_today;if(channel){const n=(d.channels&&d.channels[channel])||0,p=(d.channel_peaks&&d.channel_peaks[channel])||0,cn=document.getElementById("ccChannelNow"),cp=document.getElementById("ccChannelPeak");if(cn)cn.textContent=n+" watching now";if(cp)cp.textContent="· Peak today "+p;}document.querySelectorAll("[data-live-slug]").forEach(el=>{const s=el.getAttribute("data-live-slug"),n=(d.channels&&d.channels[s])||0;el.textContent=n+" watching now";});document.querySelectorAll("a.card").forEach(card=>{if(card.querySelector("[data-live-slug]"))return;const tag=card.querySelector(".tag");if(!tag||!tag.textContent.includes("LIVE"))return;let href=(card.getAttribute("href")||"").replace(/^\\//,"").split(/[?#]/)[0];if(!href)return;const el=document.createElement("span");el.className="cc-live-card";el.dataset.liveSlug=href;el.textContent=((d.channels&&d.channels[href])||0)+" watching now";card.appendChild(el);});}\n'.
-'async function beat(){try{const body=new URLSearchParams({action:"heartbeat",visitor:visitor,tab:tab,channel:channel});const r=await fetch("/presence.php",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:body,cache:"no-store",credentials:"same-origin"});render(await r.json());}catch(e){}}\n'.
-'beat();setInterval(beat,25000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)beat();});\n'.
-'})();</script>';
+$presenceJs=<<<'HTML'
+<script>
+(function(){
+  const channel=__CHANNEL__;
+  function rid(n){
+    const a=new Uint8Array(n);
+    crypto.getRandomValues(a);
+    return Array.from(a,b=>b.toString(16).padStart(2,'0')).join('');
+  }
+  function getStored(key,session){
+    try{
+      const store=session?sessionStorage:localStorage;
+      let v=store.getItem(key);
+      if(!v){v=rid(session?10:16);store.setItem(key,v);}
+      return v;
+    }catch(e){return rid(session?10:16);}
+  }
+  const visitor=getStored('ccVisitorId',false);
+  const tab=getStored('ccTabId',true);
+
+  function render(d){
+    if(!d||!d.ok)return;
+    const sn=document.getElementById('ccSiteNow');
+    const sp=document.getElementById('ccSitePeak');
+    if(sn)sn.textContent=d.site.now+' watching CostaCams now';
+    if(sp)sp.textContent='· Peak today '+d.site.peak_today;
+
+    if(channel){
+      const n=(d.channels&&d.channels[channel])||0;
+      const p=(d.channel_peaks&&d.channel_peaks[channel])||0;
+      const cn=document.getElementById('ccChannelNow');
+      const cp=document.getElementById('ccChannelPeak');
+      if(cn)cn.textContent=n+' watching now';
+      if(cp)cp.textContent='· Peak today '+p;
+    }
+
+    document.querySelectorAll('[data-live-slug]').forEach(el=>{
+      const s=el.getAttribute('data-live-slug');
+      const n=(d.channels&&d.channels[s])||0;
+      el.textContent='● '+n+' watching now';
+    });
+
+    document.querySelectorAll('a.card').forEach(card=>{
+      if(card.querySelector('[data-live-slug]'))return;
+      const tag=card.querySelector('.tag');
+      if(!tag||!tag.textContent.includes('LIVE'))return;
+      let href=(card.getAttribute('href')||'').split(/[?#]/)[0];
+      if(href.charAt(0)==='/')href=href.slice(1);
+      if(!href)return;
+      const el=document.createElement('span');
+      el.className='cc-live-card';
+      el.dataset.liveSlug=href;
+      el.textContent='● '+(((d.channels&&d.channels[href])||0))+' watching now';
+      card.appendChild(el);
+    });
+  }
+
+  function showUnavailable(){
+    const sn=document.getElementById('ccSiteNow');
+    const cn=document.getElementById('ccChannelNow');
+    if(sn)sn.textContent='Live viewer count unavailable';
+    if(cn)cn.textContent='Viewer count unavailable';
+  }
+
+  async function beat(){
+    try{
+      const body=new URLSearchParams({action:'heartbeat',visitor:visitor,tab:tab,channel:channel});
+      const r=await fetch('/presence.php',{
+        method:'POST',
+        headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+        body:body,
+        cache:'no-store',
+        credentials:'same-origin'
+      });
+      if(!r.ok){showUnavailable();return;}
+      render(await r.json());
+    }catch(e){showUnavailable();}
+  }
+
+  beat();
+  setInterval(beat,25000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)beat();});
+})();
+</script>
+HTML;
+$presenceJs=str_replace('__CHANNEL__',json_encode($channelSlug,JSON_UNESCAPED_SLASHES),$presenceJs);
 $html=str_replace('</body>',$presenceJs.'</body>',$html);
 
 echo $html;
