@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Australia/Brisbane');
 return [
   'alert_email' => 'support@costacams.com',
   'db_name' => getenv('DB_NAME') ?: '',
