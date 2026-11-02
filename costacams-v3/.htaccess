@@ -23,7 +23,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z0-9-]+)/?$ site.php?slug=$1 [QSA,L]
 
 # Internal implementation files are never served directly
-<FilesMatch "^(bootstrap|server-config)\.php$">
+<FilesMatch "^(bootstrap|server-config|health)\.php$">
   Require all denied
 </FilesMatch>
 <Files "schema.sql">
