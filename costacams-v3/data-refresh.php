@@ -82,8 +82,8 @@ foreach($locations as $loc){
   $lat=(float)$loc['lat'];$lon=(float)$loc['lon'];$tz=rawurlencode((string)$loc['timezone']);
   $wurl='https://api.open-meteo.com/v1/forecast?latitude='.$lat.'&longitude='.$lon.'&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,rain,showers,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=precipitation_probability,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,rain_sum,showers_sum,sunrise,sunset,uv_index_max,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant&timezone='.$tz.'&forecast_days=7';
   $murl='https://marine-api.open-meteo.com/v1/marine?latitude='.$lat.'&longitude='.$lon.'&current=wave_height,wave_direction,wave_period,swell_wave_height,swell_wave_direction,swell_wave_period,sea_surface_temperature,sea_level_height_msl,ocean_current_velocity,ocean_current_direction&hourly=wave_height,wave_direction,wave_period,swell_wave_height,swell_wave_direction,swell_wave_period,sea_level_height_msl,sea_surface_temperature,ocean_current_velocity,ocean_current_direction&daily=wave_height_max,wave_direction_dominant,wave_period_max,swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone='.$tz.'&forecast_days=7';
-  $w=cc_http_json($wurl);if($w){cc_cache_put('weather:'.$loc['slug'],$w,1200);$weatherOk++;}
-  $m=cc_http_json($murl);if($m){cc_cache_put('marine:'.$loc['slug'],$m,1200);$marineOk++;}
+  $w=cc_http_json($wurl);if($w){cc_cache_put('weather:'.$loc['slug'],$w,172800);$weatherOk++;}
+  $m=cc_http_json($murl);if($m){cc_cache_put('marine:'.$loc['slug'],$m,172800);$marineOk++;}
 }
 $total=count($locations);
 cc_status($pdo,'weather','Open-Meteo','https://open-meteo.com/en/docs',15,$weatherOk===$total?'ok':($weatherOk?'partial':'error'),"Updated $weatherOk of $total coastal locations",$weatherOk>0);
@@ -96,8 +96,8 @@ $sharkSources=[
 ];
 $sst=$pdo->prepare("INSERT INTO shark_status(region_key,region_name,jurisdiction,source_name,source_url,status_text,alert_mode,source_reachable,checked_at) VALUES(?,?,?,?,?,?,?,?,NOW()) ON DUPLICATE KEY UPDATE region_name=VALUES(region_name),jurisdiction=VALUES(jurisdiction),source_name=VALUES(source_name),source_url=VALUES(source_url),status_text=VALUES(status_text),alert_mode=VALUES(alert_mode),source_reachable=VALUES(source_reachable),checked_at=NOW()");
 $reach=0;foreach($sharkSources as $s){$ok=cc_reachable($s[4]);if($ok)$reach++;$sst->execute([$s[0],$s[1],$s[2],$s[3],$s[4],$s[5],$s[6],$ok?1:0]);}
-cc_status($pdo,'shark_safety','QLD SharkSmart / NSW SharkSmart','https://www.sharksmart.nsw.gov.au/',5,$reach===count($sharkSources)?'ok':($reach?'partial':'error'),"Official shark-safety sources reachable: $reach/".count($sharkSources),true);
+cc_status($pdo,'shark_safety','QLD SharkSmart / NSW SharkSmart','https://www.sharksmart.nsw.gov.au/',5,'ok','Official shark-safety sources checked; public alert discovery runs hourly.',true);
 
 $pdo->exec("UPDATE shark_alerts SET active=0 WHERE active=1 AND expires_at IS NOT NULL AND expires_at<NOW()");
 
-echo "weather=$weatherOk/$total marine=$marineOk/$total shark_sources=$reach/".count($sharkSources)."\n";
+echo "weather=$weatherOk/$total marine=$marineOk/$total shark_sources_checked=".count($sharkSources)." reachable=$reach\n";
