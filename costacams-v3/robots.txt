@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin
 Disallow: /admin.php
+Disallow: /health.php
+Disallow: /map-home.php
 Sitemap: https://costacams.com/sitemap.xml
