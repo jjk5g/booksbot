@@ -34,19 +34,19 @@ RewriteRule ^contact/?$ contact.php [QSA,L]
 RewriteRule ^admin/?$ admin.php [QSA,L]
 
 # Friendly aliases
-RewriteRule ^spit/?$ app.php?slug=the-spit [QSA,L]
-RewriteRule ^surfers/?$ app.php?slug=surfers-paradise [QSA,L]
-RewriteRule ^mermaid/?$ app.php?slug=mermaid-beach [QSA,L]
-RewriteRule ^snapper/?$ app.php?slug=snapper-rocks [QSA,L]
-RewriteRule ^(dbah|d-bah)/?$ app.php?slug=duranbah [QSA,L]
-RewriteRule ^byron/?$ app.php?slug=byron-bay [QSA,L]
-RewriteRule ^thepass/?$ app.php?slug=the-pass [QSA,L]
-RewriteRule ^main-beach-byron/?$ app.php?slug=byron-main-beach [QSA,L]
+RewriteRule ^spit/?$ channel.php?slug=the-spit [QSA,L]
+RewriteRule ^surfers/?$ channel.php?slug=surfers-paradise [QSA,L]
+RewriteRule ^mermaid/?$ channel.php?slug=mermaid-beach [QSA,L]
+RewriteRule ^snapper/?$ channel.php?slug=snapper-rocks [QSA,L]
+RewriteRule ^(dbah|d-bah)/?$ channel.php?slug=duranbah [QSA,L]
+RewriteRule ^byron/?$ channel.php?slug=byron-bay [QSA,L]
+RewriteRule ^thepass/?$ channel.php?slug=the-pass [QSA,L]
+RewriteRule ^main-beach-byron/?$ channel.php?slug=byron-main-beach [QSA,L]
 
 # Dynamic beach pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-z0-9-]+)/?$ app.php?slug=$1 [QSA,L]
+RewriteRule ^([a-z0-9-]+)/?$ channel.php?slug=$1 [QSA,L]
 
 # Internal implementation files are never served directly
 <FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest|shark-refresh|data-check)\.php$">
