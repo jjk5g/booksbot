@@ -15,14 +15,11 @@ try{
           ORDER BY l.id,s.priority,s.id")->fetchAll();
         foreach($rows as $r){
             $slug=(string)$r['slug'];
-            if(isset($cameraHealth[$slug])) continue; // first-priority playable stream only
+            if(isset($cameraHealth[$slug])) continue;
             $checked=(string)($r['checked_at']??'');
-            $fresh=$checked!=='' && strtotime($checked)!==false && strtotime($checked)>=time()-600;
-            if(!$fresh){
-                $state='unknown';
-            }else{
-                $state=((string)$r['status']==='ok')?'ok':'down';
-            }
+            $checkedTs=$checked!==''?strtotime($checked):false;
+            $fresh=$checkedTs!==false && $checkedTs>=time()-600;
+            $state=$fresh?(((string)$r['status']==='ok')?'ok':'down'):'unknown';
             if($state==='ok') $verifiedLive++;
             $cameraHealth[$slug]=[
                 'status'=>$state,
@@ -46,7 +43,7 @@ $healthCss=<<<'HTML'
 HTML;
 $html=str_replace('</head>',$healthCss.'</head>',$html);
 $html=str_replace('<span><i class="dot live"></i>Live camera</span><span><i class="dot forecast"></i>Forecast / camera being verified</span>', '<span><i class="dot live"></i>Verified live camera</span><span><i class="dot down"></i>Camera temporarily unavailable</span><span><i class="dot forecast"></i>Forecast / no verified camera</span>', $html);
-$html=preg_replace('~<div class="stats">\d+ locations · \d+ live feeds</div>~','<div class="stats">'.count(cc_locations()).' locations · '.$verifiedLive.' verified live feeds</div>',$html,1)??$html;
+$html=preg_replace_callback('~<div class="stats">(\d+) locations · \d+ live feeds</div>~',fn($m)=>'<div class="stats">'.$m[1].' locations · '.$verifiedLive.' verified live feeds</div>',$html,1)??$html;
 
 $inject=<<<HTML
 const cameraHealth={$healthJson};
