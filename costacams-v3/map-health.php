@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__.'/bootstrap.php';
+
+ob_start();
+require __DIR__.'/map.php';
+$html=ob_get_clean();
 
 $cameraHealth=[];
 $verifiedLive=0;
@@ -30,10 +33,6 @@ try{
         }
     }
 }catch(Throwable $e){}
-
-ob_start();
-require __DIR__.'/map.php';
-$html=ob_get_clean();
 
 $healthJson=json_encode($cameraHealth,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT);
 $healthCss=<<<'HTML'
