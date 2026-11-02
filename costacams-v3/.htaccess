@@ -29,7 +29,7 @@ RewriteEngine On
 </IfModule>
 
 # Utility pages
-RewriteRule ^map/?$ map.php [QSA,L]
+RewriteRule ^map/?$ map-health.php [QSA,L]
 RewriteRule ^contact/?$ contact.php [QSA,L]
 RewriteRule ^admin/?$ admin.php [QSA,L]
 
