@@ -1,0 +1,6 @@
+<?php
+if($_SERVER['REQUEST_METHOD']==='POST'){
+ $name=substr(strip_tags($_POST['name']??''),0,100);$email=filter_var($_POST['email']??'',FILTER_VALIDATE_EMAIL);$message=substr(strip_tags($_POST['message']??''),0,2000);
+ if($email&&$message){$to='Jere0589+costa@gmail.com';$subject='[CostaCams] Contact form';$body="Name: $name\nEmail: $email\n\n$message";$headers="From: CostaCams <noreply@costacams.com>\r\nReply-To: $email\r\n";@mail($to,$subject,$body,$headers);$ok=true;}
+}
+?><!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact CostaCams</title><style>body{background:#050505;color:#fff;font:16px system-ui;margin:0}.w{max-width:650px;margin:8vh auto;padding:25px}input,textarea,button{width:100%;padding:13px;margin:7px 0;background:#111;color:white;border:1px solid #333;border-radius:10px}textarea{min-height:160px}button{cursor:pointer;border-color:#4dd5ff}a{color:#4dd5ff}</style></head><body><main class="w"><a href="/">← CostaCams</a><h1>Contact us</h1><?php if(!empty($ok)):?><p>Thanks — your message has been sent.</p><?php endif;?><form method="post"><input name="name" placeholder="Name"><input name="email" type="email" placeholder="Email" required><textarea name="message" placeholder="Message" required></textarea><button>Send message</button></form></main></body></html>
