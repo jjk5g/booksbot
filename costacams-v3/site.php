@@ -5,10 +5,13 @@ require __DIR__.'/index.php';
 $html=ob_get_clean();
 
 $needle='<nav class="topnav"><a href="/#channels">Channels</a>';
-$replacement='<nav class="topnav"><a href="/#channels">Channels</a><a href="/map">Map</a>';
+$replacement='<nav class="topnav"><a href="/map">Map</a><a href="/#channels">Channels</a>';
 $html=str_replace($needle,$replacement,$html);
 
 if (empty($_GET['slug'])) {
+    $mapSpotlight='<section class="cc-map-entry"><div><span class="tag">EXPLORE THE COAST</span><h2>Find every camera on the live map</h2><p>See Gold Coast, Tweed Coast and Byron cameras by location, check which ones are live, and open a preview straight from the map.</p></div><a class="cc-map-btn" href="/map">🗺 Open camera map →</a></section>';
+    $html=preg_replace('~(<section class="hero">.*?</section>)~s','$1'.$mapSpotlight,$html,1)??$html;
+
     $healthySlugs=[
         'main-beach','surfers-paradise','kurrawa','miami',
         'palm-beach','currumbin','tugun','kirra',
@@ -95,7 +98,7 @@ if (empty($_GET['slug'])) {
 
 $presenceCss=<<<'CSS'
 <style id="cc-presence-style">
-.cc-presence-bar{display:flex;justify-content:center;gap:8px;align-items:center;padding:7px 14px;background:#07110d;border-bottom:1px solid #183329;color:#bce7cf;font-size:12px}.cc-presence-dot,.cc-live-card:before{display:inline-block;width:7px;height:7px;border-radius:50%;background:#69e0a0;box-shadow:0 0 8px #69e0a0}.cc-channel-live{display:inline-flex;gap:8px;align-items:center;margin:2px 0 12px;padding:8px 12px;border:1px solid #244936;background:#09140f;border-radius:999px;color:#c7eed6;font-size:13px;font-weight:700}.cc-live-card{display:block;margin-top:8px;color:#8fd8aa;font-size:12px}.cc-live-card:before{content:'';margin-right:6px;width:6px;height:6px}.cc-presence-peak{color:#789c87;font-weight:500}@media(max-width:650px){.cc-presence-bar{font-size:11px}.cc-channel-live{font-size:12px}}
+.cc-presence-bar{display:flex;justify-content:center;gap:8px;align-items:center;padding:7px 14px;background:#07110d;border-bottom:1px solid #183329;color:#bce7cf;font-size:12px}.cc-presence-dot,.cc-live-card:before{display:inline-block;width:7px;height:7px;border-radius:50%;background:#69e0a0;box-shadow:0 0 8px #69e0a0}.cc-channel-live{display:inline-flex;gap:8px;align-items:center;margin:2px 0 12px;padding:8px 12px;border:1px solid #244936;background:#09140f;border-radius:999px;color:#c7eed6;font-size:13px;font-weight:700}.cc-live-card{display:block;margin-top:8px;color:#8fd8aa;font-size:12px}.cc-live-card:before{content:'';margin-right:6px;width:6px;height:6px}.cc-presence-peak{color:#789c87;font-weight:500}.cc-map-entry{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:4px 0 30px;padding:22px 24px;border:1px solid #295866;border-radius:18px;background:linear-gradient(135deg,#0b171b,#0a1113 55%,#0c1411)}.cc-map-entry h2{margin:5px 0 7px;font-size:clamp(22px,3vw,32px)}.cc-map-entry p{margin:0;color:#9da9ae;max-width:760px}.cc-map-btn{flex:0 0 auto;border:1px solid #50dcff;color:#b9f3ff;background:#0c2026;padding:12px 17px;border-radius:999px;font-weight:800;white-space:nowrap}.cc-map-btn:hover{background:#12313a}@media(max-width:650px){.cc-presence-bar{font-size:11px}.cc-channel-live{font-size:12px}.cc-map-entry{align-items:flex-start;flex-direction:column;padding:18px}.cc-map-btn{width:100%;text-align:center}}
 </style>
 CSS;
 $html=str_replace('</head>',$presenceCss.'</head>',$html);
