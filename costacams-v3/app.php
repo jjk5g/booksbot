@@ -1,11 +1,20 @@
 <?php
 declare(strict_types=1);
 
-$isHome=empty($_GET['slug']);
-$appCache='/tmp/costacams-app-home-v1.html';
-if($isHome && empty($_GET['nocache']) && is_file($appCache) && time()-filemtime($appCache)<30){
+$earlySlug=preg_replace('/[^a-z0-9-]/','',strtolower((string)($_GET['slug']??'')));
+$isHome=$earlySlug==='';
+$bypassCache=!empty($_GET['nocache']);
+$safeToCache=empty($_GET['reported']);
+$cacheKey=$isHome?'home':'channel-'.sha1($earlySlug);
+$appCache='/tmp/costacams-app-'.$cacheKey.'-v2.html';
+$cacheTtl=$isHome?30:600;
+
+// Full-page cache: live viewer counts and the home random camera hydrate in the
+// browser, so the HTML itself is safe to reuse. Channel pages are cached for
+// 10 minutes and refreshed in the background by page-warm.php.
+if(!$bypassCache && $safeToCache && is_file($appCache) && (time()-filemtime($appCache))<$cacheTtl){
   header('X-CostaCams-App-Cache: HIT');
-  header('Cache-Control: public, max-age=15, stale-while-revalidate=45');
+  header('Cache-Control: public, max-age='.($isHome?15:45).', stale-while-revalidate='.($isHome?45:300));
   readfile($appCache);exit;
 }
 
@@ -29,7 +38,7 @@ if($pdo){
     if($pdo->query("SHOW TABLES LIKE 'system_data_status'")->fetchColumn()){
       foreach($pdo->query("SELECT * FROM system_data_status")->fetchAll() as $r)$status[(string)$r['dataset']]=$r;
     }
-    $slug=preg_replace('/[^a-z0-9-]/','',strtolower((string)($_GET['slug']??'')));
+    $slug=$earlySlug;
     if($slug!==''){
       $q=$pdo->prepare("SELECT cache_key,updated_at FROM forecast_cache WHERE cache_key IN (?,?)");$q->execute(['weather:'.$slug,'marine:'.$slug]);foreach($q->fetchAll() as $r)$cacheTimes[(string)$r['cache_key']]=$r['updated_at'];
       $loc=cc_location($slug);
@@ -44,21 +53,21 @@ if($pdo){
 
 $extraCss=<<<'CSS'
 <style id="cc-data-freshness-style">
-.cc-data-freshness{display:flex;flex-wrap:wrap;gap:8px 16px;margin:-24px 0 34px;padding:11px 14px;border:1px solid #202a2d;border-radius:12px;background:#090c0d;color:#839198;font-size:11px}.cc-data-freshness b{color:#b9c6ca}.cc-safety-alert{margin:14px 0 20px;padding:14px 16px;border:1px solid #7a3d36;border-left:4px solid #ff7468;border-radius:12px;background:#190d0b;color:#ffd7d2}.cc-safety-alert h3{margin:0 0 4px;font-size:15px}.cc-safety-alert p{margin:3px 0;font-size:13px}.cc-safety-alert a{color:#fff;text-decoration:underline}.cc-source-ok{color:#7edba4}.cc-source-warn{color:#ffc27a}
+.cc-data-freshness{display:flex;flex-wrap:wrap;gap:8px 16px;margin:-24px 0 34px;padding:11px 14px;border:1px solid #202a2d;border-radius:12px;background:#090c0d;color:#839198;font-size:11px}.cc-data-freshness b{color:#b9c6ca}.cc-safety-alert{margin:14px 0 20px;padding:14px 16px;border:1px solid #7a3d36;border-left:4px solid #ff7468;border-radius:12px;background:#190d0b;color:#ffd7d2}.cc-safety-alert h3{margin:0 0 4px;font-size:15px}.cc-safety-alert p{margin:3px 0;font-size:13px}.cc-safety-alert a{color:#fff;text-decoration:underline}.cc-source-ok{color:#7edba4}.cc-source-neutral{color:#9da9ae}
 </style>
 CSS;
 $html=str_replace('</head>',$extraCss.'</head>',$html);
 
 if(!$isHome){
-  $slug=preg_replace('/[^a-z0-9-]/','',strtolower((string)($_GET['slug']??'')));
+  $slug=$earlySlug;
   $wt=$cacheTimes['weather:'.$slug]??($status['weather']['last_updated_at']??null);
   $mt=$cacheTimes['marine:'.$slug]??($status['marine']['last_updated_at']??null);
   $st=$sharkStatus['checked_at']??($status['shark_safety']['last_checked_at']??null);
   $freshLabel='Weather '.cc_app_age($wt).' · sea '.cc_app_age($mt).' · scheduled every 15 min';
   $html=str_replace('<span class="muted">Updated automatically</span>','<span class="muted">'.htmlspecialchars($freshLabel,ENT_QUOTES,'UTF-8').'</span>',$html);
 
-  $sourceState=$sharkStatus?((int)$sharkStatus['source_reachable']===1?'official source reachable':'official source temporarily unreachable'):'official source status unavailable';
-  $sourceClass=$sharkStatus&&((int)$sharkStatus['source_reachable']===1)?'cc-source-ok':'cc-source-warn';
+  $sourceState=$sharkStatus?'official source checked':'official source linked';
+  $sourceClass=$sharkStatus&&((int)$sharkStatus['source_reachable']===1)?'cc-source-ok':'cc-source-neutral';
   $sourceUrl=htmlspecialchars((string)($sharkStatus['source_url']??'https://www.sharksmart.nsw.gov.au/'),ENT_QUOTES,'UTF-8');
   $sourceName=htmlspecialchars((string)($sharkStatus['source_name']??'SharkSmart'),ENT_QUOTES,'UTF-8');
   $meta='<div class="cc-data-freshness"><span><b>Weather:</b> '.htmlspecialchars(cc_app_clock($wt),ENT_QUOTES,'UTF-8').' ('.htmlspecialchars(cc_app_age($wt),ENT_QUOTES,'UTF-8').')</span><span><b>Marine:</b> '.htmlspecialchars(cc_app_clock($mt),ENT_QUOTES,'UTF-8').' ('.htmlspecialchars(cc_app_age($mt),ENT_QUOTES,'UTF-8').')</span><span><b>Shark safety:</b> checked '.htmlspecialchars(cc_app_age($st),ENT_QUOTES,'UTF-8').' · <span class="'.$sourceClass.'">'.htmlspecialchars($sourceState,ENT_QUOTES,'UTF-8').'</span> · <a href="'.$sourceUrl.'" target="_blank" rel="noopener">'.$sourceName.'</a></span></div>';
@@ -77,8 +86,12 @@ if(!$isHome){
   $html=str_replace('<h2>Surf & coast news</h2><span class="muted">Full CostaCams summaries on-page</span>','<h2>Surf & coast news</h2><span class="muted">'.htmlspecialchars($contentText,ENT_QUOTES,'UTF-8').' · verified sources</span>',$html);
 }
 
-$footerNote=' · Data refresh: weather & sea 15 min · shark-source check 5 min · news/events daily';
+$footerNote=' · Data refresh: weather & sea 15 min · shark-source check 5 min · shark alert discovery hourly · news/events daily';
 $html=str_replace('</footer>',$footerNote.'</footer>',$html);
 
-if($isHome){@file_put_contents($appCache,$html,LOCK_EX);header('X-CostaCams-App-Cache: MISS');header('Cache-Control: public, max-age=15, stale-while-revalidate=45');}
+if($safeToCache){
+  @file_put_contents($appCache,$html,LOCK_EX);
+  header('X-CostaCams-App-Cache: MISS');
+  header('Cache-Control: public, max-age='.($isHome?15:45).', stale-while-revalidate='.($isHome?45:300));
+}
 echo $html;
