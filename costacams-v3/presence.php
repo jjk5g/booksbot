@@ -4,6 +4,30 @@ require __DIR__.'/bootstrap.php';
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 
+function cc_presence_db(): ?PDO {
+    $cfg=cc_config();
+    $name=(string)($cfg['db_name']??'');
+    if(str_contains($name,';')) $name=explode(';',$name,2)[0];
+    $user=(string)($cfg['db_user']??'');
+    $pass=(string)($cfg['db_pass']??'');
+    if($name===''||$user===''||$pass==='') return null;
+    try{
+        return new PDO(
+            'mysql:host=localhost;dbname='.$name.';charset=utf8mb4',
+            $user,
+            $pass,
+            [
+                PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
+                PDO::ATTR_EMULATE_PREPARES=>false,
+            ]
+        );
+    }catch(Throwable $e){
+        error_log('CostaCams presence DB: '.$e->getMessage());
+        return null;
+    }
+}
+
 function cc_presence_setup(PDO $pdo): void {
     $pdo->exec("CREATE TABLE IF NOT EXISTS active_presence (
       visitor_hash CHAR(64) NOT NULL,
@@ -44,8 +68,8 @@ function cc_presence_peaks(PDO $pdo): array {
     return [$sitePeak,$channelPeaks];
 }
 
-$pdo=cc_db();
-if(!$pdo){http_response_code(503);echo json_encode(['ok'=>false]);exit;}
+$pdo=cc_presence_db();
+if(!$pdo){http_response_code(503);echo json_encode(['ok'=>false,'reason'=>'database_unavailable']);exit;}
 cc_presence_setup($pdo);
 $pdo->exec("DELETE FROM active_presence WHERE updated_at < DATE_SUB(NOW(),INTERVAL 10 MINUTE)");
 
