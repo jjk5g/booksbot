@@ -41,6 +41,16 @@ function buildWhatsAppMessage(){
  lines.push('','¿Cuál me recomendarían y por qué?');
  return lines.join('\n');
 }
-function openWhatsApp(){const text=encodeURIComponent(buildWhatsAppMessage());window.open('https://wa.me/'+BUSINESS_WHATSAPP+'?text='+text,'_blank','noopener')}
+function openWhatsApp(){
+ try{
+  if(window.parent&&window.parent!==window){
+   window.parent.postMessage({source:'mcc-finder',event:'whatsapp_lead',purchase:S.purchase,top_model:currentRanked[0]?.id||'',top_score:currentRanked[0]?.score||0,budget:S.budget},location.origin);
+  }else if(typeof gtag==='function'){
+   gtag('event','whatsapp_lead',{purchase_type:S.purchase,top_model:currentRanked[0]?.id||'',top_score:currentRanked[0]?.score||0,budget:S.budget});
+  }
+ }catch(e){}
+ const text=encodeURIComponent(buildWhatsAppMessage());
+ window.open('https://wa.me/'+BUSINESS_WHATSAPP+'?text='+text,'_blank','noopener')
+}
 
 document.querySelectorAll('#purchase button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#purchase button').forEach(x=>x.classList.remove('active'));b.classList.add('active');S.purchase=b.dataset.v;mode()});bindButtons('projects','projects');bindButtons('firstPrior','firstPrior');bindButtons('current','current',true);bindButtons('limits','limits');['firstUse','learn','firstFabric','secondUse','secondFabric','performance','budget'].forEach(id=>$(id).oninput=e=>{S[id]=Number(e.target.value);render()});$('sellerBtn').onclick=()=>{$('sellerBody').hidden=!$('sellerBody').hidden;$('sellerBtn').textContent=$('sellerBody').hidden?'Activar':'Ocultar'};$('copyBtn').onclick=async()=>{const t=$('sellerSummary').textContent;try{await navigator.clipboard.writeText(t);$('copyBtn').textContent='Copiado';setTimeout(()=>$('copyBtn').textContent='Copiar resumen',1200)}catch(e){alert(t)}};$('whatsappBtn').onclick=openWhatsApp;mode();
