@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+// Surf Match is a fast-moving interactive beta. Never let browser/CDN caches
+// serve an older revision after a deployment.
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
+header('X-CostaCams-Surf-Match: v13');
+
 // Keep the private runtime DB config in sync with the encrypted deployment
 // credential. The plaintext password never lives in the repository or web root.
 $runtimeConfig='/home/u751177156/.costacams-private.php';
