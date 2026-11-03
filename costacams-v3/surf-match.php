@@ -24,7 +24,7 @@ if(is_readable($encryptedConfig)){
 }
 
 try{
-    require __DIR__.'/surf-match-beta-v6-hotfix.php';
+    require __DIR__.'/surf-match-beta-v7.php';
 }catch(Throwable $e){
     $line=date(DATE_ATOM).' FATAL '.get_class($e).' '.$e->getMessage().' '.$e->getFile().':'.$e->getLine()."\n";
     @file_put_contents($diag,$line,FILE_APPEND|LOCK_EX);
