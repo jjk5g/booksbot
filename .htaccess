@@ -1,0 +1,5 @@
+Options -Indexes
+DirectoryIndex index.html
+<FilesMatch "\.(py|cfg|ini|txt|md|json|lock|yml|yaml|toml)$">
+  Require all denied
+</FilesMatch>
