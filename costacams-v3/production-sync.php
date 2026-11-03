@@ -30,7 +30,15 @@ function php_lint(string $file): array {
 }
 function fetch_check(string $url,array $markers,int $minBytes=1200): array {
   $ch=curl_init($url);
-  curl_setopt_array($ch,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_FOLLOWLOCATION=>true,CURLOPT_CONNECTTIMEOUT=>5,CURLOPT_TIMEOUT=>30,CURLOPT_USERAGENT=>'CostaCamsSafeDeploy/1.0',CURLOPT_ENCODING=>'']);
+  curl_setopt_array($ch,[
+    CURLOPT_RETURNTRANSFER=>true,
+    CURLOPT_FOLLOWLOCATION=>true,
+    CURLOPT_CONNECTTIMEOUT=>5,
+    CURLOPT_TIMEOUT=>30,
+    CURLOPT_USERAGENT=>'CostaCamsSafeDeploy/1.1',
+    CURLOPT_ENCODING=>'',
+    CURLOPT_HTTPHEADER=>['Cache-Control: no-cache','Pragma: no-cache'],
+  ]);
   $body=curl_exec($ch);$code=(int)curl_getinfo($ch,CURLINFO_HTTP_CODE);$err=curl_error($ch);curl_close($ch);
   if(!is_string($body))$body='';
   if($code<200||$code>=400)return [false,"HTTP $code $err",$body];
@@ -54,11 +62,13 @@ foreach($files as $from=>$to){
 echo "preflight_lint=ok\n";
 
 // 2) Staging/beta must render the exact features being promoted.
+// Surf Match runs first because its wrapper validates/repairs the private runtime
+// DB configuration; only after that do we test the database-backed homepage.
 $nonce=time();
-[$ok,$why]=fetch_check('https://beta.costacams.com/?nocache=1&preflight='.$nonce,['<title>CostaCams','id="channels"','cc-home-explore','id="surf-match"'],20000);
-if(!$ok)fail_deploy("beta homepage failed: $why");
 [$ok,$why]=fetch_check('https://beta.costacams.com/surf-match.php?preflight='.$nonce,['SURF MATCH BETA v13','All beaches','ccv13Drive'],18000);
 if(!$ok)fail_deploy("beta Surf Match failed: $why");
+[$ok,$why]=fetch_check('https://beta.costacams.com/?nocache=1&preflight='.$nonce,['<title>CostaCams','id="channels"','cc-home-explore','id="surf-match"'],20000);
+if(!$ok)fail_deploy("beta homepage failed: $why");
 echo "preflight_http=ok\n";
 
 // 3) Snapshot production and stage replacement files beside their targets.
@@ -77,11 +87,17 @@ $order[]='render-stable.php';$order[]='surf-match.php';
 foreach($order as $to){$new=$dst.'/.deploy-new-'.$to;if(!@rename($new,$dst.'/'.$to)){restore_backup($backupDir,$dst,array_values($files),$homeBackup,$homeCache);fail_deploy("promotion failed $to");}}
 echo "promotion=ok\n";
 
+// Validate the promoted Surf Match entry point before generating any new home cache.
+[$prodSurfOk,$prodSurfWhy]=fetch_check('https://costacams.com/surf-match.php?configcheck='.$nonce,['SURF MATCH BETA v13','All beaches','ccv13Drive'],18000);
+if(!$prodSurfOk){restore_backup($backupDir,$dst,array_values($files),$homeBackup,$homeCache);fail_deploy("production Surf Match bootstrap failed: $prodSurfWhy");}
+echo "production_runtime_bootstrap=ok\n";
+
 // 5) Generate static candidates. Hardened page-warm.php preserves previous cache on any invalid render.
 $warmer=$dst.'/page-warm.php';
 ob_start();passthru(escapeshellarg(PHP_BINARY).' '.escapeshellarg($warmer),$warmCode);$warmOut=ob_get_clean();echo $warmOut;
 $home=is_file($homeCache)?(string)file_get_contents($homeCache):'';
-if(strlen($home)<20000||!str_contains($home,'id="channels"')||!str_contains($home,'id="surf-match"')||str_contains(strtolower($home),'fatal error')){
+$homeLower=strtolower($home);
+if(strlen($home)<20000||!str_contains($home,'id="channels"')||!str_contains($home,'id="surf-match"')||!str_contains($homeLower,'see the coast.')||!str_contains($homeLower,'pick your beach.')||str_contains($homeLower,'fatal error')){
   restore_backup($backupDir,$dst,array_values($files),$homeBackup,$homeCache);
   fail_deploy('homepage candidate did not pass cache validation');
 }
@@ -89,6 +105,7 @@ echo "static_home_validation=ok\n";
 
 // 6) Public post-deploy smoke tests. Any failure restores code + previous homepage cache.
 $checks=[
+  ['https://costacams.com/',['<title>CostaCams','id="channels"','id="surf-match"','See the coast.','Pick your beach.'],20000],
   ['https://costacams.com/?smoke='.$nonce,['<title>CostaCams','id="channels"','id="surf-match"'],20000],
   ['https://costacams.com/surf-match.php?smoke='.$nonce,['SURF MATCH BETA v13','All beaches','ccv13Drive'],18000],
   ['https://costacams.com/map',['CostaCams'],1200],
