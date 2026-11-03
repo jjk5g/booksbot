@@ -23,7 +23,7 @@ function cc_warm_validate(string $body,int $code,string $dest): array {
   // with a partial/error render, even when PHP returned HTTP 200.
   if($name==='home.html'){
     if($len<20000)return [false,"home_too_small_$len"];
-    foreach(['<title>costacams','id="channels"','cc-home-explore'] as $marker){
+    foreach(['<title>costacams','id="channels"','cc-home-explore','id="surf-match"','see the coast.','pick your beach.'] as $marker){
       if(!str_contains($lower,$marker))return [false,'home_marker_missing_'.preg_replace('/[^a-z0-9]+/','_',$marker)];
     }
   }
@@ -63,6 +63,9 @@ foreach($jobs as [$url,$dest]){
   curl_close($ch);
 
   if(!is_string($body)){$body='';}
+  if(basename($dest)==='home.html'){
+    $body=str_replace('<h1>Your coast.<br>Live.</h1>','<h1>See the coast.<br>Pick your beach.</h1>',$body);
+  }
   [$valid,$reason]=cc_warm_validate($body,$code,$dest);
   if(!$valid){
     $fail++;$errors[]=basename($dest).':'.$reason.($curlErr!==''?':'.$curlErr:'');
