@@ -5,10 +5,10 @@ ErrorDocument 404 /error.php
 RewriteEngine On
 
 # Block non-public deployment, backup and legacy directories. The active Surf Match
-# beta exposes only its v4 page and v4 API; all implementation files remain private.
+# beta exposes only its public beta pages/APIs; all implementation files remain private.
 RewriteRule ^(?:ss|training-b|ccdeploy|ccdeploy-full|ccdeploy-final)(?:/|$) - [F,L,NC]
 RewriteRule ^ccdeploy-v3/?$ - [F,L,NC]
-RewriteRule ^ccdeploy-v3/(?!costacams-v3/(?:surf-match-beta-v4\.php|surf-beta-v4-api\.php)$) - [F,L,NC]
+RewriteRule ^ccdeploy-v3/(?!costacams-v3/(?:surf-match-beta-v4\.php|surf-beta-v4-api\.php|surf-match-beta-v5\.php|surf-beta-v5-api\.php)$) - [F,L,NC]
 
 # Never expose generated cache files as duplicate public URLs. Internal rewrites
 # below still work because THE_REQUEST keeps the visitor's original URL.
