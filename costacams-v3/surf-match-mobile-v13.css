@@ -1,0 +1,49 @@
+/* CostaCams Surf Match v13 — mobile-only responsive layer.
+   No backend/JS dependency. Loaded with media=(max-width:920px). */
+
+html,body{max-width:100%;overflow-x:hidden}
+body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.wrap{width:100%;max-width:100%;padding:16px 12px 48px}
+.top{padding:10px 12px;gap:10px}.brand{min-width:0}.beta{flex:0 0 auto;font-size:9px;padding:4px 7px}
+.hero{grid-template-columns:1fr!important;gap:12px!important;align-items:start}.hero h1{font-size:clamp(34px,12vw,52px);line-height:.98;margin:8px 0}.hero p{font-size:14px;line-height:1.5;margin-bottom:0}.livebox{padding:12px}
+.layout{grid-template-columns:minmax(0,1fr)!important;gap:12px!important;margin-top:14px}.panel,.mixer,.results{min-width:0;max-width:100%}.mixer{position:static!important;top:auto!important;padding:13px}.results{padding:12px}
+*{min-width:0}img,video,iframe,svg{max-width:100%}
+button,.action,.seg button,.quick button,.mode button{min-height:44px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+select,input,button{max-width:100%}.select,input[type=email],#postcode{font-size:16px!important}
+.mode{display:grid!important;grid-template-columns:1fr 1fr;gap:7px}.mode button{width:100%}
+.group{margin-top:11px;padding-top:11px}.labelrow{flex-wrap:wrap;align-items:flex-start;row-gap:5px}.labelrow>span.value{margin-left:auto}
+.timebox{padding:10px}.timebox .labelrow{display:grid;grid-template-columns:1fr;gap:7px}.timebox .labelrow .select{width:100%!important}.timebig{font-size:30px}.quick{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px!important}.quick button{width:100%;padding:9px 7px}
+.seg{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px!important}.seg button{width:100%;padding:9px 7px}.seg button:only-child{grid-column:1/-1}
+.wave-choices{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important}.wave-choice{min-width:0;padding:6px 1px}.wave-choice svg{height:38px}.wave-choice small{font-size:8px}
+.location-card{padding:11px}.location-card .action{width:100%!important}.ccv3-postcode{grid-template-columns:1fr!important;gap:7px!important}.ccv3-postcode input,.ccv3-postcode .action{width:100%!important}
+.ccv4-board-visual{height:170px;gap:25px;padding:9px}.ccv4-grid3{gap:12px!important}.ccv4-grid3 label{grid-template-columns:1fr!important;gap:4px!important}.ccv4-grid3 label>span,.ccv4-grid3 label>b{text-align:left!important}.ccv4-grid3 label>b{font-size:12px}
+
+/* Touch-friendly sliders. The input keeps the same JS/value behaviour. */
+input[type=range],.range{display:block;width:100%!important;max-width:100%!important;height:34px;margin:4px 0;padding:0;background:transparent;touch-action:pan-y;accent-color:#50dcff}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:#25373d}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:24px;height:24px;border-radius:50%;background:#50dcff;border:3px solid #072129;margin-top:-9px;box-shadow:0 0 0 2px #50dcff33}
+input[type=range]::-moz-range-track{height:6px;border-radius:999px;background:#25373d}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border:3px solid #072129;border-radius:50%;background:#50dcff;box-sizing:border-box}
+
+.ccv13-drive{width:100%}.ccv13-drive-top{align-items:flex-start;flex-wrap:wrap}.ccv13-drive-top strong{margin-left:auto}.ccv13-drive-grid{grid-template-columns:1fr!important;gap:5px!important}.ccv13-drive-grid .select{width:100%}.ccv13-scale{gap:5px;font-size:8px}.ccv13-scale span:nth-child(2){text-align:center;flex:1}.ccv13-radius-status{font-size:10px;padding:9px}
+.best{grid-template-columns:1fr!important;gap:10px!important}.winner,.uv{padding:13px}.score{font-size:52px}.winner h2{font-size:25px}.metrics{gap:5px}.metric{font-size:10px;padding:5px 7px}.travel strong{font-size:16px}
+.rankrow{grid-template-columns:30px minmax(0,1fr) auto;padding:9px;gap:7px}.rankrow small{display:block;overflow-wrap:anywhere}.rankscore{font-size:17px}
+.ccv13-impact{padding:11px}.ccv13-impact-head{flex-wrap:wrap}.ccv13-impact-grid{grid-template-columns:1fr 1fr!important;gap:6px}.ccv13-impact-item{padding:8px}.ccv13-impact-item strong{font-size:14px}
+.ccv13-beaches{border-radius:13px}.ccv13-beaches-head{align-items:flex-start;flex-direction:column;gap:3px;padding:9px 10px}.ccv13-beaches-head span{font-size:9px}.ccv13-rail{padding:9px 10px 11px;gap:7px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.ccv13-rail::-webkit-scrollbar{display:none}.ccv13-card{min-width:145px!important;max-width:145px!important;padding:9px}
+.spot-detail{grid-template-columns:1fr!important;gap:10px!important}.mapbox,.cambox{min-width:0}.map{height:230px!important}.cam{width:100%;aspect-ratio:16/9;min-height:0}.cam video,.cam iframe{display:block;width:100%!important;height:100%!important}
+.ccv13-extra{grid-template-columns:1fr!important;gap:10px!important}.ccv13-mapbody{height:235px!important}.ccv13-boxhead{padding:9px 10px}.ccv13-weather-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}.ccv13-weather-actions button{min-height:42px;font-size:10px}
+.timeline{min-width:0}.timeline-grid{grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:minmax(122px,42vw);overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;padding-bottom:4px}.slot{min-width:0!important;scroll-snap-align:start}
+.subscribe{padding:12px}.subscribe-grid{grid-template-columns:1fr!important;gap:10px!important}.subscribe input[type=email]{width:100%}.subscribe .action{width:100%!important}
+.research{overflow-wrap:anywhere}
+
+@media(max-width:430px){
+  .wrap{padding-left:10px;padding-right:10px}.top{padding-left:10px;padding-right:10px}.hero h1{font-size:40px}.mixer,.results{padding:10px}.quick{grid-template-columns:1fr 1fr}.seg{grid-template-columns:1fr 1fr}.ccv13-impact-grid{grid-template-columns:1fr!important}.ccv13-card{min-width:138px!important;max-width:138px!important}.ccv13-mapbody{height:220px!important}.map{height:215px!important}
+}
+
+@media(max-width:350px){
+  .wave-choice svg{height:32px}.wave-choice small{font-size:7px}.quick,.seg{grid-template-columns:1fr}.ccv13-impact-grid{grid-template-columns:1fr!important}.beta{font-size:8px}
+}
+
+@media(orientation:landscape) and (max-height:500px){
+  .top{position:relative}.hero h1{font-size:36px}.ccv13-mapbody,.map{height:210px!important}
+}
