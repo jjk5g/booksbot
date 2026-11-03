@@ -48,6 +48,42 @@ if($slug===''){
 HTML;
     $html=str_replace('</head>',$css.'</head>',$html);
 
+    // Homepage decision layer: show what is happening first, then offer Surf
+    // Match, then let visitors continue into the full camera directory.
+    $surfCss=<<<'HTML'
+<style id="cc-home-surf-match-style">
+.cc-home-surf-match{margin:32px 0 42px}.cc-home-surf-card{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:18px;padding:24px;border:1px solid #28505b;border-radius:20px;background:radial-gradient(circle at 82% 20%,#12323c 0,#0c1518 32%,#090c0d 72%);overflow:hidden}.cc-home-surf-copy h2{margin:6px 0 9px;font-size:clamp(28px,4vw,44px);line-height:1.02;letter-spacing:-.035em}.cc-home-surf-copy p{max-width:760px;margin:0;color:#aebbc0;font-size:15px}.cc-home-surf-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.cc-home-surf-primary,.cc-home-surf-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:11px 15px;font-weight:850;font-size:13px}.cc-home-surf-primary{border:1px solid #50dcff;background:#0c2026;color:#d7f8ff}.cc-home-surf-primary:hover{background:#12313a}.cc-home-surf-secondary{border:1px solid #374247;background:#101416;color:#c7d1d4}.cc-home-surf-steps{display:grid;gap:8px;align-content:center}.cc-home-surf-step{display:grid;grid-template-columns:30px 1fr;gap:9px;align-items:center;padding:10px 11px;border:1px solid #26383e;border-radius:12px;background:#081014cc}.cc-home-surf-step b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#0d2730;color:#7de8ff;font-size:12px}.cc-home-surf-step span{font-size:11px;color:#a8b8bd}.cc-home-surf-step strong{display:block;color:#edf6f8;font-size:12px;margin-bottom:1px}
+@media(max-width:760px){.cc-home-surf-card{grid-template-columns:1fr;padding:19px}.cc-home-surf-actions>a{flex:1 1 180px}}
+</style>
+HTML;
+    $html=str_replace('</head>',$surfCss.'</head>',$html);
+
+    $surfHome=<<<'HTML'
+<section class="section cc-home-surf-match" id="surf-match">
+  <div class="cc-home-surf-card">
+    <div class="cc-home-surf-copy">
+      <span class="tag">SURF MATCH · BETA</span>
+      <h2>Not sure where to surf?</h2>
+      <p>Start with your postcode or location, choose how far you are willing to drive, then let CostaCams compare the beaches. Surf Match combines your timing, skill level and board with current conditions, live cameras, traffic, rain/cloud context and the trip itself.</p>
+      <div class="cc-home-surf-actions">
+        <a class="cc-home-surf-primary" href="/surf-match.php">Find my best beach →</a>
+        <a class="cc-home-surf-secondary" href="#channels">Or browse every camera ↓</a>
+      </div>
+    </div>
+    <div class="cc-home-surf-steps" aria-label="How Surf Match works">
+      <div class="cc-home-surf-step"><b>1</b><span><strong>Set your starting area</strong>Postcode or browser location.</span></div>
+      <div class="cc-home-surf-step"><b>2</b><span><strong>Set your drive limit</strong>10 minutes, 30 minutes, kilometres — your choice.</span></div>
+      <div class="cc-home-surf-step"><b>3</b><span><strong>Compare the coast</strong>Best match, camera, route, traffic, rain/cloud and CO₂.</span></div>
+    </div>
+  </div>
+</section>
+HTML;
+    $channelAnchor='<section class="section" id="channels">';
+    if(str_contains($html,$channelAnchor))$html=str_replace($channelAnchor,$surfHome.$channelAnchor,$html,1);
+
+    // Put the decision tool in the main navigation between Map and Cameras.
+    $html=str_replace('<a href="/map">Map</a><a href="/#channels">Channels</a>','<a href="/map">Map</a><a href="/#surf-match">Find a surf</a><a href="/#channels">Channels</a>',$html);
+
     $switchJs=<<<HTML
 <script id="cc-rec-stable-switcher">
 (function(){
