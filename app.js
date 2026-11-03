@@ -41,11 +41,33 @@ function buildWhatsAppMessage(){
  lines.push('','¿Cuál me recomendarían y por qué?');
  return lines.join('\n');
 }
+function budgetBand(v){if(v<350000)return'under350';if(v<=500000)return'350to500';if(v<=650000)return'500to650';if(v<=850000)return'650to850';return'over850'}
+function fabricBand(v){if(v<=2)return'light';if(v===3)return'medium';if(v===4)return'demanding';if(v>=5)return'heavy';return'unknown'}
+function sendAnonymousProfile(){
+ try{
+  if(sessionStorage.getItem('mcc_profile_sent_v1')==='1')return;
+  const fabric=S.purchase==='first'?S.firstFabric:S.secondFabric;
+  const payload={
+   purchase:S.purchase,
+   projects:[...S.projects],
+   fabric:fabricBand(fabric),
+   budget_band:budgetBand(S.budget),
+   top_model:currentRanked[0]?.id||'',
+   priorities:S.purchase==='first'?[...S.firstPrior]:[],
+   limits:S.purchase==='second'?[...S.limits]:[]
+  };
+  fetch('/wp-json/mcc/v1/profile',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),credentials:'omit',keepalive:true})
+   .then(r=>{if(r.ok)sessionStorage.setItem('mcc_profile_sent_v1','1')}).catch(()=>{});
+ }catch(e){}
+}
 function openWhatsApp(){
+ sendAnonymousProfile();
  try{
   if(window.parent&&window.parent!==window){
+   window.parent.postMessage({source:'mcc-finder',event:'finder_complete',purchase:S.purchase,top_model:currentRanked[0]?.id||'',top_score:currentRanked[0]?.score||0,budget:S.budget},location.origin);
    window.parent.postMessage({source:'mcc-finder',event:'whatsapp_lead',purchase:S.purchase,top_model:currentRanked[0]?.id||'',top_score:currentRanked[0]?.score||0,budget:S.budget},location.origin);
   }else if(typeof gtag==='function'){
+   gtag('event','finder_complete',{purchase_type:S.purchase,top_model:currentRanked[0]?.id||'',top_score:currentRanked[0]?.score||0,budget:S.budget});
    gtag('event','whatsapp_lead',{purchase_type:S.purchase,top_model:currentRanked[0]?.id||'',top_score:currentRanked[0]?.score||0,budget:S.budget});
   }
  }catch(e){}
