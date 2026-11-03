@@ -27,21 +27,31 @@ $js=<<<'HTML'
 <script id="cc-surf-v5-js">
 (function(){
   const api5='surf-beta-v5-api.php';
+  let v5RoadTimes={};
+  const priorTravelMin=travelMin;
+  travelMin=function(s){const r=v5RoadTimes[s.slug];return r&&Number.isFinite(Number(r.minutes))?Number(r.minutes):priorTravelMin(s);};
   profile.session_minutes=Number(initial.session_minutes||profile.session_minutes||40);
   profile.buffer_minutes=Number(initial.buffer_minutes||profile.buffer_minutes||10);
   if(!['finish_work','in_water','must_work'].includes(profile.time_mode)) profile.time_mode=profile.time_mode==='arrive'?'in_water':'finish_work';
   $('timeMode').value=profile.time_mode;$('sessionMinutes').value=profile.session_minutes;$('bufferMinutes').value=profile.buffer_minutes;
   $('sessionOut').textContent=profile.session_minutes+' min';$('bufferOut').textContent=profile.buffer_minutes+' min';
 
+  async function post5(data){const body=new URLSearchParams();Object.entries(data).forEach(([k,v])=>body.set(k,String(v)));const r=await fetch(api5,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body,cache:'no-store'});let j={};try{j=await r.json()}catch(e){}if(!r.ok)throw new Error(j.message||'Request failed');return j;}
+  async function loadV5RoadTimes(){
+    if(profile.origin_lat==null||profile.origin_lon==null){v5RoadTimes={};refresh();return;}
+    $('routeSource').textContent='Calculating road drive times to the beaches…';
+    try{const destinations=spots.map(s=>({slug:s.slug,lat:s.lat,lon:s.lon}));const j=await post5({action:'route_table',origin_lat:profile.origin_lat,origin_lon:profile.origin_lon,destinations:JSON.stringify(destinations)});v5RoadTimes=j.routes||{};$('routeSource').textContent=j.source==='road_route'?'Road driving times loaded and included in every recommendation.':'Road router unavailable — using approximate drive estimates.';refresh();}
+    catch(e){v5RoadTimes={};$('routeSource').textContent='Road router unavailable — using approximate drive estimates.';refresh();}
+  }
   function planFor(s,baseEpoch){
     const tr=travelMin(s),buf=Number(profile.buffer_minutes||10)*60,sess=Number(profile.session_minutes||40)*60,mode=profile.time_mode;
     let p={travel:tr,evalEpoch:baseEpoch,inWater:baseEpoch,leaveBase:null,leaveWater:null,arriveBack:null};
     if(tr==null)return p;const road=tr*60;
     if(mode==='finish_work'){
-      p.leaveBase=baseEpoch; p.inWater=baseEpoch+road+buf; p.evalEpoch=p.inWater; p.leaveWater=p.inWater+sess; p.arriveBack=p.leaveWater+road+buf;
-    } else if(mode==='in_water'){
+      p.leaveBase=baseEpoch;p.inWater=baseEpoch+road+buf;p.evalEpoch=p.inWater;p.leaveWater=p.inWater+sess;p.arriveBack=p.leaveWater+road+buf;
+    }else if(mode==='in_water'){
       p.inWater=baseEpoch;p.leaveBase=baseEpoch-road-buf;p.evalEpoch=baseEpoch;p.leaveWater=baseEpoch+sess;p.arriveBack=p.leaveWater+road+buf;
-    } else {
+    }else{
       p.arriveBack=baseEpoch;p.leaveWater=baseEpoch-road-buf;p.inWater=p.leaveWater-sess;p.leaveBase=p.inWater-road-buf;p.evalEpoch=p.inWater+Math.round(sess/2);
     }
     return p;
@@ -56,10 +66,10 @@ $js=<<<'HTML'
     if(profile.time_mode==='finish_work'){
       $('winnerWhen').textContent='If you finish work at '+fmtTime(profile.session_hour)+' · forecast scored around '+clock(p.evalEpoch);
       html=`<strong>In the water about ${clock(p.inWater)}</strong><span class="sub">Finish ${fmtTime(profile.session_hour)} → ~${p.travel} min drive → ${profile.buffer_minutes} min parking/change/paddle.</span><div class="ccv5-plan"><span class="ccv5-route-chip">Finish ${fmtTime(profile.session_hour)}</span><span class="ccv5-route-chip">Drive ${p.travel} min</span><span class="ccv5-route-chip">Setup ${profile.buffer_minutes} min</span><span class="ccv5-route-chip">Surf ${profile.session_minutes} min</span></div>`;
-    } else if(profile.time_mode==='in_water'){
+    }else if(profile.time_mode==='in_water'){
       $('winnerWhen').textContent='To be surfing at '+fmtTime(profile.session_hour)+' · forecast scored at that time';
       html=`<strong>Leave about ${clock(p.leaveBase)}</strong><span class="sub">~${p.travel} min drive + ${profile.buffer_minutes} min parking/change/paddle to be in the water at ${fmtTime(profile.session_hour)}.</span><div class="ccv5-plan"><span class="ccv5-route-chip">Leave ${clock(p.leaveBase)}</span><span class="ccv5-route-chip">Surf ${profile.session_minutes} min</span><span class="ccv5-route-chip">Back about ${clock(p.arriveBack)}</span></div>`;
-    } else {
+    }else{
       $('winnerWhen').textContent='If you must be back for work by '+fmtTime(profile.session_hour)+' · session planned backwards';
       html=`<strong>Leave your starting area about ${clock(p.leaveBase)}</strong><span class="sub">Surf about ${clock(p.inWater)}–${clock(p.leaveWater)} for ${profile.session_minutes} min, then ~${p.travel} min back + ${profile.buffer_minutes} min logistics to be back by ${fmtTime(profile.session_hour)}.</span><div class="ccv5-plan"><span class="ccv5-route-chip">Out ${clock(p.leaveBase)}</span><span class="ccv5-route-chip">Surf ${clock(p.inWater)}</span><span class="ccv5-route-chip">Leave beach ${clock(p.leaveWater)}</span><span class="ccv5-route-chip">Work ${fmtTime(profile.session_hour)}</span></div>`;
     }
@@ -67,12 +77,12 @@ $js=<<<'HTML'
   };
   async function drawRouteOnly(a){if(profile.origin_lat==null||profile.origin_lon==null||!map)return;try{const u=`https://router.project-osrm.org/route/v1/driving/${profile.origin_lon},${profile.origin_lat};${a.s.lon},${a.s.lat}?overview=full&geometries=geojson`;const r=await fetch(u);const j=await r.json();if(!j.routes||!j.routes[0])return;if(routeLine)routeLine.remove();routeLine=L.geoJSON(j.routes[0].geometry,{interactive:false}).addTo(map);map.fitBounds(routeLine.getBounds().pad(.12));}catch(e){}}
   const oldRefresh=refresh;refresh=function(){profile.session_minutes=Number($('sessionMinutes').value);profile.buffer_minutes=Number($('bufferMinutes').value);$('sessionOut').textContent=profile.session_minutes+' min';$('bufferOut').textContent=profile.buffer_minutes+' min';oldRefresh();updateScheduleHelp();};
-  function updateScheduleHelp(){const m=$('timeMode').value;profile.time_mode=m;let t='';if(m==='finish_work')t='CostaCams treats this as the time you become free. It adds the drive plus '+profile.buffer_minutes+' min for parking/change/paddle, then checks the forecast at the time you would actually enter the water.';else if(m==='in_water')t='CostaCams works backwards from your desired in-water time and tells you when to leave.';else t='CostaCams works backwards from your work/start deadline, including your return drive, '+profile.buffer_minutes+' min logistics and a '+profile.session_minutes+' min surf.';$('scheduleExplain').textContent=t;}
+  function updateScheduleHelp(){const m=$('timeMode').value;profile.time_mode=m;let t='';if(m==='finish_work')t='CostaCams treats this as the time you become free. It adds the road drive plus '+profile.buffer_minutes+' min for parking/change/paddle, then checks the forecast at the time you would actually enter the water.';else if(m==='in_water')t='CostaCams works backwards from your desired in-water time and tells you when to leave.';else t='CostaCams works backwards from your work/start deadline, including your return drive, '+profile.buffer_minutes+' min logistics and a '+profile.session_minutes+' min surf.';$('scheduleExplain').textContent=t;}
   ['sessionMinutes','bufferMinutes'].forEach(id=>$(id).addEventListener('input',refresh));$('timeMode').addEventListener('change',refresh);
 
-  const oldUsePostcode=$('usePostcode').onclick;$('usePostcode').onclick=async()=>{const pc=$('postcode').value.trim();$('locationState').textContent='Finding postcode area…';try{const body=new URLSearchParams({action:'postcode',postcode:pc});const r=await fetch(api5,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body,cache:'no-store'});const j=await r.json();if(!r.ok)throw new Error(j.message||'Area not found');profile.origin_lat=Number(j.lat);profile.origin_lon=Number(j.lon);profile.origin_postcode=j.postcode;profile.location_source='postcode';$('postcode').value=j.postcode;$('locationState').textContent=(j.label||('Postcode '+j.postcode))+' set as your approximate starting / return area.';if(typeof loadRoadTimes==='function')await loadRoadTimes();else refresh();}catch(e){$('locationState').textContent=e.message||'Could not find that postcode.';}};
-  const baseGeo=$('useLocation').onclick;$('useLocation').onclick=()=>{if(!navigator.geolocation){$('locationState').textContent='Location is not supported. Use postcode instead.';return}$('locationState').textContent='Requesting location permission…';navigator.geolocation.getCurrentPosition(async pos=>{profile.origin_lat=Number(pos.coords.latitude.toFixed(5));profile.origin_lon=Number(pos.coords.longitude.toFixed(5));profile.origin_postcode='';profile.location_source='browser';$('postcode').value='';$('locationState').textContent='Location point set. No street address was requested.';if(typeof loadRoadTimes==='function')await loadRoadTimes();else refresh();},()=>{$('locationState').textContent='Location not shared. Use postcode instead.';},{enableHighAccuracy:false,timeout:8000,maximumAge:300000});};
-  setTimeout(()=>{refresh();updateScheduleHelp();},50);
+  $('usePostcode').onclick=async()=>{const pc=$('postcode').value.trim();$('locationState').textContent='Finding postcode area…';try{const j=await post5({action:'postcode',postcode:pc});profile.origin_lat=Number(j.lat);profile.origin_lon=Number(j.lon);profile.origin_postcode=j.postcode;profile.location_source='postcode';$('postcode').value=j.postcode;$('locationState').textContent=(j.label||('Postcode '+j.postcode))+' set as your approximate starting / return area.';await loadV5RoadTimes();}catch(e){$('locationState').textContent=e.message||'Could not find that postcode.';}};
+  $('useLocation').onclick=()=>{if(!navigator.geolocation){$('locationState').textContent='Location is not supported. Use postcode instead.';return}$('locationState').textContent='Requesting location permission…';navigator.geolocation.getCurrentPosition(async pos=>{profile.origin_lat=Number(pos.coords.latitude.toFixed(5));profile.origin_lon=Number(pos.coords.longitude.toFixed(5));profile.origin_postcode='';profile.location_source='browser';$('postcode').value='';$('locationState').textContent='Location point set. No street address was requested.';await loadV5RoadTimes();},()=>{$('locationState').textContent='Location not shared. Use postcode instead.';},{enableHighAccuracy:false,timeout:8000,maximumAge:300000});};
+  if(profile.origin_lat!=null&&profile.origin_lon!=null)setTimeout(loadV5RoadTimes,150);else setTimeout(()=>{refresh();updateScheduleHelp();},50);
 })();
 </script>
 HTML;
