@@ -79,7 +79,7 @@ HTML;
 </section>
 HTML;
     $channelAnchor='<section class="section" id="channels">';
-    if(str_contains($html,$channelAnchor))$html=str_replace($channelAnchor,$surfHome.$channelAnchor,$html,1);
+    if(str_contains($html,$channelAnchor))$html=str_replace($channelAnchor,$surfHome.$channelAnchor,$html);
 
     // Put the decision tool in the main navigation between Map and Cameras.
     $html=str_replace('<a href="/map">Map</a><a href="/#channels">Channels</a>','<a href="/map">Map</a><a href="/#surf-match">Find a surf</a><a href="/#channels">Channels</a>',$html);
