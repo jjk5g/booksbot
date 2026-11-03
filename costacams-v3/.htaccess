@@ -1,6 +1,14 @@
 Options -Indexes
 DirectoryIndex render-stable.php
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
 RewriteEngine On
+
+# Block non-public deployment, backup and legacy directories. The active Surf Match
+# beta exposes only its v4 page and v4 API; all implementation files remain private.
+RewriteRule ^(?:ss|training-b|ccdeploy|ccdeploy-full|ccdeploy-final)(?:/|$) - [F,L,NC]
+RewriteRule ^ccdeploy-v3/?$ - [F,L,NC]
+RewriteRule ^ccdeploy-v3/(?!costacams-v3/(?:surf-match-beta-v4\.php|surf-beta-v4-api\.php)$) - [F,L,NC]
 
 # Never expose generated cache files as duplicate public URLs. Internal rewrites
 # below still work because THE_REQUEST keeps the visitor's original URL.
@@ -107,12 +115,14 @@ RewriteRule ^byron/?$ render-fast.php?slug=byron-bay [QSA,L]
 RewriteRule ^thepass/?$ render-fast.php?slug=the-pass [QSA,L]
 RewriteRule ^main-beach-byron/?$ render-fast.php?slug=byron-main-beach [QSA,L]
 
+# A one-segment path is allowed only when it resolves to a real CostaCams beach.
+# Unknown slugs go to the branded 404 page and are logged.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-z0-9-]+)/?$ render-fast.php?slug=$1 [QSA,L]
+RewriteRule ^([a-z0-9-]+)/?$ channel-router.php?slug=$1 [QSA,L]
 
 # Internal implementation files are never served directly.
-<FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest|shark-refresh|data-check|page-warm|health-debug)\.php$">
+<FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest|shark-refresh|data-check|page-warm|health-debug|surf-beta-engine|surf-brief-beta-send|channel-router)\.php$">
   Require all denied
 </FilesMatch>
 <Files "schema.sql">
