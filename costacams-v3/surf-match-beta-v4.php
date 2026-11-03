@@ -24,7 +24,7 @@ $boardBlock=<<<'HTML'
   <div class="advanced-only ccv4-advanced-fit" id="advancedFit"></div>
 </div>
 HTML;
-$html=str_replace('</aside><section class="panel results">',$boardBlock.'</aside><section class="panel results">',$html,1);
+$html=str_replace('</aside><section class="panel results">',$boardBlock.'</aside><section class="panel results">',$html);
 $html=str_replace('<button class="action" id="editSavedBtn" type="button" style="width:100%;margin-top:7px;display:none">Edit my saved profile</button>','<button class="action" id="editSavedBtn" type="button" style="width:100%;margin-top:7px;display:none">Edit my saved profile</button><button class="action" id="requestManageBtn" type="button" style="width:100%;margin-top:7px">Email me my profile link</button>',$html);
 $html=str_replace('“Send sample” sends one example only and does not subscribe you.','“Send sample” is limited to one attempt per email per day and does not subscribe you.',$html);
 
