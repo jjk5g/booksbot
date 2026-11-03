@@ -121,8 +121,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z0-9-]+)/?$ channel-router.php?slug=$1 [QSA,L]
 
-# Internal implementation files are never served directly.
+# Internal implementation and credential file types are never served directly.
 <FilesMatch "^(bootstrap|server-config|health|data-refresh|content-ingest|shark-refresh|data-check|page-warm|health-debug|surf-beta-engine|surf-brief-beta-send|channel-router)\.php$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "\.(?:pem|key)$">
   Require all denied
 </FilesMatch>
 <Files "schema.sql">
