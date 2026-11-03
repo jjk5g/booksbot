@@ -6,5 +6,7 @@ $html=ob_get_clean();
 $html=str_replace('Surf Match Beta v5 | CostaCams','Surf Match Beta v6 | CostaCams',$html);
 $html=str_replace('SURF MATCH BETA v5','SURF MATCH BETA v6',$html);
 $html=str_replace('surf-beta-v5-api.php','surf-beta-v6-api.php',$html);
+// New / legacy profiles default to the practical after-work interpretation.
+$html=str_replace("profile.time_mode=profile.time_mode==='arrive'?'in_water':'finish_work';","profile.time_mode='finish_work';",$html);
 $html=str_replace('Try a real sample email first, or subscribe and save this profile.','Try a real sample email first, or subscribe and save this profile. Emails are sent from the authenticated CostaCams mailbox to the address you enter.',$html);
 echo $html;
