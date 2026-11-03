@@ -1,6 +1,5 @@
 const $=id=>document.getElementById(id);
 const fmt=new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0});
-const BUSINESS_WHATSAPP='';
 let currentRanked=[];
 const BUSINESS_WHATSAPP='61413653521';if(new URLSearchParams(location.search).get('embed')==='1')document.body.classList.add('embed');
 const S={purchase:'first',projects:new Set(['repairs','clothes']),firstUse:3,learn:2,firstFabric:3,firstPrior:new Set(['easy','support']),current:'basic',limits:new Set(['power']),secondUse:3,secondFabric:3,performance:3,budget:600000};
