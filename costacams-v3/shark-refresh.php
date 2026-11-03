@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 if(PHP_SAPI!=='cli'){http_response_code(403);exit('CLI only');}
-require __DIR__.'/bootstrap.php';
+$boot=__DIR__.'/bootstrap.php';if(!is_file($boot))$boot='/home/u751177156/domains/costacams.com/public_html/bootstrap.php';require $boot;
 $pdo=cc_db(); if(!$pdo){fwrite(STDERR,"database unavailable\n");exit(1);}
 date_default_timezone_set('Australia/Brisbane');
 function geturl(string $u): array {$ch=curl_init($u);curl_setopt_array($ch,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_FOLLOWLOCATION=>true,CURLOPT_CONNECTTIMEOUT=>8,CURLOPT_TIMEOUT=>20,CURLOPT_ENCODING=>'',CURLOPT_USERAGENT=>'CostaCamsSharkWatch/2.0 (+https://costacams.com)']);$b=curl_exec($ch);$c=(int)curl_getinfo($ch,CURLINFO_HTTP_CODE);$e=curl_error($ch);curl_close($ch);return [$c>=200&&$c<400&&is_string($b)&&strlen($b)>100,$b?:'',"$c $e"];}
