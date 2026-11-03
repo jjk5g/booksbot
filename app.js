@@ -2,6 +2,7 @@ const $=id=>document.getElementById(id);
 const fmt=new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0});
 const BUSINESS_WHATSAPP='';
 let currentRanked=[];
+const BUSINESS_WHATSAPP='61413653521';if(new URLSearchParams(location.search).get('embed')==='1')document.body.classList.add('embed');
 const S={purchase:'first',projects:new Set(['repairs','clothes']),firstUse:3,learn:2,firstFabric:3,firstPrior:new Set(['easy','support']),current:'basic',limits:new Set(['power']),secondUse:3,secondFabric:3,performance:3,budget:600000};
 const machines=[
 {id:'singer-m1605',brand:'Singer',model:'M1605',price:330000,first:5,second:1.5,easy:5,support:4.8,portable:4.6,quiet:3.8,grow:2.5,use:2.3,fabric:2.2,perf:2.1,projects:{repairs:5,clothes:4.2,heavy:1.7,stretch:2.1,craft:4,business:1.7},limits:{power:2,features:2,speed:2,stretch:2,reliability:3,ease:5},tags:['Fácil de aprender','Compacta','Primera máquina']},
@@ -24,4 +25,23 @@ function openWhatsApp(){const text=encodeURIComponent(buildWhatsAppMessage());co
 function cap(x){return x.charAt(0).toUpperCase()+x.slice(1)}function labels(){$('firstUseVal').textContent=L.firstUse[S.firstUse];$('learnVal').textContent=L.learn[S.learn];$('firstFabricVal').textContent=L.fabric[S.firstFabric];$('secondUseVal').textContent=L.secondUse[S.secondUse];$('secondFabricVal').textContent=L.fabric[S.secondFabric];$('performanceVal').textContent=L.perf[S.performance];$('budgetVal').textContent=fmt.format(S.budget);$('count').textContent=`${5+S.projects.size+(S.purchase==='first'?S.firstPrior.size:S.limits.size)} ajustes`}
 function mode(){const first=S.purchase==='first';$('firstFlow').hidden=!first;$('secondFlow').hidden=first;$('modeSub').textContent=first?'Preguntas simples para alguien que está empezando.':'Preguntas más específicas para alguien que ya tiene experiencia.';$('modeNotice').innerHTML=first?'<b>Primera máquina</b><span>No hace falta saber cuántas puntadas, potencia o velocidad necesitás. Traducimos eso a situaciones cotidianas.</span>':'<b>Segunda máquina / upgrade</b><span>Ahora sí importa qué tenés, qué te queda corto y qué cambio querés sentir respecto de tu máquina actual.</span>';render()}
 function bindButtons(id,setKey,single=false){document.querySelectorAll(`#${id} button`).forEach(b=>b.onclick=()=>{const v=b.dataset.v;if(single){document.querySelectorAll(`#${id} button`).forEach(x=>x.classList.remove('active'));b.classList.add('active');S[setKey]=v}else{const set=S[setKey];if(set.has(v)){if(set.size>1){set.delete(v);b.classList.remove('active')}}else{set.add(v);b.classList.add('active')}}render()})}
+
+function waLabelProjects(){return [...S.projects].map(x=>({repairs:'arreglos',clothes:'ropa',heavy:'jean / lonas',stretch:'lycra / elastizados',craft:'manualidades',business:'emprendimiento'}[x])).join(', ')}
+function buildWhatsAppMessage(){
+ const lines=['Hola, completé el asesor de Máquinas de Coser Córdoba y quisiera una recomendación.',''];
+ if(S.purchase==='first'){
+  const pri=[...S.firstPrior].map(x=>({easy:'facilidad para aprender',support:'service y repuestos',portable:'que sea liviana',quiet:'que sea silenciosa',grow:'que tenga margen para crecer'}[x])).join(', ');
+  lines.push('TIPO DE COMPRA: Primera máquina','QUÉ QUIERO HACER: '+waLabelProjects(),'USO QUE IMAGINO: '+L.firstUse[S.firstUse],'QUÉ PREFIERO AL EMPEZAR: '+L.learn[S.learn],'MATERIALES: '+L.fabric[S.firstFabric],'PRIORIDADES: '+pri);
+ }else{
+  const cur={basic:'máquina familiar / básica',mechanical:'mecánica intermedia',electronic:'electrónica',overlock:'overlock',unknown:'no sé el modelo'}[S.current];
+  const lim=[...S.limits].map(x=>({power:'potencia / telas gruesas',features:'más funciones',speed:'velocidad / producción',stretch:'elastizados / terminación',reliability:'robustez / durabilidad',ease:'comodidad de uso'}[x])).join(', ');
+  lines.push('TIPO DE COMPRA: Segunda máquina / upgrade','MÁQUINA ACTUAL: '+cur,'QUÉ QUIERO HACER: '+waLabelProjects(),'QUÉ ME QUEDA CORTO: '+lim,'FRECUENCIA REAL: '+L.secondUse[S.secondUse],'MATERIAL MÁS EXIGENTE: '+L.fabric[S.secondFabric],'MEJORA QUE BUSCO: '+L.perf[S.performance]);
+ }
+ lines.push('PRESUPUESTO APROXIMADO: '+fmt.format(S.budget),'','OPCIONES SUGERIDAS POR EL ASESOR:');
+ currentRanked.forEach((m,i)=>lines.push((i+1)+'. '+m.brand+' '+m.model+' — '+m.score+'% de compatibilidad. '+cap(reason(m))));
+ lines.push('','¿Cuál me recomendarían y por qué?');
+ return lines.join('\n');
+}
+function openWhatsApp(){const text=encodeURIComponent(buildWhatsAppMessage());window.open('https://wa.me/'+BUSINESS_WHATSAPP+'?text='+text,'_blank','noopener')}
+
 document.querySelectorAll('#purchase button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#purchase button').forEach(x=>x.classList.remove('active'));b.classList.add('active');S.purchase=b.dataset.v;mode()});bindButtons('projects','projects');bindButtons('firstPrior','firstPrior');bindButtons('current','current',true);bindButtons('limits','limits');['firstUse','learn','firstFabric','secondUse','secondFabric','performance','budget'].forEach(id=>$(id).oninput=e=>{S[id]=Number(e.target.value);render()});$('sellerBtn').onclick=()=>{$('sellerBody').hidden=!$('sellerBody').hidden;$('sellerBtn').textContent=$('sellerBody').hidden?'Activar':'Ocultar'};$('copyBtn').onclick=async()=>{const t=$('sellerSummary').textContent;try{await navigator.clipboard.writeText(t);$('copyBtn').textContent='Copiado';setTimeout(()=>$('copyBtn').textContent='Copiar resumen',1200)}catch(e){alert(t)}};$('whatsappBtn').onclick=openWhatsApp;mode();
