@@ -49,6 +49,9 @@ $canonical='https://costacams.com/event.php?slug='.rawurlencode($slug);
 <meta property="og:description" content="<?=$esc($meta)?>">
 <meta property="og:type" content="article">
 <meta property="og:url" content="<?=$esc($canonical)?>">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WLK1YD519"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6WLK1YD519');</script>
+<script defer src="/cc-analytics.js?v=20261107-01"></script>
 <style>
 :root{color-scheme:dark;--bg:#050708;--panel:#0d1518;--line:#283c43;--aqua:#50dcff;--text:#eaf3f5;--muted:#a0b0b6}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -15%,#15313a,#050708 55%);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
