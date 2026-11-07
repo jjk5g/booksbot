@@ -37,7 +37,7 @@ try{
       'Known-good static index missing');
   $surfHash=is_file($root.'/surf-match-beta-v13.php')?hash_file('sha256',$root.'/surf-match-beta-v13.php'):'';
   $abort($surfHash!=='','Surf Match v13 missing; do not promote');
-  $files=['render-fast.php','surf-match.php','map-clean.php','event.php','admin.php'];
+  $files=['render-fast.php','surf-match.php','map-clean.php','event.php','admin.php','page-warm.php'];
   $prepared=[];
   foreach($files as $name)$existing[$name]=$get($root.'/'.$name);
   foreach(['cc-analytics.js','analytics-collect.php','analytics-dashboard.php'] as $name){
@@ -74,6 +74,11 @@ TXT;
 TXT;
   $adminBlock=$segment($adminStage,'<div class="box" style="background:#0d2028"', "\n<div class=\"box\"><h2>Open camera reports");
   $prepared['admin.php']=$patch($existing['admin.php'],$adminAnchor,$adminBlock."\n");
+  // Keep the static homepage safety net: its warmer must preserve calendar and analytics.
+  $warmNeedle="'cc-home-explore','id=\"surf-match\"','see the coast.','pick your beach.'";
+  $abort(substr_count($existing['page-warm.php'],$warmNeedle)===1
+      && !str_contains($existing['page-warm.php'],"'cc-analytics.js'"),'Warm validator mismatch');
+  $prepared['page-warm.php']=str_replace($warmNeedle,$warmNeedle.",'id=\"calendar\"','cc-analytics.js'",$existing['page-warm.php']);
   foreach($prepared as $name=>$body){
     $abort(strlen($body)>200,'Invalid candidate '.$name);
     if(str_ends_with($name,'.php')){
