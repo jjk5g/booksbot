@@ -60,7 +60,8 @@ TXT;
   $mapStage=$get($stage.'/map-clean.php');
   $map=$segment($mapStage,'// Track the full map',"\necho \$html;");
   $mapAnchor="\necho \$html;";
-  $prepared['map-clean.php']=$patch($existing['map-clean.php'],$mapAnchor,"\n".$map.$mapAnchor);
+  $abort(substr_count($existing['map-clean.php'],$mapAnchor)===1 && !str_contains($existing['map-clean.php'],'cc-analytics.js'),'Map live anchor mismatch');
+  $prepared['map-clean.php']=str_replace($mapAnchor,"\n".$map.$mapAnchor,$existing['map-clean.php']);
   $eventStage=$get($stage.'/event.php');
   $eventAnchor=<<<'TXT'
 <meta property="og:url" content="<?=$esc($canonical)?>">
