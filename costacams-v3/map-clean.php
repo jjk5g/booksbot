@@ -150,4 +150,19 @@ $lazy=<<<'HTML'
 HTML;
 $html=str_replace('</body>',$lazy.'</body>',$html);
 
+
+// Track the full map, never an embedded map (that would double-count homepage visits).
+$mapAnalytics=<<<'HTML'
+<script id="cc-map-analytics-setup">
+(function(){
+ if(window.self!==window.top)return;
+ var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-6WLK1YD519';document.head.appendChild(s);
+ window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};
+ gtag('js',new Date());gtag('config','G-6WLK1YD519');
+})();
+</script>
+<script defer src="/cc-analytics.js?v=20261107-01"></script>
+HTML;
+$html=str_replace('</head>',$mapAnalytics.'</head>',$html);
+
 echo $html;
