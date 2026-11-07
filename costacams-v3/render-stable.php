@@ -132,6 +132,8 @@ HTML;
 
 // Optional calendar module. Errors never take down the camera homepage.
 if($slug===''){
+    // Keep the approved production headline when the static homepage is warmed.
+    $html=str_replace('<h1>Your coast.<br>Live.</h1>','<h1>See the coast. Pick your beach.</h1>',$html);
     try {
         $calFile=__DIR__.'/coast-calendar.php';
         if(is_readable($calFile) && str_contains($html,'<section class="section" id="events">')){
