@@ -20,7 +20,7 @@ $checks=['doctype'=>stripos($html,'<!doctype html')!==false,
     'calendar_js'=>str_contains($html,'id="cc-cal-script"'),
     'calendar_data'=>str_contains($html,'id="ccCalData"'),
     'calendar_links'=>str_contains($html,'/event.php?slug='),
-    'hero'=>str_contains(strtolower($html),'pick your beach')];
+    'hero'=>str_contains(strtolower($html),'pick your beach')||str_contains(strtolower($html),'your coast.')];
 $count=-1;
 if(preg_match('~<script type="application/json" id="ccCalData">(.*?)</script>~s',$html,$m)){
  $events=json_decode($m[1],true);
