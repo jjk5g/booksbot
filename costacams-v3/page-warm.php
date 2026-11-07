@@ -23,7 +23,7 @@ function cc_warm_validate(string $body,int $code,string $dest): array {
   // with a partial/error render, even when PHP returned HTTP 200.
   if($name==='home.html'){
     if($len<20000)return [false,"home_too_small_$len"];
-    foreach(['<title>costacams','id="channels"','cc-home-explore','id="surf-match"','see the coast.','pick your beach.'] as $marker){
+    foreach(['<title>costacams','id="channels"','cc-home-explore','id="surf-match"','see the coast.','pick your beach.','id="calendar"','cc-analytics.js'] as $marker){
       if(!str_contains($lower,$marker))return [false,'home_marker_missing_'.preg_replace('/[^a-z0-9]+/','_',$marker)];
     }
   }
