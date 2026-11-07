@@ -37,6 +37,10 @@ try{
     require __DIR__.'/surf-match-beta-v13.php';
     $page=(string)ob_get_clean();
     $mobileCss='<link rel="stylesheet" href="/surf-match-mobile-v13.css?v=20261103-1" media="(max-width: 920px)">';
+    // Tracking only: do not alter the v13 interface or recommendation engine.
+    $mobileCss.='<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WLK1YD519"></script>';
+    $mobileCss.='<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-6WLK1YD519");</script>';
+    $mobileCss.='<script defer src="/cc-analytics.js?v=20261107-01"></script>';
     if(stripos($page,'</head>')!==false){
         $page=str_ireplace('</head>',$mobileCss.'</head>',$page);
     }
