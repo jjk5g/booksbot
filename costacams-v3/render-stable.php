@@ -129,4 +129,19 @@ HTML;
     $html=str_replace('else setTimeout(loadMap,160);','else setTimeout(loadMap,1000);',$html);
 }
 
+
+// Optional calendar module. Errors never take down the camera homepage.
+if($slug===''){
+    try {
+        $calFile=__DIR__.'/coast-calendar.php';
+        if(is_readable($calFile) && str_contains($html,'<section class="section" id="events">')){
+            require_once $calFile;
+            $calendarHtml=cc_calendar_home();
+            if(str_contains($calendarHtml,'id="calendar"') && str_contains($calendarHtml,'id="ccCalData"')){
+                $html=str_replace('<section class="section" id="events">',$calendarHtml.'<section class="section" id="events">',$html);
+                $html=str_replace('<a href="/#events">Events</a>','<a href="/#calendar">Calendar</a><a href="/#events">Events</a>',$html);
+            }
+        }
+    } catch(Throwable $e) { error_log('CostaCams calendar skipped safely: '.get_class($e)); }
+}
 echo $html;
