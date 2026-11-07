@@ -58,6 +58,8 @@ $ga=<<<'HTML'
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6WLK1YD519');</script>
 HTML;
 $html=str_replace('</head>',$ga.'</head>',$html);
+// Fast first-party analytics also works when the page itself is served from static cache.
+$html=str_replace('</head>','<script defer src="/cc-analytics.js?v=20261107-01"></script></head>',$html);
 $html=str_replace('<meta name="description"','<meta name="robots" content="index,follow,max-image-preview:large"><meta name="description"',$html);
 
 $seoCss=<<<'HTML'
