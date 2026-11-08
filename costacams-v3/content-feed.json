@@ -1,12 +1,29 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T05:51:48+10:00",
+  "generated_at": "2026-11-09T05:56:41+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
     "Byron Shire"
   ],
   "items": [
+    {
+      "slug": "ritual-tweed-museum-2026",
+      "category": "event",
+      "event_type": "culture",
+      "region": "Tweed Coast",
+      "locality": "Murwillumbah",
+      "title": "Ritual – Tweed Regional Museum",
+      "summary": "Free exhibition exploring the everyday rituals and traditions of Tweed communities, through 21 November.",
+      "body": "Ritual at Tweed Regional Museum explores traditions, seasons and everyday practices that connect communities. The free exhibition opened 29 July 2026 and continues through 21 November 2026.",
+      "source_name": "Tweed Regional Museum",
+      "source_url": "https://museum.tweed.nsw.gov.au/whats-on/news-updates/media-releases/1714435-from-shipwrecks-to-a-cup-of-tea-new-museum-exhibition-finds-meaning-in-the-everyday",
+      "published_at": "2026-11-08T05:51:48+10:00",
+      "event_date": "2026-07-29",
+      "event_end_date": "2026-11-21",
+      "external_key": "tweed-museum-ritual-20260729",
+      "sort_order": 10
+    },
     {
       "slug": "beach-life-nicholas-harding-tweed-2026",
       "category": "event",
@@ -22,7 +39,7 @@
       "event_date": "2026-08-28",
       "event_end_date": "2026-11-22",
       "external_key": "tweed-gallery-beach-life-nicholas-harding-2026",
-      "sort_order": 10
+      "sort_order": 20
     },
     {
       "slug": "pan-pacific-masters-games-gold-coast-2026",
@@ -39,7 +56,7 @@
       "event_date": "2026-11-06",
       "event_end_date": "2026-11-15",
       "external_key": "gold-coast-pan-pacific-masters-games-2026",
-      "sort_order": 20
+      "sort_order": 30
     },
     {
       "slug": "dune-rats-tracks-party-hotel-brunswick-2026-11-06",
@@ -56,41 +73,24 @@
       "event_date": "2026-11-06T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-tracks-party-hotel-brunswick-200731",
-      "sort_order": 30
+      "sort_order": 40
     },
     {
-      "slug": "hota-farmers-artisan-markets-2026-11-08",
+      "slug": "tallebudgera-wicked-wednesday-swim-2026-11-11",
       "category": "event",
-      "event_type": "market",
+      "event_type": "sport",
       "region": "Gold Coast",
-      "locality": "Surfers Paradise",
-      "title": "HOTA Farmers & Artisan Markets",
-      "summary": "Sunday morning market at the HOTA lakeside precinct with produce, artisan food and handmade goods.",
-      "body": "HOTA confirms its Farmers & Artisan Markets take place every Sunday from 6am to 11:30am, coordinated by Goodwill Projects. The 8 November edition takes place in the lakeside HOTA precinct.",
-      "source_name": "HOTA – Home of the Arts",
-      "source_url": "https://hota.com.au/visit/our-precinct",
-      "published_at": null,
-      "event_date": "2026-11-08T06:00:00+10:00",
-      "event_end_date": "2026-11-08T11:30:00+10:00",
-      "external_key": "gold-coast-hota-farmers-artisan-markets-2026-11-08",
-      "sort_order": 120
-    },
-    {
-      "slug": "coastal-markets-coolangatta-2026-11-08",
-      "category": "event",
-      "event_type": "market",
-      "region": "Gold Coast",
-      "locality": "Coolangatta",
-      "title": "The Coastal Markets – Coolangatta",
-      "summary": "Free beachfront artisan markets at Queen Elizabeth Park on Sunday 8 November.",
-      "body": "The City of Gold Coast event calendar confirms the Coolangatta Coastal Markets at Queen Elizabeth Park, 60 Marine Parade, on Sunday 8 November 2026 from 8am to 2pm. Browse handmade art, fashion, gifts and homewares from local and visiting vendors.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events/The-Coastal-Markets-Coolangatta",
-      "published_at": null,
-      "event_date": "2026-11-08T08:00:00+10:00",
-      "event_end_date": "2026-11-08T14:00:00+10:00",
-      "external_key": "gold-coast-coastal-markets-coolangatta-20261108",
-      "sort_order": 130
+      "locality": "Palm Beach",
+      "title": "Wicked Wednesday community ocean swim at Tallebudgera Creek",
+      "summary": "Early-morning coached open-water swim at Tallebudgera Creek Beach on Wednesday 11 November, 5:30–6:30am.",
+      "body": "City of Gold Coast's Active & Healthy program lists a professionally coached community swim on Tallebudgera Creek Beach, meeting near Neptune's Kiosk, on 11 November 2026 from 5:30am to 6:30am. The program includes ability groups and water-safety guidance.",
+      "source_name": "City of Gold Coast",
+      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Active-Healthy-program/Active-Healthy-calendar/Saltwater-Swimmers-GCSS094",
+      "published_at": "2026-11-09T05:56:41+10:00",
+      "event_date": "2026-11-11T05:30:00+10:00",
+      "event_end_date": "2026-11-11T06:30:00+10:00",
+      "external_key": "goldcoast-saltwater-swimmers-20261111",
+      "sort_order": 50
     },
     {
       "slug": "miami-marketta-viva-la-salsa-2026-11-12",
@@ -107,7 +107,24 @@
       "event_date": "2026-11-12",
       "event_end_date": null,
       "external_key": "miami-marketta-miami-marketta-viva-la-salsa-2026-11-12",
-      "sort_order": 140
+      "sort_order": 60
+    },
+    {
+      "slug": "bangalow-show-2026",
+      "category": "event",
+      "event_type": "culture",
+      "region": "Byron Shire",
+      "locality": "Bangalow",
+      "title": "Bangalow Show 2026",
+      "summary": "Two-day agricultural show with livestock competitions, local produce and family activities at Bangalow Showgrounds.",
+      "body": "The Bangalow Show takes place on 13–14 November 2026 at Bangalow Showgrounds, Market Street. The community show features agricultural competitions, pavilion exhibits, local produce and family entertainment.",
+      "source_name": "ByronBay.com",
+      "source_url": "https://byronbay.com/events/bangalow-show-2026/",
+      "published_at": "2026-11-08T05:51:48+10:00",
+      "event_date": "2026-11-13",
+      "event_end_date": "2026-11-14",
+      "external_key": "byron-bangalow-show-20261113",
+      "sort_order": 70
     },
     {
       "slug": "murwillumbah-after-dark-2026-11-13",
@@ -124,7 +141,24 @@
       "event_date": "2026-11-13",
       "event_end_date": null,
       "external_key": "visit-tweed-murwillumbah-after-dark-20261113",
-      "sort_order": 150
+      "sort_order": 80
+    },
+    {
+      "slug": "byron-abbatribute-theatre-2026-11-13",
+      "category": "event",
+      "event_type": "music",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "ABBA Thank You for the Music at Byron Theatre",
+      "summary": "ABBA tribute concert at Byron Theatre on Friday 13 November, 7:30–9:50pm.",
+      "body": "A ticketed two-hour tribute show celebrating ABBA's songs and story takes place at Byron Theatre, 69 Jonson Street, Byron Bay, on Friday 13 November 2026 from 7:30pm to 9:50pm.",
+      "source_name": "ByronBay.com",
+      "source_url": "https://byronbay.com/events/abba-thank-you-for-the-music/",
+      "published_at": "2026-11-09T05:56:41+10:00",
+      "event_date": "2026-11-13T19:30:00+11:00",
+      "event_end_date": "2026-11-13T21:50:00+11:00",
+      "external_key": "byron-theatre-abba-tribute-20261113",
+      "sort_order": 90
     },
     {
       "slug": "kingscliff-lions-beachside-markets-2026-11-14",
@@ -141,7 +175,7 @@
       "event_date": "2026-11-14T08:00:00+11:00",
       "event_end_date": "2026-11-14T13:00:00+11:00",
       "external_key": "tweed-kingscliff-lions-market-20261114",
-      "sort_order": 160
+      "sort_order": 100
     },
     {
       "slug": "miami-marketta-cherry-pickers-2026-11-14",
@@ -158,7 +192,24 @@
       "event_date": "2026-11-14T09:00:00+10:00",
       "event_end_date": null,
       "external_key": "miami-marketta-miami-marketta-cherry-pickers-2026-11-14",
-      "sort_order": 170
+      "sort_order": 110
+    },
+    {
+      "slug": "byron-twilight-market-2026-11-14",
+      "category": "event",
+      "event_type": "market",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "Byron Twilight Market",
+      "summary": "Local arts, crafts, food and live music at Railway Park on Saturday 14 November, 4–9pm.",
+      "body": "The Byron Twilight Market brings local makers, designers and musicians to Railway Park in Byron Bay on Saturday 14 November 2026, from 4pm to 9pm. The market is part of a seasonal Saturday series.",
+      "source_name": "ByronBay.com",
+      "source_url": "https://byronbay.com/events/byron-twilight-market/",
+      "published_at": "2026-11-09T05:56:41+10:00",
+      "event_date": "2026-11-14T16:00:00+11:00",
+      "event_end_date": "2026-11-14T21:00:00+11:00",
+      "external_key": "byron-twilight-market-20261114",
+      "sort_order": 120
     },
     {
       "slug": "pottsville-beach-markets-2026-11-15",
@@ -175,7 +226,7 @@
       "event_date": "2026-11-15T07:00:00+11:00",
       "event_end_date": "2026-11-15T13:00:00+11:00",
       "external_key": "tweed-pottsville-beach-market-20261115",
-      "sort_order": 180
+      "sort_order": 130
     },
     {
       "slug": "coastal-markets-broadbeach-2026-11-15",
@@ -192,7 +243,41 @@
       "event_date": "2026-11-15T08:00:00+10:00",
       "event_end_date": "2026-11-15T14:00:00+10:00",
       "external_key": "gold-coast-coastal-markets-broadbeach-20261115",
-      "sort_order": 190
+      "sort_order": 140
+    },
+    {
+      "slug": "bright-lights-awards-byron-2026",
+      "category": "event",
+      "event_type": "culture",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "Bright Lights Awards 2026",
+      "summary": "Local screen talent celebrated at Byron Theatre on Sunday 15 November.",
+      "body": "Bright Lights Awards celebrates local screen talent at Byron Theatre, Byron Bay, on Sunday 15 November 2026 from 7pm. Tickets are required.",
+      "source_name": "ByronBay.com",
+      "source_url": "https://byronbay.com/events/bright-lights-awards-2026/",
+      "published_at": "2026-11-08T05:51:48+10:00",
+      "event_date": "2026-11-15T19:00:00+11:00",
+      "event_end_date": null,
+      "external_key": "byron-bright-lights-20261115",
+      "sort_order": 150
+    },
+    {
+      "slug": "all-day-i-dream-beach-hotel-2026",
+      "category": "event",
+      "event_type": "music",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "All Day I Dream of Australia – Byron Bay",
+      "summary": "Melodic electronic music at the beachfront Beach Hotel on Friday 20 November.",
+      "body": "All Day I Dream of Australia is scheduled at the Beach Hotel in Byron Bay on Friday 20 November 2026 from 6pm. Ticketed event; confirm lineup and ticket availability with the venue.",
+      "source_name": "ByronBay.com",
+      "source_url": "https://byronbay.com/events/all-day-i-dream-of-australia-byron-bay/",
+      "published_at": "2026-11-08T05:51:48+10:00",
+      "event_date": "2026-11-20T18:00:00+11:00",
+      "event_end_date": null,
+      "external_key": "byron-all-day-i-dream-20261120",
+      "sort_order": 160
     },
     {
       "slug": "kingscliff-triathlon-2026-11",
@@ -209,7 +294,7 @@
       "event_date": "2026-11-21",
       "event_end_date": "2026-11-22",
       "external_key": "austriathlon-kingscliff-triathlon-20261121-22",
-      "sort_order": 200
+      "sort_order": 170
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -226,7 +311,7 @@
       "event_date": "2026-11-27T10:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 210
+      "sort_order": 180
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -243,7 +328,24 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 220
+      "sort_order": 190
+    },
+    {
+      "slug": "tweed-gallery-summer-opening-2026-11-27",
+      "category": "event",
+      "event_type": "culture",
+      "region": "Tweed Coast",
+      "locality": "Murwillumbah",
+      "title": "Tweed Regional Gallery summer exhibition opening",
+      "summary": "Free summer exhibition opening celebrations at Tweed Regional Gallery on Friday 27 November, 6–8pm.",
+      "body": "Tweed Regional Gallery will host free summer exhibition opening celebrations on Friday 27 November 2026 from 6pm to 8pm, featuring Beautiful Tensions: Gray Street Workshop celebrates forty years, The Drink by Brendan Kelly, and Attend the Weather by Kinza Larmor. Bookings are essential.",
+      "source_name": "Tweed Regional Gallery",
+      "source_url": "https://gallery.tweed.nsw.gov.au/whats-on/activities-events/workshops-openings-events",
+      "published_at": "2026-11-09T05:56:41+10:00",
+      "event_date": "2026-11-27T18:00:00+11:00",
+      "event_end_date": "2026-11-27T20:00:00+11:00",
+      "external_key": "tweed-gallery-summer-opening-20261127",
+      "sort_order": 200
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -260,7 +362,24 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 230
+      "sort_order": 210
+    },
+    {
+      "slug": "kingscliff-carols-by-coast-2026-12-11",
+      "category": "event",
+      "event_type": "community",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Carols by the Coast 2026",
+      "summary": "Kingscliff's Carols by the Coast is listed for Friday 11 December in Tweed Shire Council's supported events program.",
+      "body": "Tweed Shire Council's 2026–27 events sponsorship allocation confirms Carols by the Coast for 11 December 2026. The council listing confirms the date and support allocation but does not provide a verified start time; check the organiser for further program details.",
+      "source_name": "Tweed Shire Council",
+      "source_url": "https://www.tweed.nsw.gov.au/community/tweed-event-hub/sponsorship-support",
+      "published_at": "2026-11-09T05:56:41+10:00",
+      "event_date": "2026-12-11",
+      "event_end_date": null,
+      "external_key": "tweed-carols-by-the-coast-20261211",
+      "sort_order": 220
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -277,6 +396,23 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
+      "sort_order": 230
+    },
+    {
+      "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
+      "category": "news",
+      "event_type": "coast_news",
+      "region": "Gold Coast",
+      "locality": "Miami / Mermaid Beach / Surfers Paradise / Main Beach",
+      "title": "Gold Coast reports 1.2 million cubic metres of sand restored to beaches",
+      "summary": "City reports major 2026 offshore dredging works replenished beaches from Miami to Main Beach.",
+      "body": "In an 8 October 2026 update, City of Gold Coast said offshore dredging between April and October had returned approximately 1.2 million cubic metres of sand to Gold Coast beaches, including Miami, Mermaid Beach, Surfers Paradise and Main Beach. The work was part of recovery and beach nourishment efforts following Tropical Cyclone Alfred.",
+      "source_name": "City of Gold Coast",
+      "source_url": "https://www.goldcoast.qld.gov.au/Council/City-news/dredge-update",
+      "published_at": "2026-10-08",
+      "event_date": null,
+      "event_end_date": null,
+      "external_key": "goldcoast-council-dredge-update-20261008",
       "sort_order": 240
     },
     {
@@ -295,74 +431,6 @@
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
       "sort_order": 250
-    },
-    {
-      "slug": "bangalow-show-2026",
-      "category": "event",
-      "event_type": "culture",
-      "region": "Byron Shire",
-      "locality": "Bangalow",
-      "title": "Bangalow Show 2026",
-      "summary": "Two-day agricultural show with livestock competitions, local produce and family activities at Bangalow Showgrounds.",
-      "body": "The Bangalow Show takes place on 13–14 November 2026 at Bangalow Showgrounds, Market Street. The community show features agricultural competitions, pavilion exhibits, local produce and family entertainment.",
-      "source_name": "ByronBay.com",
-      "source_url": "https://byronbay.com/events/bangalow-show-2026/",
-      "published_at": "2026-11-08T05:51:48+10:00",
-      "event_date": "2026-11-13",
-      "event_end_date": "2026-11-14",
-      "external_key": "byron-bangalow-show-20261113",
-      "sort_order": 260
-    },
-    {
-      "slug": "bright-lights-awards-byron-2026",
-      "category": "event",
-      "event_type": "culture",
-      "region": "Byron Shire",
-      "locality": "Byron Bay",
-      "title": "Bright Lights Awards 2026",
-      "summary": "Local screen talent celebrated at Byron Theatre on Sunday 15 November.",
-      "body": "Bright Lights Awards celebrates local screen talent at Byron Theatre, Byron Bay, on Sunday 15 November 2026 from 7pm. Tickets are required.",
-      "source_name": "ByronBay.com",
-      "source_url": "https://byronbay.com/events/bright-lights-awards-2026/",
-      "published_at": "2026-11-08T05:51:48+10:00",
-      "event_date": "2026-11-15T19:00:00+11:00",
-      "event_end_date": null,
-      "external_key": "byron-bright-lights-20261115",
-      "sort_order": 270
-    },
-    {
-      "slug": "all-day-i-dream-beach-hotel-2026",
-      "category": "event",
-      "event_type": "music",
-      "region": "Byron Shire",
-      "locality": "Byron Bay",
-      "title": "All Day I Dream of Australia – Byron Bay",
-      "summary": "Melodic electronic music at the beachfront Beach Hotel on Friday 20 November.",
-      "body": "All Day I Dream of Australia is scheduled at the Beach Hotel in Byron Bay on Friday 20 November 2026 from 6pm. Ticketed event; confirm lineup and ticket availability with the venue.",
-      "source_name": "ByronBay.com",
-      "source_url": "https://byronbay.com/events/all-day-i-dream-of-australia-byron-bay/",
-      "published_at": "2026-11-08T05:51:48+10:00",
-      "event_date": "2026-11-20T18:00:00+11:00",
-      "event_end_date": null,
-      "external_key": "byron-all-day-i-dream-20261120",
-      "sort_order": 280
-    },
-    {
-      "slug": "ritual-tweed-museum-2026",
-      "category": "event",
-      "event_type": "culture",
-      "region": "Tweed Coast",
-      "locality": "Murwillumbah",
-      "title": "Ritual – Tweed Regional Museum",
-      "summary": "Free exhibition exploring the everyday rituals and traditions of Tweed communities, through 21 November.",
-      "body": "Ritual at Tweed Regional Museum explores traditions, seasons and everyday practices that connect communities. The free exhibition opened 29 July 2026 and continues through 21 November 2026.",
-      "source_name": "Tweed Regional Museum",
-      "source_url": "https://museum.tweed.nsw.gov.au/whats-on/news-updates/media-releases/1714435-from-shipwrecks-to-a-cup-of-tea-new-museum-exhibition-finds-meaning-in-the-everyday",
-      "published_at": "2026-11-08T05:51:48+10:00",
-      "event_date": "2026-07-29",
-      "event_end_date": "2026-11-21",
-      "external_key": "tweed-museum-ritual-20260729",
-      "sort_order": 290
     }
   ],
   "shark_alerts": [
