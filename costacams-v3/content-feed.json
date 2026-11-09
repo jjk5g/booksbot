@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T05:56:41+10:00",
+  "generated_at": "2026-11-10T06:24:58+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -59,23 +59,6 @@
       "sort_order": 30
     },
     {
-      "slug": "dune-rats-tracks-party-hotel-brunswick-2026-11-06",
-      "category": "event",
-      "event_type": "music",
-      "region": "Byron Shire",
-      "locality": "Brunswick Heads",
-      "title": "The Tracks Party Tour at Hotel Brunswick",
-      "summary": "Dune Rats, HEADSEND, Special Features and Speira play Hotel Brunswick on Friday night.",
-      "body": "Moshtix confirms The Tracks Party Tour at Hotel Brunswick for Friday 6 November 2026 from 6pm, featuring Dune Rats, HEADSEND, Special Features and Speira. The Brunswick Heads show is an 18+ event.",
-      "source_name": "Moshtix / My Jamz Touring",
-      "source_url": "https://moshtix.com.au/v2/event/the-tracks-party-tour-at-hotel-brunswick-ft-dune-rats-headsend-special-features/200731",
-      "published_at": null,
-      "event_date": "2026-11-06T18:00:00+11:00",
-      "event_end_date": null,
-      "external_key": "moshtix-tracks-party-hotel-brunswick-200731",
-      "sort_order": 40
-    },
-    {
       "slug": "tallebudgera-wicked-wednesday-swim-2026-11-11",
       "category": "event",
       "event_type": "sport",
@@ -90,7 +73,7 @@
       "event_date": "2026-11-11T05:30:00+10:00",
       "event_end_date": "2026-11-11T06:30:00+10:00",
       "external_key": "goldcoast-saltwater-swimmers-20261111",
-      "sort_order": 50
+      "sort_order": 40
     },
     {
       "slug": "miami-marketta-viva-la-salsa-2026-11-12",
@@ -107,7 +90,7 @@
       "event_date": "2026-11-12",
       "event_end_date": null,
       "external_key": "miami-marketta-miami-marketta-viva-la-salsa-2026-11-12",
-      "sort_order": 60
+      "sort_order": 50
     },
     {
       "slug": "bangalow-show-2026",
@@ -124,7 +107,7 @@
       "event_date": "2026-11-13",
       "event_end_date": "2026-11-14",
       "external_key": "byron-bangalow-show-20261113",
-      "sort_order": 70
+      "sort_order": 60
     },
     {
       "slug": "murwillumbah-after-dark-2026-11-13",
@@ -141,7 +124,7 @@
       "event_date": "2026-11-13",
       "event_end_date": null,
       "external_key": "visit-tweed-murwillumbah-after-dark-20261113",
-      "sort_order": 80
+      "sort_order": 70
     },
     {
       "slug": "byron-abbatribute-theatre-2026-11-13",
@@ -158,7 +141,7 @@
       "event_date": "2026-11-13T19:30:00+11:00",
       "event_end_date": "2026-11-13T21:50:00+11:00",
       "external_key": "byron-theatre-abba-tribute-20261113",
-      "sort_order": 90
+      "sort_order": 80
     },
     {
       "slug": "kingscliff-lions-beachside-markets-2026-11-14",
@@ -175,7 +158,7 @@
       "event_date": "2026-11-14T08:00:00+11:00",
       "event_end_date": "2026-11-14T13:00:00+11:00",
       "external_key": "tweed-kingscliff-lions-market-20261114",
-      "sort_order": 100
+      "sort_order": 90
     },
     {
       "slug": "miami-marketta-cherry-pickers-2026-11-14",
@@ -192,7 +175,7 @@
       "event_date": "2026-11-14T09:00:00+10:00",
       "event_end_date": null,
       "external_key": "miami-marketta-miami-marketta-cherry-pickers-2026-11-14",
-      "sort_order": 110
+      "sort_order": 100
     },
     {
       "slug": "byron-twilight-market-2026-11-14",
@@ -209,7 +192,7 @@
       "event_date": "2026-11-14T16:00:00+11:00",
       "event_end_date": "2026-11-14T21:00:00+11:00",
       "external_key": "byron-twilight-market-20261114",
-      "sort_order": 120
+      "sort_order": 110
     },
     {
       "slug": "pottsville-beach-markets-2026-11-15",
@@ -226,7 +209,7 @@
       "event_date": "2026-11-15T07:00:00+11:00",
       "event_end_date": "2026-11-15T13:00:00+11:00",
       "external_key": "tweed-pottsville-beach-market-20261115",
-      "sort_order": 130
+      "sort_order": 120
     },
     {
       "slug": "coastal-markets-broadbeach-2026-11-15",
@@ -243,7 +226,7 @@
       "event_date": "2026-11-15T08:00:00+10:00",
       "event_end_date": "2026-11-15T14:00:00+10:00",
       "external_key": "gold-coast-coastal-markets-broadbeach-20261115",
-      "sort_order": 140
+      "sort_order": 130
     },
     {
       "slug": "bright-lights-awards-byron-2026",
@@ -260,7 +243,7 @@
       "event_date": "2026-11-15T19:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-bright-lights-20261115",
-      "sort_order": 150
+      "sort_order": 140
     },
     {
       "slug": "all-day-i-dream-beach-hotel-2026",
@@ -277,7 +260,7 @@
       "event_date": "2026-11-20T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-all-day-i-dream-20261120",
-      "sort_order": 160
+      "sort_order": 150
     },
     {
       "slug": "kingscliff-triathlon-2026-11",
@@ -294,7 +277,7 @@
       "event_date": "2026-11-21",
       "event_end_date": "2026-11-22",
       "external_key": "austriathlon-kingscliff-triathlon-20261121-22",
-      "sort_order": 170
+      "sort_order": 160
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -311,7 +294,7 @@
       "event_date": "2026-11-27T10:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 180
+      "sort_order": 170
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -328,7 +311,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 190
+      "sort_order": 180
     },
     {
       "slug": "tweed-gallery-summer-opening-2026-11-27",
@@ -345,7 +328,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": "2026-11-27T20:00:00+11:00",
       "external_key": "tweed-gallery-summer-opening-20261127",
-      "sort_order": 200
+      "sort_order": 190
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -362,7 +345,7 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 210
+      "sort_order": 200
     },
     {
       "slug": "kingscliff-carols-by-coast-2026-12-11",
@@ -379,7 +362,7 @@
       "event_date": "2026-12-11",
       "event_end_date": null,
       "external_key": "tweed-carols-by-the-coast-20261211",
-      "sort_order": 220
+      "sort_order": 210
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -396,7 +379,7 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 230
+      "sort_order": 220
     },
     {
       "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
@@ -413,7 +396,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 240
+      "sort_order": 230
     },
     {
       "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
@@ -430,7 +413,92 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
+      "sort_order": 240
+    },
+    {
+      "slug": "new-brighton-farmers-market-2026-11-10",
+      "category": "event",
+      "event_type": "market",
+      "region": "Byron Shire",
+      "locality": "New Brighton",
+      "title": "New Brighton Farmers Market",
+      "summary": "Beachside farmers market at New Brighton Oval on Tuesday 10 November, 8–11am.",
+      "body": "The New Brighton Farmers Market is scheduled for Tuesday 10 November 2026 at New Brighton Oval, with local produce, baked goods and breakfast options. The market is community-run and close to the coast.",
+      "source_name": "ByronBay.com",
+      "source_url": "https://byronbay.com/events/new-brighton-farmers-market/",
+      "published_at": "2026-11-10T06:24:58+10:00",
+      "event_date": "2026-11-10T08:00:00+11:00",
+      "event_end_date": "2026-11-10T11:00:00+11:00",
+      "external_key": "costacams-new-brighton-farmers-market-2026-11-10",
       "sort_order": 250
+    },
+    {
+      "slug": "surfers-paradise-beachfront-markets-2026-11-11",
+      "category": "event",
+      "event_type": "market",
+      "region": "Gold Coast",
+      "locality": "Surfers Paradise",
+      "title": "Surfers Paradise Beachfront Markets",
+      "summary": "Free beachfront market on Wednesday 11 November, 4–9pm.",
+      "body": "City of Gold Coast's official events calendar lists the Surfers Paradise Beachfront Markets on Wednesday 11 November 2026, from 4pm to 9pm. This is a free, family-friendly coastal market.",
+      "source_name": "What's On Gold Coast / City of Gold Coast",
+      "source_url": "https://www.whatsongoldcoast.au/All-events",
+      "published_at": "2026-11-10T06:24:58+10:00",
+      "event_date": "2026-11-11T16:00:00+10:00",
+      "event_end_date": "2026-11-11T21:00:00+10:00",
+      "external_key": "costacams-surfers-paradise-beachfront-markets-2026-11-11",
+      "sort_order": 260
+    },
+    {
+      "slug": "byron-farmers-market-2026-11-12",
+      "category": "event",
+      "event_type": "market",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "Byron Farmers Market",
+      "summary": "Thursday morning produce market at Butler Street Reserve, 7–11am.",
+      "body": "Byron Farmers Market is listed for Thursday 12 November 2026, 7am to 11am at Butler Street Reserve, offering seasonal produce and locally grown food.",
+      "source_name": "ByronBay.com",
+      "source_url": "https://byronbay.com/events/the-byron-farmers-market/",
+      "published_at": "2026-11-10T06:24:58+10:00",
+      "event_date": "2026-11-12T07:00:00+11:00",
+      "event_end_date": "2026-11-12T11:00:00+11:00",
+      "external_key": "costacams-byron-farmers-market-2026-11-12",
+      "sort_order": 270
+    },
+    {
+      "slug": "burleigh-market-2026-11-14",
+      "category": "event",
+      "event_type": "market",
+      "region": "Gold Coast",
+      "locality": "Burleigh Heads",
+      "title": "Burleigh Market",
+      "summary": "Community farmers and makers market in Burleigh Heads on Saturday 14 November.",
+      "body": "City of Gold Coast's official events calendar lists Burleigh Market on Saturday 14 November 2026. The community market features farmers' produce, arts, crafts, plants, coffee and local musicians. Exact opening and closing hours were not confirmed in the consulted listing.",
+      "source_name": "What's On Gold Coast / City of Gold Coast",
+      "source_url": "https://www.whatsongoldcoast.au/Family-friendly",
+      "published_at": "2026-11-10T06:24:58+10:00",
+      "event_date": "2026-11-14",
+      "event_end_date": null,
+      "external_key": "costacams-burleigh-market-2026-11-14",
+      "sort_order": 280
+    },
+    {
+      "slug": "marine-expo-hollywell-2026-11-14",
+      "category": "event",
+      "event_type": "festival",
+      "region": "Gold Coast",
+      "locality": "Hollywell",
+      "title": "Marine Expo",
+      "summary": "Marine lifestyle and boating exhibition in Hollywell on 14–15 November.",
+      "body": "City of Gold Coast's official events calendar lists a family-friendly Marine Expo in Hollywell starting Saturday 14 November 2026 and continuing the following day, featuring boats, marine businesses and marine attractions. Daily hours were not verified.",
+      "source_name": "What's On Gold Coast / City of Gold Coast",
+      "source_url": "https://www.whatsongoldcoast.au/Family-friendly",
+      "published_at": "2026-11-10T06:24:58+10:00",
+      "event_date": "2026-11-14",
+      "event_end_date": "2026-11-15",
+      "external_key": "costacams-marine-expo-hollywell-2026-11-14",
+      "sort_order": 290
     }
   ],
   "shark_alerts": [
