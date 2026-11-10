@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T06:24:58+10:00",
+  "generated_at": "2026-11-11T05:35:38+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -416,23 +416,6 @@
       "sort_order": 240
     },
     {
-      "slug": "new-brighton-farmers-market-2026-11-10",
-      "category": "event",
-      "event_type": "market",
-      "region": "Byron Shire",
-      "locality": "New Brighton",
-      "title": "New Brighton Farmers Market",
-      "summary": "Beachside farmers market at New Brighton Oval on Tuesday 10 November, 8–11am.",
-      "body": "The New Brighton Farmers Market is scheduled for Tuesday 10 November 2026 at New Brighton Oval, with local produce, baked goods and breakfast options. The market is community-run and close to the coast.",
-      "source_name": "ByronBay.com",
-      "source_url": "https://byronbay.com/events/new-brighton-farmers-market/",
-      "published_at": "2026-11-10T06:24:58+10:00",
-      "event_date": "2026-11-10T08:00:00+11:00",
-      "event_end_date": "2026-11-10T11:00:00+11:00",
-      "external_key": "costacams-new-brighton-farmers-market-2026-11-10",
-      "sort_order": 250
-    },
-    {
       "slug": "surfers-paradise-beachfront-markets-2026-11-11",
       "category": "event",
       "event_type": "market",
@@ -447,7 +430,7 @@
       "event_date": "2026-11-11T16:00:00+10:00",
       "event_end_date": "2026-11-11T21:00:00+10:00",
       "external_key": "costacams-surfers-paradise-beachfront-markets-2026-11-11",
-      "sort_order": 260
+      "sort_order": 250
     },
     {
       "slug": "byron-farmers-market-2026-11-12",
@@ -464,7 +447,7 @@
       "event_date": "2026-11-12T07:00:00+11:00",
       "event_end_date": "2026-11-12T11:00:00+11:00",
       "external_key": "costacams-byron-farmers-market-2026-11-12",
-      "sort_order": 270
+      "sort_order": 260
     },
     {
       "slug": "burleigh-market-2026-11-14",
@@ -481,7 +464,7 @@
       "event_date": "2026-11-14",
       "event_end_date": null,
       "external_key": "costacams-burleigh-market-2026-11-14",
-      "sort_order": 280
+      "sort_order": 270
     },
     {
       "slug": "marine-expo-hollywell-2026-11-14",
@@ -498,7 +481,75 @@
       "event_date": "2026-11-14",
       "event_end_date": "2026-11-15",
       "external_key": "costacams-marine-expo-hollywell-2026-11-14",
+      "sort_order": 280
+    },
+    {
+      "slug": "coastal-markets-coolangatta-2026-11-22",
+      "category": "event",
+      "event_type": "market",
+      "region": "Gold Coast",
+      "locality": "Coolangatta",
+      "title": "The Coastal Markets – Coolangatta",
+      "summary": "Beachfront artisan market at Queen Elizabeth Park on Sunday 22 November, 8am–2pm.",
+      "body": "The Coastal Markets return to Queen Elizabeth Park, Marine Parade, Coolangatta, on Sunday 22 November 2026 from 8am to 2pm. Free-entry beachfront market featuring handmade goods, design, fashion, gifts and local makers.",
+      "source_name": "What's On Gold Coast / City of Gold Coast",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/The-Coastal-Markets-Coolangatta",
+      "published_at": "2026-11-11T05:35:38+10:00",
+      "event_date": "2026-11-22T08:00:00+10:00",
+      "event_end_date": "2026-11-22T14:00:00+10:00",
+      "external_key": "costacams-coastal-markets-coolangatta-2026-11-22",
       "sort_order": 290
+    },
+    {
+      "slug": "mini-museum-explorers-tweed-2026-11-13",
+      "category": "event",
+      "event_type": "community",
+      "region": "Tweed Coast",
+      "locality": "Murwillumbah",
+      "title": "Mini Museum Explorers",
+      "summary": "Free family storytelling and craft session at Tweed Regional Museum, Friday 13 November, 10–10:30am.",
+      "body": "Tweed Regional Museum hosts Mini Museum Explorers on Friday 13 November 2026, 10am to 10:30am. The free session combines stories, songs, crafts and role play for children aged three and over with carers. No booking required.",
+      "source_name": "Tweed Regional Museum",
+      "source_url": "https://museum.tweed.nsw.gov.au/whats-on/events-workshops-activities",
+      "published_at": "2026-11-11T05:35:38+10:00",
+      "event_date": "2026-11-13T10:00:00+11:00",
+      "event_end_date": "2026-11-13T10:30:00+11:00",
+      "external_key": "costacams-mini-museum-explorers-tweed-2026-11-13",
+      "sort_order": 300
+    },
+    {
+      "slug": "coastal-markets-burleigh-2026-11-29",
+      "category": "event",
+      "event_type": "market",
+      "region": "Gold Coast",
+      "locality": "Burleigh Heads",
+      "title": "The Coastal Markets – Burleigh Heads",
+      "summary": "Beachfront artisan market scheduled for Sunday 29 November from 8am.",
+      "body": "The Coastal Markets are scheduled for Burleigh Heads on Sunday 29 November 2026 from 8am. The official Gold Coast events listing describes handmade and artisan stalls at the beachfront market; the closing time was not independently confirmed.",
+      "source_name": "What's On Gold Coast / City of Gold Coast",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/The-Coastal-Markets-Burleigh-Heads",
+      "published_at": "2026-11-11T05:35:38+10:00",
+      "event_date": "2026-11-29T08:00:00+10:00",
+      "event_end_date": null,
+      "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
+      "sort_order": 310
+    },
+    {
+      "slug": "the-spit-north-beach-closure-erosion-2026",
+      "category": "news",
+      "event_type": "coast_news",
+      "region": "Gold Coast",
+      "locality": "Main Beach",
+      "title": "The Spit North beach access remains closed due to erosion",
+      "summary": "City of Gold Coast lists The Spit North beach as closed until further notice due to erosion and unstable sand scarps.",
+      "body": "The official City of Gold Coast beach information page reports The Spit North closed until further notice after severe erosion and sand scarps associated with Tropical Cyclone Alfred and seasonal high tides. This is an erosion-related beach access closure, not a shark alert. Check council notices before visiting.",
+      "source_name": "City of Gold Coast",
+      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Gold-Coast-beaches/Beach-locations/The-Spit-North",
+      "published_at": "2026-11-11T05:35:38+10:00",
+      "event_date": null,
+      "event_end_date": null,
+      "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
+      "sort_order": 320
     }
   ],
   "shark_alerts": [
