@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T05:35:38+10:00",
+  "generated_at": "2026-11-12T05:40:20+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -57,23 +57,6 @@
       "event_end_date": "2026-11-15",
       "external_key": "gold-coast-pan-pacific-masters-games-2026",
       "sort_order": 30
-    },
-    {
-      "slug": "tallebudgera-wicked-wednesday-swim-2026-11-11",
-      "category": "event",
-      "event_type": "sport",
-      "region": "Gold Coast",
-      "locality": "Palm Beach",
-      "title": "Wicked Wednesday community ocean swim at Tallebudgera Creek",
-      "summary": "Early-morning coached open-water swim at Tallebudgera Creek Beach on Wednesday 11 November, 5:30–6:30am.",
-      "body": "City of Gold Coast's Active & Healthy program lists a professionally coached community swim on Tallebudgera Creek Beach, meeting near Neptune's Kiosk, on 11 November 2026 from 5:30am to 6:30am. The program includes ability groups and water-safety guidance.",
-      "source_name": "City of Gold Coast",
-      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Active-Healthy-program/Active-Healthy-calendar/Saltwater-Swimmers-GCSS094",
-      "published_at": "2026-11-09T05:56:41+10:00",
-      "event_date": "2026-11-11T05:30:00+10:00",
-      "event_end_date": "2026-11-11T06:30:00+10:00",
-      "external_key": "goldcoast-saltwater-swimmers-20261111",
-      "sort_order": 40
     },
     {
       "slug": "miami-marketta-viva-la-salsa-2026-11-12",
@@ -416,23 +399,6 @@
       "sort_order": 240
     },
     {
-      "slug": "surfers-paradise-beachfront-markets-2026-11-11",
-      "category": "event",
-      "event_type": "market",
-      "region": "Gold Coast",
-      "locality": "Surfers Paradise",
-      "title": "Surfers Paradise Beachfront Markets",
-      "summary": "Free beachfront market on Wednesday 11 November, 4–9pm.",
-      "body": "City of Gold Coast's official events calendar lists the Surfers Paradise Beachfront Markets on Wednesday 11 November 2026, from 4pm to 9pm. This is a free, family-friendly coastal market.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events",
-      "published_at": "2026-11-10T06:24:58+10:00",
-      "event_date": "2026-11-11T16:00:00+10:00",
-      "event_end_date": "2026-11-11T21:00:00+10:00",
-      "external_key": "costacams-surfers-paradise-beachfront-markets-2026-11-11",
-      "sort_order": 250
-    },
-    {
       "slug": "byron-farmers-market-2026-11-12",
       "category": "event",
       "event_type": "market",
@@ -550,6 +516,57 @@
       "event_end_date": null,
       "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
       "sort_order": 320
+    },
+    {
+      "slug": "movies-under-stars-palm-beach-2026-11-21",
+      "category": "event",
+      "event_type": "community",
+      "region": "Gold Coast",
+      "locality": "Palm Beach",
+      "title": "Movies Under the Stars – Minions & Monsters",
+      "summary": "Free outdoor cinema at Palm Beach Parklands on 21 November, with activities from 5pm and screening at 7pm.",
+      "body": "City of Gold Coast lists free family activities, face painting and food trucks from 5pm at Palm Beach Parklands, 945 Gold Coast Highway. The film starts at 7pm; the listed event concludes at 9pm. Check the organiser's updates for weather changes.",
+      "source_name": "What's On Gold Coast / City of Gold Coast",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Movies-Under-the-Stars-Minions-and-Monsters",
+      "published_at": "2026-11-12T05:40:20+10:00",
+      "event_date": "2026-11-21T17:00:00+10:00",
+      "event_end_date": "2026-11-21T21:00:00+10:00",
+      "external_key": "costacams-movies-under-stars-palm-beach-2026-11-21",
+      "sort_order": 330
+    },
+    {
+      "slug": "broadwater-christmas-twilight-2026-12-12",
+      "category": "event",
+      "event_type": "market",
+      "region": "Gold Coast",
+      "locality": "Southport",
+      "title": "Broadwater Christmas Twilight",
+      "summary": "Waterfront festive market and live music at Broadwater Parklands, Saturday 12 December, 3–9pm.",
+      "body": "The Great Lawn at Broadwater Parklands hosts the free Broadwater Christmas Twilight event, with artisan stalls, food, live holiday music, children's activities and Santa. City of Gold Coast lists 3pm–9pm on 12 December.",
+      "source_name": "What's On Gold Coast / City of Gold Coast",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Broadwater-Christmas-Twilight",
+      "published_at": "2026-11-12T05:40:20+10:00",
+      "event_date": "2026-12-12T15:00:00+10:00",
+      "event_end_date": "2026-12-12T21:00:00+10:00",
+      "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
+      "sort_order": 340
+    },
+    {
+      "slug": "byron-community-market-2026-12-06",
+      "category": "event",
+      "event_type": "market",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "Byron Community Market – December",
+      "summary": "Byron's monthly community market is scheduled for Sunday 6 December at Main Beach Foreshore.",
+      "body": "Byron Shire Council's event calendar lists the Byron Community Market for Sunday 6 December 2026, 8am–2pm, at Main Beach Foreshore, Bay Street, Byron Bay. The foreshore is the listed temporary market location during drainage works.",
+      "source_name": "Byron Shire Council",
+      "source_url": "https://www.byron.nsw.gov.au/Recreation-Culture/Events-Venues/Whats-On/Byron-Community-Market",
+      "published_at": "2026-11-12T05:40:20+10:00",
+      "event_date": "2026-12-06T08:00:00+11:00",
+      "event_end_date": "2026-12-06T14:00:00+11:00",
+      "external_key": "costacams-byron-community-market-2026-12-06",
+      "sort_order": 350
     }
   ],
   "shark_alerts": [
