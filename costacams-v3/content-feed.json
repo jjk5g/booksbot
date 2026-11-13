@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T06:14:00+10:00",
+  "generated_at": "2026-11-14T05:39:58+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -76,40 +76,6 @@
       "sort_order": 40
     },
     {
-      "slug": "murwillumbah-after-dark-2026-11-13",
-      "category": "event",
-      "event_type": "culture",
-      "region": "Tweed Coast",
-      "locality": "Murwillumbah",
-      "title": "Murwillumbah After Dark",
-      "summary": "Upcoming Murwillumbah evening event listed by the Tweed's official tourism authority for Friday 13 November.",
-      "body": "Visit The Tweed lists Murwillumbah After Dark for Friday 13 November 2026. Further program and start-time details were not independently confirmed; check the official tourism listing before travelling.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/",
-      "published_at": null,
-      "event_date": "2026-11-13",
-      "event_end_date": null,
-      "external_key": "visit-tweed-murwillumbah-after-dark-20261113",
-      "sort_order": 50
-    },
-    {
-      "slug": "byron-abbatribute-theatre-2026-11-13",
-      "category": "event",
-      "event_type": "music",
-      "region": "Byron Shire",
-      "locality": "Byron Bay",
-      "title": "ABBA Thank You for the Music at Byron Theatre",
-      "summary": "ABBA tribute concert at Byron Theatre on Friday 13 November, 7:30–9:50pm.",
-      "body": "A ticketed two-hour tribute show celebrating ABBA's songs and story takes place at Byron Theatre, 69 Jonson Street, Byron Bay, on Friday 13 November 2026 from 7:30pm to 9:50pm.",
-      "source_name": "ByronBay.com",
-      "source_url": "https://byronbay.com/events/abba-thank-you-for-the-music/",
-      "published_at": "2026-11-09T05:56:41+10:00",
-      "event_date": "2026-11-13T19:30:00+11:00",
-      "event_end_date": "2026-11-13T21:50:00+11:00",
-      "external_key": "byron-theatre-abba-tribute-20261113",
-      "sort_order": 60
-    },
-    {
       "slug": "kingscliff-lions-beachside-markets-2026-11-14",
       "category": "event",
       "event_type": "market",
@@ -124,7 +90,7 @@
       "event_date": "2026-11-14T08:00:00+11:00",
       "event_end_date": "2026-11-14T13:00:00+11:00",
       "external_key": "tweed-kingscliff-lions-market-20261114",
-      "sort_order": 70
+      "sort_order": 50
     },
     {
       "slug": "miami-marketta-cherry-pickers-2026-11-14",
@@ -141,7 +107,7 @@
       "event_date": "2026-11-14T09:00:00+10:00",
       "event_end_date": null,
       "external_key": "miami-marketta-miami-marketta-cherry-pickers-2026-11-14",
-      "sort_order": 80
+      "sort_order": 60
     },
     {
       "slug": "byron-twilight-market-2026-11-14",
@@ -158,7 +124,7 @@
       "event_date": "2026-11-14T16:00:00+11:00",
       "event_end_date": "2026-11-14T21:00:00+11:00",
       "external_key": "byron-twilight-market-20261114",
-      "sort_order": 90
+      "sort_order": 70
     },
     {
       "slug": "pottsville-beach-markets-2026-11-15",
@@ -175,7 +141,7 @@
       "event_date": "2026-11-15T07:00:00+11:00",
       "event_end_date": "2026-11-15T13:00:00+11:00",
       "external_key": "tweed-pottsville-beach-market-20261115",
-      "sort_order": 100
+      "sort_order": 80
     },
     {
       "slug": "coastal-markets-broadbeach-2026-11-15",
@@ -192,7 +158,7 @@
       "event_date": "2026-11-15T08:00:00+10:00",
       "event_end_date": "2026-11-15T14:00:00+10:00",
       "external_key": "gold-coast-coastal-markets-broadbeach-20261115",
-      "sort_order": 110
+      "sort_order": 90
     },
     {
       "slug": "bright-lights-awards-byron-2026",
@@ -209,7 +175,7 @@
       "event_date": "2026-11-15T19:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-bright-lights-20261115",
-      "sort_order": 120
+      "sort_order": 100
     },
     {
       "slug": "all-day-i-dream-beach-hotel-2026",
@@ -226,7 +192,7 @@
       "event_date": "2026-11-20T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-all-day-i-dream-20261120",
-      "sort_order": 130
+      "sort_order": 110
     },
     {
       "slug": "kingscliff-triathlon-2026-11",
@@ -243,7 +209,7 @@
       "event_date": "2026-11-21",
       "event_end_date": "2026-11-22",
       "external_key": "austriathlon-kingscliff-triathlon-20261121-22",
-      "sort_order": 140
+      "sort_order": 120
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -260,7 +226,7 @@
       "event_date": "2026-11-27T10:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 150
+      "sort_order": 130
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -277,7 +243,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 160
+      "sort_order": 140
     },
     {
       "slug": "tweed-gallery-summer-opening-2026-11-27",
@@ -294,7 +260,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": "2026-11-27T20:00:00+11:00",
       "external_key": "tweed-gallery-summer-opening-20261127",
-      "sort_order": 170
+      "sort_order": 150
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -311,24 +277,24 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 180
+      "sort_order": 160
     },
     {
-      "slug": "kingscliff-carols-by-coast-2026-12-11",
+      "slug": "kingscliff-carols-by-coast-2026-12-15",
       "category": "event",
       "event_type": "community",
       "region": "Tweed Coast",
       "locality": "Kingscliff",
       "title": "Carols by the Coast 2026",
-      "summary": "Kingscliff's Carols by the Coast is listed for Friday 11 December in Tweed Shire Council's supported events program.",
-      "body": "Tweed Shire Council's 2026–27 events sponsorship allocation confirms Carols by the Coast for 11 December 2026. The council listing confirms the date and support allocation but does not provide a verified start time; check the organiser for further program details.",
-      "source_name": "Tweed Shire Council",
-      "source_url": "https://www.tweed.nsw.gov.au/community/tweed-event-hub/sponsorship-support",
+      "summary": "Community Christmas carols at Rowan Robinson Park, Kingscliff, on Tuesday 15 December, 6:30–8:30pm.",
+      "body": "Visit The Tweed confirms Carols by the Coast at Rowan Robinson Park, Kingscliff, on Tuesday 15 December 2026, from 6:30pm to 8:30pm NSW time. Local schools, choirs and individuals will perform, with music by Lindisfarne School, a visit from Santa and a Lions barbecue.",
+      "source_name": "Visit The Tweed",
+      "source_url": "https://www.visitthetweed.com.au/event/carols-by-the-coast-2026/",
       "published_at": "2026-11-09T05:56:41+10:00",
-      "event_date": "2026-12-11",
-      "event_end_date": null,
-      "external_key": "tweed-carols-by-the-coast-20261211",
-      "sort_order": 190
+      "event_date": "2026-12-15T18:30:00+11:00",
+      "event_end_date": "2026-12-15T20:30:00+11:00",
+      "external_key": "visit-tweed-carols-by-coast-20261215",
+      "sort_order": 170
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -345,7 +311,7 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 200
+      "sort_order": 180
     },
     {
       "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
@@ -362,7 +328,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 210
+      "sort_order": 190
     },
     {
       "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
@@ -379,7 +345,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
-      "sort_order": 220
+      "sort_order": 200
     },
     {
       "slug": "burleigh-market-2026-11-14",
@@ -396,7 +362,7 @@
       "event_date": "2026-11-14",
       "event_end_date": null,
       "external_key": "costacams-burleigh-market-2026-11-14",
-      "sort_order": 230
+      "sort_order": 210
     },
     {
       "slug": "marine-expo-hollywell-2026-11-14",
@@ -413,7 +379,7 @@
       "event_date": "2026-11-14",
       "event_end_date": "2026-11-15",
       "external_key": "costacams-marine-expo-hollywell-2026-11-14",
-      "sort_order": 240
+      "sort_order": 220
     },
     {
       "slug": "coastal-markets-coolangatta-2026-11-22",
@@ -430,24 +396,7 @@
       "event_date": "2026-11-22T08:00:00+10:00",
       "event_end_date": "2026-11-22T14:00:00+10:00",
       "external_key": "costacams-coastal-markets-coolangatta-2026-11-22",
-      "sort_order": 250
-    },
-    {
-      "slug": "mini-museum-explorers-tweed-2026-11-13",
-      "category": "event",
-      "event_type": "community",
-      "region": "Tweed Coast",
-      "locality": "Murwillumbah",
-      "title": "Mini Museum Explorers",
-      "summary": "Free family storytelling and craft session at Tweed Regional Museum, Friday 13 November, 10–10:30am.",
-      "body": "Tweed Regional Museum hosts Mini Museum Explorers on Friday 13 November 2026, 10am to 10:30am. The free session combines stories, songs, crafts and role play for children aged three and over with carers. No booking required.",
-      "source_name": "Tweed Regional Museum",
-      "source_url": "https://museum.tweed.nsw.gov.au/whats-on/events-workshops-activities",
-      "published_at": "2026-11-11T05:35:38+10:00",
-      "event_date": "2026-11-13T10:00:00+11:00",
-      "event_end_date": "2026-11-13T10:30:00+11:00",
-      "external_key": "costacams-mini-museum-explorers-tweed-2026-11-13",
-      "sort_order": 260
+      "sort_order": 230
     },
     {
       "slug": "coastal-markets-burleigh-2026-11-29",
@@ -464,7 +413,7 @@
       "event_date": "2026-11-29T08:00:00+10:00",
       "event_end_date": null,
       "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
-      "sort_order": 270
+      "sort_order": 240
     },
     {
       "slug": "the-spit-north-beach-closure-erosion-2026",
@@ -481,7 +430,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
-      "sort_order": 280
+      "sort_order": 250
     },
     {
       "slug": "movies-under-stars-palm-beach-2026-11-21",
@@ -498,7 +447,7 @@
       "event_date": "2026-11-21T17:00:00+10:00",
       "event_end_date": "2026-11-21T21:00:00+10:00",
       "external_key": "costacams-movies-under-stars-palm-beach-2026-11-21",
-      "sort_order": 290
+      "sort_order": 260
     },
     {
       "slug": "broadwater-christmas-twilight-2026-12-12",
@@ -515,7 +464,7 @@
       "event_date": "2026-12-12T15:00:00+10:00",
       "event_end_date": "2026-12-12T21:00:00+10:00",
       "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
-      "sort_order": 300
+      "sort_order": 270
     },
     {
       "slug": "byron-community-market-2026-12-06",
@@ -532,7 +481,7 @@
       "event_date": "2026-12-06T08:00:00+11:00",
       "event_end_date": "2026-12-06T14:00:00+11:00",
       "external_key": "costacams-byron-community-market-2026-12-06",
-      "sort_order": 310
+      "sort_order": 280
     },
     {
       "slug": "broadbeach-waters-parkrun-2026-11-14",
@@ -549,7 +498,7 @@
       "event_date": "2026-11-14T07:00:00+10:00",
       "event_end_date": "2026-11-14T08:00:00+10:00",
       "external_key": "broadbeach-waters-parkrun-2026-11-14",
-      "sort_order": 320
+      "sort_order": 290
     },
     {
       "slug": "burleigh-seaside-yoga-2026-11-14",
@@ -566,7 +515,7 @@
       "event_date": "2026-11-14T08:00:00+10:00",
       "event_end_date": "2026-11-14T09:00:00+10:00",
       "external_key": "burleigh-seaside-yoga-2026-11-14",
-      "sort_order": 330
+      "sort_order": 300
     },
     {
       "slug": "tallebudgera-wicked-wednesday-swim-2026-11-18",
@@ -583,7 +532,41 @@
       "event_date": "2026-11-18T05:30:00+10:00",
       "event_end_date": "2026-11-18T06:30:00+10:00",
       "external_key": "tallebudgera-wicked-wednesday-swim-2026-11-18",
-      "sort_order": 340
+      "sort_order": 310
+    },
+    {
+      "slug": "pottsville-kids-christmas-craft-fair-2026-11-15",
+      "category": "event",
+      "event_type": "market",
+      "region": "Tweed Coast",
+      "locality": "Pottsville Beach",
+      "title": "Kids Christmas Craft Fair",
+      "summary": "Young local makers showcase handmade Christmas gifts and crafts at Pottsville Beach Community Hall on Sunday 15 November, 9–11:30am.",
+      "body": "Visit The Tweed lists the Kids Christmas Craft Fair on Sunday 15 November 2026 from 9am to 11:30am at Pottsville Beach Community Hall, 1 Tweed Coast Road. The event supports young local creators selling handmade gifts, decorations and crafts, with a cake stall and refreshments.",
+      "source_name": "Visit The Tweed",
+      "source_url": "https://www.visitthetweed.com.au/event/kids-christmas-craft-fair/",
+      "published_at": "2026-11-14T05:39:58+10:00",
+      "event_date": "2026-11-15T09:00:00+11:00",
+      "event_end_date": "2026-11-15T11:30:00+11:00",
+      "external_key": "visit-tweed-kids-christmas-craft-fair-20261115",
+      "sort_order": 320
+    },
+    {
+      "slug": "kingscliff-body-board-club-2026-11-15",
+      "category": "event",
+      "event_type": "surf",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Kingy Body Board Club – Sunday meet-up",
+      "summary": "Community bodyboarding meet-up at the Kingscliff rockwall on Sunday 15 November at 7am.",
+      "body": "Visit The Tweed lists Kingy Body Board Club sessions at the Kingscliff rockwall, including Sunday 15 November 2026 from 7am to 8am. The informal group welcomes all skill levels and encourages community connection. Check the linked group for any weather-related changes.",
+      "source_name": "Visit The Tweed",
+      "source_url": "https://www.visitthetweed.com.au/event/kingy-body-board-club/",
+      "published_at": "2026-11-14T05:39:58+10:00",
+      "event_date": "2026-11-15T07:00:00+11:00",
+      "event_end_date": "2026-11-15T08:00:00+11:00",
+      "external_key": "visit-tweed-kingy-body-board-20261115",
+      "sort_order": 330
     }
   ],
   "shark_alerts": [
