@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-15T06:18:00+10:00",
+  "generated_at": "2026-11-16T05:47:00+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -42,142 +42,6 @@
       "sort_order": 20
     },
     {
-      "slug": "pan-pacific-masters-games-gold-coast-2026",
-      "category": "event",
-      "event_type": "sport",
-      "region": "Gold Coast",
-      "locality": "Broadbeach",
-      "title": "Pan Pacific Masters Games 2026",
-      "summary": "Multi-sport masters competition and social program across the Gold Coast from 6 to 15 November.",
-      "body": "City of Gold Coast's official What's On calendar lists the Pan Pacific Masters Games starting 6 November 2026 with nine additional dates, through 15 November. Events take place across the Gold Coast, with Broadbeach listed as the event locality. Check the official listing for sport-specific venues and schedules.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/Home",
-      "published_at": null,
-      "event_date": "2026-11-06",
-      "event_end_date": "2026-11-15",
-      "external_key": "gold-coast-pan-pacific-masters-games-2026",
-      "sort_order": 30
-    },
-    {
-      "slug": "marine-expo-hollywell-2026-11-14",
-      "category": "event",
-      "event_type": "festival",
-      "region": "Gold Coast",
-      "locality": "Hollywell",
-      "title": "Marine Expo",
-      "summary": "Marine lifestyle and boating exhibition in Hollywell on 14–15 November.",
-      "body": "City of Gold Coast's official events calendar lists a family-friendly Marine Expo in Hollywell starting Saturday 14 November 2026 and continuing the following day, featuring boats, marine businesses and marine attractions. Daily hours were not verified.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/Family-friendly",
-      "published_at": "2026-11-10T06:24:58+10:00",
-      "event_date": "2026-11-14",
-      "event_end_date": "2026-11-15",
-      "external_key": "costacams-marine-expo-hollywell-2026-11-14",
-      "sort_order": 40
-    },
-    {
-      "slug": "pho3nix-qld-triathlon-robina-2026-11-15",
-      "category": "event",
-      "event_type": "sport",
-      "region": "Gold Coast",
-      "locality": "Clear Island Waters",
-      "title": "Pho3nix Queensland Triathlon Series – Round 3",
-      "summary": "Triathlon competition in Clear Island Waters on Sunday 15 November, 5am–noon.",
-      "body": "City of Gold Coast confirms the Pho3nix Queensland Triathlon Series Round 3 on Sunday 15 November 2026 from 5am to noon, near the corner of Boowaggan Street and Robina Parkway, Clear Island Waters. The event welcomes participants of different ages and abilities.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events/Pho3nix-Queensland-Triathlon-Series-Round-3-Robina-64926ad17eec584f304eba92",
-      "published_at": "2026-11-15T06:18:00+10:00",
-      "event_date": "2026-11-15T05:00:00+10:00",
-      "event_end_date": "2026-11-15T12:00:00+10:00",
-      "external_key": "pho3nix-qld-triathlon-robina-2026-11-15",
-      "sort_order": 50
-    },
-    {
-      "slug": "hota-farmers-market-2026-11-15",
-      "category": "event",
-      "event_type": "market",
-      "region": "Gold Coast",
-      "locality": "Surfers Paradise",
-      "title": "HOTA Farmers and Artisan Market",
-      "summary": "Sunday morning farmers and artisan market at HOTA, 6am–11:30am.",
-      "body": "City of Gold Coast confirms HOTA Farmers and Artisan Market on Sunday 15 November 2026 from 6am to 11:30am at HOTA, 135 Bundall Road. Expect fresh produce, artisan foods, handmade goods and local makers.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events/HOTA-Farmers-and-Artisan-Market-60deb811cdcec11c46c40065",
-      "published_at": "2026-11-15T06:18:00+10:00",
-      "event_date": "2026-11-15T06:00:00+10:00",
-      "event_end_date": "2026-11-15T11:30:00+10:00",
-      "external_key": "hota-farmers-market-2026-11-15",
-      "sort_order": 60
-    },
-    {
-      "slug": "kingscliff-body-board-club-2026-11-15",
-      "category": "event",
-      "event_type": "surf",
-      "region": "Tweed Coast",
-      "locality": "Kingscliff",
-      "title": "Kingy Body Board Club – Sunday meet-up",
-      "summary": "Community bodyboarding meet-up at the Kingscliff rockwall on Sunday 15 November at 7am.",
-      "body": "Visit The Tweed lists Kingy Body Board Club sessions at the Kingscliff rockwall, including Sunday 15 November 2026 from 7am to 8am. The informal group welcomes all skill levels and encourages community connection. Check the linked group for any weather-related changes.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/event/kingy-body-board-club/",
-      "published_at": "2026-11-14T05:39:58+10:00",
-      "event_date": "2026-11-15T07:00:00+11:00",
-      "event_end_date": "2026-11-15T08:00:00+11:00",
-      "external_key": "visit-tweed-kingy-body-board-20261115",
-      "sort_order": 70
-    },
-    {
-      "slug": "pottsville-beach-markets-2026-11-15",
-      "category": "event",
-      "event_type": "market",
-      "region": "Tweed Coast",
-      "locality": "Pottsville Beach",
-      "title": "Pottsville Beach Markets",
-      "summary": "Sunday community market at Philip Street Reserve, 7am–1pm.",
-      "body": "The Tweed Coast events guide lists the Pottsville Beach Markets for Sunday 15 November 2026 at Philip Street Reserve. The market includes produce, plants, local art and community stalls, from 7am to 1pm.",
-      "source_name": "The Beach Cabarita / Tweed Coast events guide",
-      "source_url": "https://www.thebeachcabarita.com.au/whats-on/",
-      "published_at": "2026-11-06T05:55:41+10:00",
-      "event_date": "2026-11-15T07:00:00+11:00",
-      "event_end_date": "2026-11-15T13:00:00+11:00",
-      "external_key": "tweed-pottsville-beach-market-20261115",
-      "sort_order": 80
-    },
-    {
-      "slug": "coastal-markets-broadbeach-2026-11-15",
-      "category": "event",
-      "event_type": "market",
-      "region": "Gold Coast",
-      "locality": "Broadbeach",
-      "title": "The Coastal Markets – Broadbeach",
-      "summary": "Beachfront artisan market at Kurrawa Park with handmade goods, fashion, gifts, homewares and coastal-inspired finds.",
-      "body": "The City of Gold Coast event listing confirms The Coastal Markets at Kurrawa Park, Broadbeach, on Sunday 15 November 2026 from 8am to 2pm. The free beachfront market brings together handmade and artisan vendors in a coastal setting.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events/The-Coastal-Markets-Broadbeach",
-      "published_at": null,
-      "event_date": "2026-11-15T08:00:00+10:00",
-      "event_end_date": "2026-11-15T14:00:00+10:00",
-      "external_key": "gold-coast-coastal-markets-broadbeach-20261115",
-      "sort_order": 90
-    },
-    {
-      "slug": "pottsville-kids-christmas-craft-fair-2026-11-15",
-      "category": "event",
-      "event_type": "market",
-      "region": "Tweed Coast",
-      "locality": "Pottsville Beach",
-      "title": "Kids Christmas Craft Fair",
-      "summary": "Young local makers showcase handmade Christmas gifts and crafts at Pottsville Beach Community Hall on Sunday 15 November, 9–11:30am.",
-      "body": "Visit The Tweed lists the Kids Christmas Craft Fair on Sunday 15 November 2026 from 9am to 11:30am at Pottsville Beach Community Hall, 1 Tweed Coast Road. The event supports young local creators selling handmade gifts, decorations and crafts, with a cake stall and refreshments.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/event/kids-christmas-craft-fair/",
-      "published_at": "2026-11-14T05:39:58+10:00",
-      "event_date": "2026-11-15T09:00:00+11:00",
-      "event_end_date": "2026-11-15T11:30:00+11:00",
-      "external_key": "visit-tweed-kids-christmas-craft-fair-20261115",
-      "sort_order": 100
-    },
-    {
       "slug": "bright-lights-awards-byron-2026",
       "category": "event",
       "event_type": "culture",
@@ -192,7 +56,24 @@
       "event_date": "2026-11-15T19:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-bright-lights-20261115",
-      "sort_order": 110
+      "sort_order": 30
+    },
+    {
+      "slug": "kingscliff-library-crafternoons-2026-11-17",
+      "category": "event",
+      "event_type": "community",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Crafternoons at Kingscliff Library",
+      "summary": "Free after-school craft activities for children aged six and over on Tuesday 17 November, 3:30–4:30pm.",
+      "body": "Visit The Tweed confirms Crafternoons at Kingscliff Library, 1 Turnock Street, on Tuesday 17 November 2026 from 3:30pm to 4:30pm. Library staff guide children through crafts, painting and making. Materials are provided, bookings are not required and children must be supervised by a parent or guardian.",
+      "source_name": "Visit The Tweed",
+      "source_url": "https://www.visitthetweed.com.au/event/crafternoons-at-kingscliff-library-2/",
+      "published_at": "2026-11-16T05:47:00+10:00",
+      "event_date": "2026-11-17T15:30:00+11:00",
+      "event_end_date": "2026-11-17T16:30:00+11:00",
+      "external_key": "visit-tweed-kingscliff-crafternoons-20261117",
+      "sort_order": 40
     },
     {
       "slug": "tallebudgera-wicked-wednesday-swim-2026-11-18",
@@ -209,7 +90,7 @@
       "event_date": "2026-11-18T05:30:00+10:00",
       "event_end_date": "2026-11-18T06:30:00+10:00",
       "external_key": "tallebudgera-wicked-wednesday-swim-2026-11-18",
-      "sort_order": 120
+      "sort_order": 50
     },
     {
       "slug": "all-day-i-dream-beach-hotel-2026",
@@ -226,7 +107,7 @@
       "event_date": "2026-11-20T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-all-day-i-dream-20261120",
-      "sort_order": 130
+      "sort_order": 60
     },
     {
       "slug": "kingscliff-triathlon-2026-11",
@@ -243,7 +124,7 @@
       "event_date": "2026-11-21",
       "event_end_date": "2026-11-22",
       "external_key": "austriathlon-kingscliff-triathlon-20261121-22",
-      "sort_order": 140
+      "sort_order": 70
     },
     {
       "slug": "movies-under-stars-palm-beach-2026-11-21",
@@ -260,7 +141,7 @@
       "event_date": "2026-11-21T17:00:00+10:00",
       "event_end_date": "2026-11-21T21:00:00+10:00",
       "external_key": "costacams-movies-under-stars-palm-beach-2026-11-21",
-      "sort_order": 150
+      "sort_order": 80
     },
     {
       "slug": "coastal-markets-coolangatta-2026-11-22",
@@ -277,7 +158,24 @@
       "event_date": "2026-11-22T08:00:00+10:00",
       "event_end_date": "2026-11-22T14:00:00+10:00",
       "external_key": "costacams-coastal-markets-coolangatta-2026-11-22",
-      "sort_order": 160
+      "sort_order": 90
+    },
+    {
+      "slug": "kingscliff-community-workshop-2026-11-24",
+      "category": "event",
+      "event_type": "community",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Free Community Mental Health Response Workshop",
+      "summary": "Free adult community workshop at Kingscliff Beach Bowling Club on 24 November, 9am–1pm.",
+      "body": "Visit The Tweed lists a free community mental health response workshop at Kingscliff Beach Bowling Club, 131 Marine Parade, on Tuesday 24 November 2026 from 9am to 1pm. Topics include recognising warning signs, supportive conversations and practical response techniques. Organised with Mongrels Men Health and Wellbeing; intended for adults aged over 18.",
+      "source_name": "Visit The Tweed",
+      "source_url": "https://www.visitthetweed.com.au/event/community-workshop-kingscliff/",
+      "published_at": "2026-11-16T05:47:00+10:00",
+      "event_date": "2026-11-24T09:00:00+11:00",
+      "event_end_date": "2026-11-24T13:00:00+11:00",
+      "external_key": "visit-tweed-community-workshop-kingscliff-20261124",
+      "sort_order": 100
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -294,7 +192,7 @@
       "event_date": "2026-11-27T10:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 170
+      "sort_order": 110
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -311,7 +209,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 180
+      "sort_order": 120
     },
     {
       "slug": "tweed-gallery-summer-opening-2026-11-27",
@@ -328,7 +226,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": "2026-11-27T20:00:00+11:00",
       "external_key": "tweed-gallery-summer-opening-20261127",
-      "sort_order": 190
+      "sort_order": 130
     },
     {
       "slug": "ultra-nate-arts-factory-byron-2026-11-27",
@@ -345,7 +243,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "ultra-nate-arts-factory-byron-2026-11-27",
-      "sort_order": 200
+      "sort_order": 140
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -362,7 +260,7 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 210
+      "sort_order": 150
     },
     {
       "slug": "coastal-markets-burleigh-2026-11-29",
@@ -379,7 +277,7 @@
       "event_date": "2026-11-29T08:00:00+10:00",
       "event_end_date": null,
       "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
-      "sort_order": 220
+      "sort_order": 160
     },
     {
       "slug": "byron-community-market-2026-12-06",
@@ -396,7 +294,7 @@
       "event_date": "2026-12-06T08:00:00+11:00",
       "event_end_date": "2026-12-06T14:00:00+11:00",
       "external_key": "costacams-byron-community-market-2026-12-06",
-      "sort_order": 230
+      "sort_order": 170
     },
     {
       "slug": "broadwater-christmas-twilight-2026-12-12",
@@ -413,7 +311,7 @@
       "event_date": "2026-12-12T15:00:00+10:00",
       "event_end_date": "2026-12-12T21:00:00+10:00",
       "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
-      "sort_order": 240
+      "sort_order": 180
     },
     {
       "slug": "kingscliff-carols-by-coast-2026-12-15",
@@ -430,7 +328,7 @@
       "event_date": "2026-12-15T18:30:00+11:00",
       "event_end_date": "2026-12-15T20:30:00+11:00",
       "external_key": "visit-tweed-carols-by-coast-20261215",
-      "sort_order": 250
+      "sort_order": 190
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -447,7 +345,7 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 260
+      "sort_order": 200
     },
     {
       "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
@@ -464,7 +362,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 270
+      "sort_order": 210
     },
     {
       "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
@@ -481,7 +379,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
-      "sort_order": 280
+      "sort_order": 220
     },
     {
       "slug": "the-spit-north-beach-closure-erosion-2026",
@@ -498,7 +396,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
-      "sort_order": 290
+      "sort_order": 230
     },
     {
       "slug": "the-spit-south-beach-closure-erosion-2026",
@@ -515,7 +413,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "gold-coast-spit-south-erosion-closure-2026",
-      "sort_order": 300
+      "sort_order": 240
     }
   ],
   "shark_alerts": [
