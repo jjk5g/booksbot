@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T05:53:10+10:00",
+  "generated_at": "2026-11-19T05:40:17+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -42,23 +42,6 @@
       "sort_order": 20
     },
     {
-      "slug": "tallebudgera-wicked-wednesday-swim-2026-11-18",
-      "category": "event",
-      "event_type": "sport",
-      "region": "Gold Coast",
-      "locality": "Tallebudgera Creek",
-      "title": "Wicked Wednesday open-water swim – 18 November",
-      "summary": "Sunrise community open-water swim with coached ability groups at Tallebudgera Creek.",
-      "body": "The City of Gold Coast Active & Healthy calendar lists Wicked Wednesday for 18 November 2026 from 5:30am to 6:30am. The programme is aimed at swimmers aged eight and over and includes coaching and water-safety guidance.",
-      "source_name": "City of Gold Coast",
-      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Active-Healthy-program/Active-Healthy-calendar/Saltwater-Swimmers-GCSS094",
-      "published_at": "2026-11-13T06:14:00+10:00",
-      "event_date": "2026-11-18T05:30:00+10:00",
-      "event_end_date": "2026-11-18T06:30:00+10:00",
-      "external_key": "tallebudgera-wicked-wednesday-swim-2026-11-18",
-      "sort_order": 30
-    },
-    {
       "slug": "all-day-i-dream-beach-hotel-2026",
       "category": "event",
       "event_type": "music",
@@ -73,7 +56,7 @@
       "event_date": "2026-11-20T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-all-day-i-dream-20261120",
-      "sort_order": 40
+      "sort_order": 30
     },
     {
       "slug": "kingscliff-triathlon-2026-11",
@@ -90,7 +73,7 @@
       "event_date": "2026-11-21",
       "event_end_date": "2026-11-22",
       "external_key": "austriathlon-kingscliff-triathlon-20261121-22",
-      "sort_order": 50
+      "sort_order": 40
     },
     {
       "slug": "movies-under-stars-palm-beach-2026-11-21",
@@ -107,7 +90,7 @@
       "event_date": "2026-11-21T17:00:00+10:00",
       "event_end_date": "2026-11-21T21:00:00+10:00",
       "external_key": "costacams-movies-under-stars-palm-beach-2026-11-21",
-      "sort_order": 60
+      "sort_order": 50
     },
     {
       "slug": "coastal-markets-coolangatta-2026-11-22",
@@ -124,7 +107,7 @@
       "event_date": "2026-11-22T08:00:00+10:00",
       "event_end_date": "2026-11-22T14:00:00+10:00",
       "external_key": "costacams-coastal-markets-coolangatta-2026-11-22",
-      "sort_order": 70
+      "sort_order": 60
     },
     {
       "slug": "kingscliff-community-workshop-2026-11-24",
@@ -141,7 +124,7 @@
       "event_date": "2026-11-24T09:00:00+11:00",
       "event_end_date": "2026-11-24T13:00:00+11:00",
       "external_key": "visit-tweed-community-workshop-kingscliff-20261124",
-      "sort_order": 80
+      "sort_order": 70
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -158,7 +141,7 @@
       "event_date": "2026-11-27T10:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 90
+      "sort_order": 80
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -175,7 +158,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 100
+      "sort_order": 90
     },
     {
       "slug": "tweed-gallery-summer-opening-2026-11-27",
@@ -192,7 +175,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": "2026-11-27T20:00:00+11:00",
       "external_key": "tweed-gallery-summer-opening-20261127",
-      "sort_order": 110
+      "sort_order": 100
     },
     {
       "slug": "ultra-nate-arts-factory-byron-2026-11-27",
@@ -209,7 +192,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "ultra-nate-arts-factory-byron-2026-11-27",
-      "sort_order": 120
+      "sort_order": 110
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -226,7 +209,7 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 130
+      "sort_order": 120
     },
     {
       "slug": "coastal-markets-burleigh-2026-11-29",
@@ -243,7 +226,7 @@
       "event_date": "2026-11-29T08:00:00+10:00",
       "event_end_date": null,
       "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
-      "sort_order": 140
+      "sort_order": 130
     },
     {
       "slug": "byron-community-market-2026-12-06",
@@ -260,7 +243,7 @@
       "event_date": "2026-12-06T08:00:00+11:00",
       "event_end_date": "2026-12-06T14:00:00+11:00",
       "external_key": "costacams-byron-community-market-2026-12-06",
-      "sort_order": 150
+      "sort_order": 140
     },
     {
       "slug": "broadwater-christmas-twilight-2026-12-12",
@@ -277,7 +260,7 @@
       "event_date": "2026-12-12T15:00:00+10:00",
       "event_end_date": "2026-12-12T21:00:00+10:00",
       "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
-      "sort_order": 160
+      "sort_order": 150
     },
     {
       "slug": "kingscliff-carols-by-coast-2026-12-15",
@@ -294,7 +277,7 @@
       "event_date": "2026-12-15T18:30:00+11:00",
       "event_end_date": "2026-12-15T20:30:00+11:00",
       "external_key": "visit-tweed-carols-by-coast-20261215",
-      "sort_order": 170
+      "sort_order": 160
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -311,7 +294,7 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 180
+      "sort_order": 170
     },
     {
       "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
@@ -328,7 +311,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 190
+      "sort_order": 180
     },
     {
       "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
@@ -345,7 +328,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
-      "sort_order": 200
+      "sort_order": 190
     },
     {
       "slug": "the-spit-north-beach-closure-erosion-2026",
@@ -362,7 +345,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
-      "sort_order": 210
+      "sort_order": 200
     },
     {
       "slug": "the-spit-south-beach-closure-erosion-2026",
@@ -379,7 +362,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "gold-coast-spit-south-erosion-closure-2026",
-      "sort_order": 220
+      "sort_order": 210
     },
     {
       "slug": "kingscliff-recycling-story-time-2026-11-19",
@@ -396,7 +379,7 @@
       "event_date": "2026-11-19T10:00:00+11:00",
       "event_end_date": "2026-11-19T11:00:00+11:00",
       "external_key": "tweed-kingscliff-recycling-story-time-20261119",
-      "sort_order": 230
+      "sort_order": 220
     },
     {
       "slug": "kingy-body-board-club-2026-11-20",
@@ -413,7 +396,7 @@
       "event_date": "2026-11-20T07:00:00+11:00",
       "event_end_date": "2026-11-20T08:00:00+11:00",
       "external_key": "tweed-kingy-body-board-club-20261120",
-      "sort_order": 240
+      "sort_order": 230
     },
     {
       "slug": "resonate-kingscliff-2026-11-21",
@@ -430,7 +413,7 @@
       "event_date": "2026-11-21T16:00:00+11:00",
       "event_end_date": null,
       "external_key": "tweed-resonate-kingscliff-20261121",
-      "sort_order": 250
+      "sort_order": 240
     },
     {
       "slug": "fingal-head-paul-george-andy-v-2026-11-21",
@@ -447,7 +430,7 @@
       "event_date": "2026-11-21T18:00:00+11:00",
       "event_end_date": "2026-11-21T23:00:00+11:00",
       "external_key": "tweed-fingal-paul-george-andy-v-20261121",
-      "sort_order": 260
+      "sort_order": 250
     },
     {
       "slug": "mullumbimby-farmers-market-2026-11-20",
@@ -464,7 +447,41 @@
       "event_date": "2026-11-20T07:00:00+11:00",
       "event_end_date": "2026-11-20T11:00:00+11:00",
       "external_key": "byron-mullumbimby-farmers-market-20261120",
+      "sort_order": 260
+    },
+    {
+      "slug": "kingscliff-studio-qi-gong-2026-11-19",
+      "category": "event",
+      "event_type": "community",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Studio Qi Gong – Gentle movement & breath",
+      "summary": "Thursday morning qi gong session at Kingscliff Saltwater Studio, 9:10–10:10am.",
+      "body": "Kingscliff Saltwater Studio at 78–80 Marine Parade hosts a guided qi gong session on Thursday 19 November 2026 from 9:10am to 10:10am. The class focuses on gentle movement, stretching, breathing and meditation. Check the organiser's booking information before attending.",
+      "source_name": "Visit The Tweed",
+      "source_url": "https://www.visitthetweed.com.au/event/studio-qi-gong-gentle-movement-breath-2/",
+      "published_at": "2026-11-19T05:40:17+10:00",
+      "event_date": "2026-11-19T09:10:00+11:00",
+      "event_end_date": "2026-11-19T10:10:00+11:00",
+      "external_key": "tweed-kingscliff-qi-gong-20261119",
       "sort_order": 270
+    },
+    {
+      "slug": "kingy-body-board-club-2026-11-21",
+      "category": "event",
+      "event_type": "surf",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Kingy Body Board Club – Saturday morning",
+      "summary": "Community bodyboarding meetup at the Kingscliff rockwall on Saturday 21 November, 7–8am.",
+      "body": "Kingy Body Board Club lists a Saturday 21 November 2026 meetup from 7am to 8am at the Kingscliff rockwall, near Marine Parade. The community session welcomes different skill levels. Check the club's Facebook group for changes and local surf conditions before entering the water.",
+      "source_name": "Visit The Tweed",
+      "source_url": "https://www.visitthetweed.com.au/event/kingy-body-board-club/",
+      "published_at": "2026-11-19T05:40:17+10:00",
+      "event_date": "2026-11-21T07:00:00+11:00",
+      "event_end_date": "2026-11-21T08:00:00+11:00",
+      "external_key": "tweed-kingy-body-board-20261121",
+      "sort_order": 280
     }
   ],
   "shark_alerts": [
