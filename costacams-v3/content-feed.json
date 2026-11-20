@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T06:03:30+10:00",
+  "generated_at": "2026-11-21T05:54:43+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -42,57 +42,6 @@
       "sort_order": 20
     },
     {
-      "slug": "kingy-body-board-club-2026-11-20",
-      "category": "event",
-      "event_type": "surf",
-      "region": "Tweed Coast",
-      "locality": "Kingscliff",
-      "title": "Kingy Body Board Club – Friday morning",
-      "summary": "Community bodyboard meet-up at Kingscliff rockwall on Friday 20 November at 7am.",
-      "body": "Kingy Body Board Club lists a community bodyboarding gathering on Friday 20 November 2026 from 7am to 8am. Meet at the rockwall at Kingscliff; the organiser's listing uses The Salt Mill on Marine Parade as an approximate address, not the meeting point. The activity welcomes different ages and skill levels. Check the organiser's group for updates before attending.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/event/kingy-body-board-club-4/",
-      "published_at": "2026-11-17T06:15:10+10:00",
-      "event_date": "2026-11-20T07:00:00+11:00",
-      "event_end_date": "2026-11-20T08:00:00+11:00",
-      "external_key": "tweed-kingy-body-board-club-20261120",
-      "sort_order": 30
-    },
-    {
-      "slug": "mullumbimby-farmers-market-2026-11-20",
-      "category": "event",
-      "event_type": "market",
-      "region": "Byron Shire",
-      "locality": "Mullumbimby",
-      "title": "Mullumbimby Farmers Market – 20 November",
-      "summary": "Friday morning farmers market at Mullumbimby Showground, 7–11am.",
-      "body": "Byron Shire Council lists the Mullumbimby Farmers Market at Mullumbimby Showground on Main Arm Road for Friday 20 November 2026, 7am to 11am. Visit for local farm produce and market stalls; check the organiser for any last-minute changes.",
-      "source_name": "Byron Shire Council",
-      "source_url": "https://www.byron.nsw.gov.au/Recreation-Culture/Events-Venues/Whats-On/Mullumbimby-Farmers-Market",
-      "published_at": "2026-11-18T05:53:10+10:00",
-      "event_date": "2026-11-20T07:00:00+11:00",
-      "event_end_date": "2026-11-20T11:00:00+11:00",
-      "external_key": "byron-mullumbimby-farmers-market-20261120",
-      "sort_order": 40
-    },
-    {
-      "slug": "surfers-paradise-beachfront-markets-2026-11-20",
-      "category": "event",
-      "event_type": "market",
-      "region": "Gold Coast",
-      "locality": "Surfers Paradise",
-      "title": "Surfers Paradise Beachfront Markets – Friday 20 November",
-      "summary": "Free beachfront twilight markets on The Esplanade, Friday 4–9pm, featuring artisan stalls and live music.",
-      "body": "City of Gold Coast lists Surfers Paradise Beachfront Markets on Friday 20 November 2026, 4pm–9pm, along The Esplanade. The free seaside market features local makers, crafts, food and live music. Check the organiser for weather-related changes.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events/Surfers-Paradise-Beachfront-Markets",
-      "published_at": "2026-11-20T06:03:30+10:00",
-      "event_date": "2026-11-20T16:00:00+10:00",
-      "event_end_date": "2026-11-20T21:00:00+10:00",
-      "external_key": "goldcoast-beachfront-markets-20261120",
-      "sort_order": 50
-    },
-    {
       "slug": "all-day-i-dream-beach-hotel-2026",
       "category": "event",
       "event_type": "music",
@@ -107,7 +56,7 @@
       "event_date": "2026-11-20T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "byron-all-day-i-dream-20261120",
-      "sort_order": 60
+      "sort_order": 30
     },
     {
       "slug": "kingscliff-triathlon-2026-11",
@@ -124,7 +73,24 @@
       "event_date": "2026-11-21",
       "event_end_date": "2026-11-22",
       "external_key": "austriathlon-kingscliff-triathlon-20261121-22",
-      "sort_order": 70
+      "sort_order": 40
+    },
+    {
+      "slug": "main-beach-parkrun-2026-11-21",
+      "category": "event",
+      "event_type": "sport",
+      "region": "Gold Coast",
+      "locality": "Main Beach",
+      "title": "Main Beach parkrun – Saturday 21 November",
+      "summary": "Free community five-kilometre run or walk at Main Beach, Saturday 21 November, 7–8am.",
+      "body": "City of Gold Coast lists Main Beach parkrun for Saturday 21 November 2026 from 7am to 8am. Walkers and runners of different abilities can participate. First-time participants must register and bring their parkrun barcode.",
+      "source_name": "City of Gold Coast",
+      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Active-Healthy-program/Active-Healthy-calendar/parkrun-Main-Beach-CP075",
+      "published_at": "2026-11-21T05:54:43+10:00",
+      "event_date": "2026-11-21T07:00:00+10:00",
+      "event_end_date": "2026-11-21T08:00:00+10:00",
+      "external_key": "goldcoast-main-beach-parkrun-20261121",
+      "sort_order": 50
     },
     {
       "slug": "kingy-body-board-club-2026-11-21",
@@ -141,7 +107,7 @@
       "event_date": "2026-11-21T07:00:00+11:00",
       "event_end_date": "2026-11-21T08:00:00+11:00",
       "external_key": "tweed-kingy-body-board-20261121",
-      "sort_order": 80
+      "sort_order": 60
     },
     {
       "slug": "broadwater-pavilion-markets-2026-11-21",
@@ -158,7 +124,24 @@
       "event_date": "2026-11-21T08:00:00+10:00",
       "event_end_date": "2026-11-21T14:00:00+10:00",
       "external_key": "goldcoast-broadwater-pavilion-markets-20261121",
-      "sort_order": 90
+      "sort_order": 70
+    },
+    {
+      "slug": "main-beach-yoga-bec-2026-11-21",
+      "category": "event",
+      "event_type": "community",
+      "region": "Gold Coast",
+      "locality": "Main Beach",
+      "title": "Yoga by the Beach with Bec – Main Beach",
+      "summary": "Outdoor community yoga session at Main Beach on Saturday 21 November, 8–9am.",
+      "body": "The City of Gold Coast Active & Healthy calendar lists Yoga by the Beach with Bec at Main Beach on Saturday 21 November 2026 from 8am to 9am. The session combines yoga and community connection in a beachside setting. Check the official event listing for participation details.",
+      "source_name": "City of Gold Coast",
+      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Active-Healthy-program/Active-Healthy-calendar/Yoga-by-the-beach-with-Bec-AH0943",
+      "published_at": "2026-11-21T05:54:43+10:00",
+      "event_date": "2026-11-21T08:00:00+10:00",
+      "event_end_date": "2026-11-21T09:00:00+10:00",
+      "external_key": "goldcoast-main-beach-yoga-bec-20261121",
+      "sort_order": 80
     },
     {
       "slug": "resonate-kingscliff-2026-11-21",
@@ -175,7 +158,7 @@
       "event_date": "2026-11-21T16:00:00+11:00",
       "event_end_date": null,
       "external_key": "tweed-resonate-kingscliff-20261121",
-      "sort_order": 100
+      "sort_order": 90
     },
     {
       "slug": "movies-under-stars-palm-beach-2026-11-21",
@@ -192,7 +175,7 @@
       "event_date": "2026-11-21T17:00:00+10:00",
       "event_end_date": "2026-11-21T21:00:00+10:00",
       "external_key": "costacams-movies-under-stars-palm-beach-2026-11-21",
-      "sort_order": 110
+      "sort_order": 100
     },
     {
       "slug": "fingal-head-paul-george-andy-v-2026-11-21",
@@ -209,7 +192,7 @@
       "event_date": "2026-11-21T18:00:00+11:00",
       "event_end_date": "2026-11-21T23:00:00+11:00",
       "external_key": "tweed-fingal-paul-george-andy-v-20261121",
-      "sort_order": 120
+      "sort_order": 110
     },
     {
       "slug": "coastal-markets-coolangatta-2026-11-22",
@@ -226,7 +209,7 @@
       "event_date": "2026-11-22T08:00:00+10:00",
       "event_end_date": "2026-11-22T14:00:00+10:00",
       "external_key": "costacams-coastal-markets-coolangatta-2026-11-22",
-      "sort_order": 130
+      "sort_order": 120
     },
     {
       "slug": "kingscliff-community-workshop-2026-11-24",
@@ -243,7 +226,7 @@
       "event_date": "2026-11-24T09:00:00+11:00",
       "event_end_date": "2026-11-24T13:00:00+11:00",
       "external_key": "visit-tweed-community-workshop-kingscliff-20261124",
-      "sort_order": 140
+      "sort_order": 130
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -260,7 +243,7 @@
       "event_date": "2026-11-27T10:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 150
+      "sort_order": 140
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -277,7 +260,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 160
+      "sort_order": 150
     },
     {
       "slug": "tweed-gallery-summer-opening-2026-11-27",
@@ -294,7 +277,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": "2026-11-27T20:00:00+11:00",
       "external_key": "tweed-gallery-summer-opening-20261127",
-      "sort_order": 170
+      "sort_order": 160
     },
     {
       "slug": "ultra-nate-arts-factory-byron-2026-11-27",
@@ -311,7 +294,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "ultra-nate-arts-factory-byron-2026-11-27",
-      "sort_order": 180
+      "sort_order": 170
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -328,7 +311,7 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 190
+      "sort_order": 180
     },
     {
       "slug": "coastal-markets-burleigh-2026-11-29",
@@ -345,7 +328,7 @@
       "event_date": "2026-11-29T08:00:00+10:00",
       "event_end_date": null,
       "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
-      "sort_order": 200
+      "sort_order": 190
     },
     {
       "slug": "byron-community-market-2026-12-06",
@@ -362,7 +345,7 @@
       "event_date": "2026-12-06T08:00:00+11:00",
       "event_end_date": "2026-12-06T14:00:00+11:00",
       "external_key": "costacams-byron-community-market-2026-12-06",
-      "sort_order": 210
+      "sort_order": 200
     },
     {
       "slug": "broadwater-christmas-twilight-2026-12-12",
@@ -379,7 +362,7 @@
       "event_date": "2026-12-12T15:00:00+10:00",
       "event_end_date": "2026-12-12T21:00:00+10:00",
       "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
-      "sort_order": 220
+      "sort_order": 210
     },
     {
       "slug": "kingscliff-carols-by-coast-2026-12-15",
@@ -396,7 +379,7 @@
       "event_date": "2026-12-15T18:30:00+11:00",
       "event_end_date": "2026-12-15T20:30:00+11:00",
       "external_key": "visit-tweed-carols-by-coast-20261215",
-      "sort_order": 230
+      "sort_order": 220
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -413,23 +396,40 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 240
+      "sort_order": 230
     },
     {
-      "slug": "the-spit-south-beach-closure-erosion-2026",
+      "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
       "category": "news",
       "event_type": "coast_news",
       "region": "Gold Coast",
-      "locality": "Main Beach",
-      "title": "The Spit South beach access closed due to erosion",
-      "summary": "City of Gold Coast lists The Spit South beach as closed until further notice due to severe erosion and unstable sand scarps.",
-      "body": "The City of Gold Coast's official The Spit South beach page states that severe erosion and sand scarps linked to Tropical Cyclone Alfred and seasonal high tides have affected access. The beach is listed as closed until further notice. This is an erosion-related closure, not a shark alert; check the council page before visiting.",
+      "locality": "Miami / Mermaid Beach / Surfers Paradise / Main Beach",
+      "title": "Gold Coast reports 1.2 million cubic metres of sand restored to beaches",
+      "summary": "City reports major 2026 offshore dredging works replenished beaches from Miami to Main Beach.",
+      "body": "In an 8 October 2026 update, City of Gold Coast said offshore dredging between April and October had returned approximately 1.2 million cubic metres of sand to Gold Coast beaches, including Miami, Mermaid Beach, Surfers Paradise and Main Beach. The work was part of recovery and beach nourishment efforts following Tropical Cyclone Alfred.",
       "source_name": "City of Gold Coast",
-      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Gold-Coast-beaches/Beach-locations/The-Spit-South",
-      "published_at": "2026-11-15T06:18:00+10:00",
+      "source_url": "https://www.goldcoast.qld.gov.au/Council/City-news/dredge-update",
+      "published_at": "2026-10-08",
       "event_date": null,
       "event_end_date": null,
-      "external_key": "gold-coast-spit-south-erosion-closure-2026",
+      "external_key": "goldcoast-council-dredge-update-20261008",
+      "sort_order": 240
+    },
+    {
+      "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
+      "category": "news",
+      "event_type": "coast_news",
+      "region": "Gold Coast",
+      "locality": "Snapper Rocks",
+      "title": "Gold Coast considers trial of night surfing lights at Snapper Rocks",
+      "summary": "Gold Coast councillors are considering a proposal to trial artificial beach lighting during the 2027 World Surf League Championship Tour at Snapper Rocks.",
+      "body": "ABC Gold Coast reported on 2 November 2026 that councillors would consider a proposal to trial artificial lighting at beaches to extend surfing time, with the recommended trial linked to the 2027 World Surf League Championship Tour at Snapper Rocks. The report also records an environmental scientist's warning that night lighting could attract prey species and potentially affect shark activity.",
+      "source_name": "ABC Gold Coast",
+      "source_url": "https://www.abc.net.au/news/2026-11-02/gold-coast-local-news-briefing/107335180",
+      "published_at": "2026-11-02T09:52:00+10:00",
+      "event_date": null,
+      "event_end_date": null,
+      "external_key": "abc-gold-coast-20261102-night-surfing-lights",
       "sort_order": 250
     },
     {
@@ -450,38 +450,21 @@
       "sort_order": 260
     },
     {
-      "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
+      "slug": "the-spit-south-beach-closure-erosion-2026",
       "category": "news",
       "event_type": "coast_news",
       "region": "Gold Coast",
-      "locality": "Snapper Rocks",
-      "title": "Gold Coast considers trial of night surfing lights at Snapper Rocks",
-      "summary": "Gold Coast councillors are considering a proposal to trial artificial beach lighting during the 2027 World Surf League Championship Tour at Snapper Rocks.",
-      "body": "ABC Gold Coast reported on 2 November 2026 that councillors would consider a proposal to trial artificial lighting at beaches to extend surfing time, with the recommended trial linked to the 2027 World Surf League Championship Tour at Snapper Rocks. The report also records an environmental scientist's warning that night lighting could attract prey species and potentially affect shark activity.",
-      "source_name": "ABC Gold Coast",
-      "source_url": "https://www.abc.net.au/news/2026-11-02/gold-coast-local-news-briefing/107335180",
-      "published_at": "2026-11-02T09:52:00+10:00",
-      "event_date": null,
-      "event_end_date": null,
-      "external_key": "abc-gold-coast-20261102-night-surfing-lights",
-      "sort_order": 270
-    },
-    {
-      "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
-      "category": "news",
-      "event_type": "coast_news",
-      "region": "Gold Coast",
-      "locality": "Miami / Mermaid Beach / Surfers Paradise / Main Beach",
-      "title": "Gold Coast reports 1.2 million cubic metres of sand restored to beaches",
-      "summary": "City reports major 2026 offshore dredging works replenished beaches from Miami to Main Beach.",
-      "body": "In an 8 October 2026 update, City of Gold Coast said offshore dredging between April and October had returned approximately 1.2 million cubic metres of sand to Gold Coast beaches, including Miami, Mermaid Beach, Surfers Paradise and Main Beach. The work was part of recovery and beach nourishment efforts following Tropical Cyclone Alfred.",
+      "locality": "Main Beach",
+      "title": "The Spit South beach access closed due to erosion",
+      "summary": "City of Gold Coast lists The Spit South beach as closed until further notice due to severe erosion and unstable sand scarps.",
+      "body": "The City of Gold Coast's official The Spit South beach page states that severe erosion and sand scarps linked to Tropical Cyclone Alfred and seasonal high tides have affected access. The beach is listed as closed until further notice. This is an erosion-related closure, not a shark alert; check the council page before visiting.",
       "source_name": "City of Gold Coast",
-      "source_url": "https://www.goldcoast.qld.gov.au/Council/City-news/dredge-update",
-      "published_at": "2026-10-08",
+      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Gold-Coast-beaches/Beach-locations/The-Spit-South",
+      "published_at": "2026-11-15T06:18:00+10:00",
       "event_date": null,
       "event_end_date": null,
-      "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 280
+      "external_key": "gold-coast-spit-south-erosion-closure-2026",
+      "sort_order": 270
     }
   ],
   "shark_alerts": [
