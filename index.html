@@ -125,4 +125,7 @@ function renderQuests(){$('quests').innerHTML=MISSIONS.map(([id,title,desc,targe
 function renderJournal(){$('journalEntries').innerHTML=progress.entries.length?progress.entries.slice().reverse().map(e=>`<div class="mini-card" style="margin:8px 0"><div class="tiny muted">${esc(e.date)}</div><div class="small" style="white-space:pre-wrap;margin-top:5px">${esc(e.text)}</div></div>`).join(''):'<p class="small">Todavía no guardaste notas en este navegador.</p>'}
 $('saveJournal').addEventListener('click',()=>{const v=$('journal').value.trim();if(!v){toast('Escribí primero tu reflexión.');return}progress.entries.push({date:new Date().toLocaleString('es'),text:v.slice(0,1500)});if(progress.entries.length>50)progress.entries.shift();saveProgress();$('journal').value='';earn('journal',20);renderJournal();toast('Reflexión guardada localmente.')});$('clearJournal').addEventListener('click',()=>{if(!confirm('¿Borrar todas tus reflexiones guardadas en este dispositivo?'))return;progress.entries=[];saveProgress();renderJournal();toast('Diario local borrado.')});
 renderExplorer();renderGame();renderCheckins();function detectEngine(){const a=!!window.Astronomy;$('engineStatus').textContent=a?'✓ Motor astronómico disponible':'Necesita conexión al motor astronómico';if(a)renderToday();else $('skySummary').innerHTML='<p>Esperando conexión al motor astronómico. El test y la biblioteca funcionan incluso sin Internet.</p>'}window.addEventListener('load',detectEngine);setTimeout(detectEngine,2500);
-</script></body></html>
+</script>
+<link rel="stylesheet" href="connections.css">
+<script src="connections.js"></script>
+</body></html>

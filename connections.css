@@ -1,0 +1,34 @@
+/* Sevento Universe 2.1: relationships and reports — isolated extension */
+.link-hero{padding:24px;border:1px solid #62537d;border-radius:20px;background:radial-gradient(circle at 93% 3%,#6b4e8a5e,transparent 47%),linear-gradient(130deg,#2f294a,#1c1a32);margin-bottom:20px}
+.link-hero h2{margin:4px 0 8px}.link-hero p{max-width:850px}
+.link-kicker{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#a8ead7}
+.link-facts{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+.link-facts span{border:1px solid #625578;border-radius:8px;padding:7px 10px;font-size:12px;color:#ddd2ee}
+.link-steps{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.link-steps .panel{min-width:0}
+.link-stat-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+.link-stat{border-radius:15px;border:1px solid #544971;background:#242039;padding:17px}.link-stat strong{font-size:29px;display:block;color:#dcc9ff}.link-stat span{font-size:12px;color:#bdb4d4}
+.link-result-charts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.link-result-charts .panel{min-width:0}.link-result-charts svg{max-height:345px}
+.link-note{border-left:3px solid #a8ead7;padding:14px 16px;background:#24363855;border-radius:9px;font-size:13px;color:#d3e9e3}
+.link-muted{font-size:12px;color:#bdb4d4}.link-green{color:#a8ead7}
+.link-test{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:15px 0}
+.link-test .mini-card{padding:14px}
+.link-test label{font-size:12px;color:#d8d0e9;display:block;margin:0 0 6px}
+.link-test select{width:100%;background:#121129;border:1px solid #544d70;border-radius:9px;color:#f7efff;padding:10px}
+.link-book{counter-reset:reading}
+.link-book h3{color:#e9d9ff}
+.link-book .quest-icon{font-size:18px}
+.link-report-controls{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.link-report-preview{background:#ece8f2;color:#27213d;border-radius:17px;padding:25px;line-height:1.65}
+.link-report-preview h3,.link-report-preview strong{color:#342951}.link-report-preview p{color:#504768}
+.link-report-preview .mini-card{background:#f8f5fb;border-color:#dbd3e9}
+.link-saved{font-size:13px;border:1px solid #65577e;border-radius:12px;padding:14px;background:#2e2944}
+.link-conversion{border-top:1px solid #514666;margin-top:22px;padding-top:20px}
+.link-mail-actions{display:flex;flex-wrap:wrap;align-items:end;gap:10px}
+.link-mail-actions .field{min-width:250px;flex:1}
+.link-mail-actions input{width:100%}
+.link-report-label{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:#dfd7ef}
+.link-print-mark{display:none}
+@media(max-width:920px){.link-stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}.link-steps{grid-template-columns:1fr}.link-test{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.topbar{flex-wrap:wrap}.topbar .nav{max-width:100%;overflow:visible;justify-content:center}.nav button{padding:8px 11px;font-size:12px}.link-result-charts{grid-template-columns:1fr}.link-test{grid-template-columns:1fr}.link-hero{padding:18px}.link-stat{padding:13px}.link-stat strong{font-size:24px}}
