@@ -1,29 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T05:54:43+10:00",
+  "generated_at": "2026-11-22T06:11:00+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
     "Byron Shire"
   ],
   "items": [
-    {
-      "slug": "ritual-tweed-museum-2026",
-      "category": "event",
-      "event_type": "culture",
-      "region": "Tweed Coast",
-      "locality": "Murwillumbah",
-      "title": "Ritual – Tweed Regional Museum",
-      "summary": "Free exhibition exploring the everyday rituals and traditions of Tweed communities, through 21 November.",
-      "body": "Ritual at Tweed Regional Museum explores traditions, seasons and everyday practices that connect communities. The free exhibition opened 29 July 2026 and continues through 21 November 2026.",
-      "source_name": "Tweed Regional Museum",
-      "source_url": "https://museum.tweed.nsw.gov.au/whats-on/news-updates/media-releases/1714435-from-shipwrecks-to-a-cup-of-tea-new-museum-exhibition-finds-meaning-in-the-everyday",
-      "published_at": "2026-11-08T05:51:48+10:00",
-      "event_date": "2026-07-29",
-      "event_end_date": "2026-11-21",
-      "external_key": "tweed-museum-ritual-20260729",
-      "sort_order": 10
-    },
     {
       "slug": "beach-life-nicholas-harding-tweed-2026",
       "category": "event",
@@ -39,24 +22,7 @@
       "event_date": "2026-08-28",
       "event_end_date": "2026-11-22",
       "external_key": "tweed-gallery-beach-life-nicholas-harding-2026",
-      "sort_order": 20
-    },
-    {
-      "slug": "all-day-i-dream-beach-hotel-2026",
-      "category": "event",
-      "event_type": "music",
-      "region": "Byron Shire",
-      "locality": "Byron Bay",
-      "title": "All Day I Dream of Australia – Byron Bay",
-      "summary": "Melodic electronic music at the beachfront Beach Hotel on Friday 20 November.",
-      "body": "All Day I Dream of Australia is scheduled at the Beach Hotel in Byron Bay on Friday 20 November 2026 from 6pm. Ticketed event; confirm lineup and ticket availability with the venue.",
-      "source_name": "ByronBay.com",
-      "source_url": "https://byronbay.com/events/all-day-i-dream-of-australia-byron-bay/",
-      "published_at": "2026-11-08T05:51:48+10:00",
-      "event_date": "2026-11-20T18:00:00+11:00",
-      "event_end_date": null,
-      "external_key": "byron-all-day-i-dream-20261120",
-      "sort_order": 30
+      "sort_order": 10
     },
     {
       "slug": "kingscliff-triathlon-2026-11",
@@ -73,126 +39,7 @@
       "event_date": "2026-11-21",
       "event_end_date": "2026-11-22",
       "external_key": "austriathlon-kingscliff-triathlon-20261121-22",
-      "sort_order": 40
-    },
-    {
-      "slug": "main-beach-parkrun-2026-11-21",
-      "category": "event",
-      "event_type": "sport",
-      "region": "Gold Coast",
-      "locality": "Main Beach",
-      "title": "Main Beach parkrun – Saturday 21 November",
-      "summary": "Free community five-kilometre run or walk at Main Beach, Saturday 21 November, 7–8am.",
-      "body": "City of Gold Coast lists Main Beach parkrun for Saturday 21 November 2026 from 7am to 8am. Walkers and runners of different abilities can participate. First-time participants must register and bring their parkrun barcode.",
-      "source_name": "City of Gold Coast",
-      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Active-Healthy-program/Active-Healthy-calendar/parkrun-Main-Beach-CP075",
-      "published_at": "2026-11-21T05:54:43+10:00",
-      "event_date": "2026-11-21T07:00:00+10:00",
-      "event_end_date": "2026-11-21T08:00:00+10:00",
-      "external_key": "goldcoast-main-beach-parkrun-20261121",
-      "sort_order": 50
-    },
-    {
-      "slug": "kingy-body-board-club-2026-11-21",
-      "category": "event",
-      "event_type": "surf",
-      "region": "Tweed Coast",
-      "locality": "Kingscliff",
-      "title": "Kingy Body Board Club – Saturday morning",
-      "summary": "Community bodyboarding meetup at the Kingscliff rockwall on Saturday 21 November, 7–8am.",
-      "body": "Kingy Body Board Club lists a Saturday 21 November 2026 meetup from 7am to 8am at the Kingscliff rockwall, near Marine Parade. The community session welcomes different skill levels. Check the club's Facebook group for changes and local surf conditions before entering the water.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/event/kingy-body-board-club/",
-      "published_at": "2026-11-19T05:40:17+10:00",
-      "event_date": "2026-11-21T07:00:00+11:00",
-      "event_end_date": "2026-11-21T08:00:00+11:00",
-      "external_key": "tweed-kingy-body-board-20261121",
-      "sort_order": 60
-    },
-    {
-      "slug": "broadwater-pavilion-markets-2026-11-21",
-      "category": "event",
-      "event_type": "market",
-      "region": "Gold Coast",
-      "locality": "Southport",
-      "title": "Broadwater Pavilion Markets – November",
-      "summary": "Free waterfront market at Broadwater Parklands on Saturday 21 November, 8am–2pm, with local stalls and live music.",
-      "body": "The City of Gold Coast confirms Broadwater Pavilion Markets on Fisherman's Lawn, Broadwater Parklands, Marine Parade, Southport, on Saturday 21 November 2026 from 8am to 2pm. Expect makers, bakers, artisan goods, live music, family games and food trucks. Free entry.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events/Broadwater-Pavilion-Markets",
-      "published_at": "2026-11-20T06:03:30+10:00",
-      "event_date": "2026-11-21T08:00:00+10:00",
-      "event_end_date": "2026-11-21T14:00:00+10:00",
-      "external_key": "goldcoast-broadwater-pavilion-markets-20261121",
-      "sort_order": 70
-    },
-    {
-      "slug": "main-beach-yoga-bec-2026-11-21",
-      "category": "event",
-      "event_type": "community",
-      "region": "Gold Coast",
-      "locality": "Main Beach",
-      "title": "Yoga by the Beach with Bec – Main Beach",
-      "summary": "Outdoor community yoga session at Main Beach on Saturday 21 November, 8–9am.",
-      "body": "The City of Gold Coast Active & Healthy calendar lists Yoga by the Beach with Bec at Main Beach on Saturday 21 November 2026 from 8am to 9am. The session combines yoga and community connection in a beachside setting. Check the official event listing for participation details.",
-      "source_name": "City of Gold Coast",
-      "source_url": "https://www.goldcoast.qld.gov.au/Things-to-do/Active-Healthy-program/Active-Healthy-calendar/Yoga-by-the-beach-with-Bec-AH0943",
-      "published_at": "2026-11-21T05:54:43+10:00",
-      "event_date": "2026-11-21T08:00:00+10:00",
-      "event_end_date": "2026-11-21T09:00:00+10:00",
-      "external_key": "goldcoast-main-beach-yoga-bec-20261121",
-      "sort_order": 80
-    },
-    {
-      "slug": "resonate-kingscliff-2026-11-21",
-      "category": "event",
-      "event_type": "community",
-      "region": "Tweed Coast",
-      "locality": "Kingscliff",
-      "title": "RESONATE sound immersion – Kingscliff",
-      "summary": "Guided breathwork, meditation and sound immersion at Marine Parade on Saturday 21 November.",
-      "body": "RESONATE lists a Saturday 21 November 2026 session at 60 Marine Parade, Kingscliff, beginning at 4pm. The experience combines guided breathwork, meditation and sound immersion. The event listing shows a 4pm–5:15pm session for the series, with 21 November included among the additional dates; confirm session details with the organiser before booking.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/event/resonate-2/",
-      "published_at": "2026-11-17T06:15:10+10:00",
-      "event_date": "2026-11-21T16:00:00+11:00",
-      "event_end_date": null,
-      "external_key": "tweed-resonate-kingscliff-20261121",
-      "sort_order": 90
-    },
-    {
-      "slug": "movies-under-stars-palm-beach-2026-11-21",
-      "category": "event",
-      "event_type": "community",
-      "region": "Gold Coast",
-      "locality": "Palm Beach",
-      "title": "Movies Under the Stars – Minions & Monsters",
-      "summary": "Free outdoor cinema at Palm Beach Parklands on 21 November, with activities from 5pm and screening at 7pm.",
-      "body": "City of Gold Coast lists free family activities, face painting and food trucks from 5pm at Palm Beach Parklands, 945 Gold Coast Highway. The film starts at 7pm; the listed event concludes at 9pm. Check the organiser's updates for weather changes.",
-      "source_name": "What's On Gold Coast / City of Gold Coast",
-      "source_url": "https://www.whatsongoldcoast.au/All-events/Movies-Under-the-Stars-Minions-and-Monsters",
-      "published_at": "2026-11-12T05:40:20+10:00",
-      "event_date": "2026-11-21T17:00:00+10:00",
-      "event_end_date": "2026-11-21T21:00:00+10:00",
-      "external_key": "costacams-movies-under-stars-palm-beach-2026-11-21",
-      "sort_order": 100
-    },
-    {
-      "slug": "fingal-head-paul-george-andy-v-2026-11-21",
-      "category": "event",
-      "event_type": "music",
-      "region": "Tweed Coast",
-      "locality": "Fingal Head",
-      "title": "Paul A. George + Andy V at Salt & Stone",
-      "summary": "Live flamenco guitar, saxophone and electronic dance music at Fingal Head on Saturday 21 November, 6–11pm.",
-      "body": "Salt & Stone at 64 Fingal Road, Fingal Head hosts Paul A. George (Tijuana Cartel) and Andy V for an organic electronic dance party on Saturday 21 November 2026, from 6pm to 11pm. The performance combines live guitar, saxophone and electronic rhythms. Check the organiser listing for ticket details and changes.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/event/paul-a-george-andy-v-salt-stone/",
-      "published_at": "2026-11-18T05:53:10+10:00",
-      "event_date": "2026-11-21T18:00:00+11:00",
-      "event_end_date": "2026-11-21T23:00:00+11:00",
-      "external_key": "tweed-fingal-paul-george-andy-v-20261121",
-      "sort_order": 110
+      "sort_order": 20
     },
     {
       "slug": "coastal-markets-coolangatta-2026-11-22",
@@ -209,7 +56,7 @@
       "event_date": "2026-11-22T08:00:00+10:00",
       "event_end_date": "2026-11-22T14:00:00+10:00",
       "external_key": "costacams-coastal-markets-coolangatta-2026-11-22",
-      "sort_order": 120
+      "sort_order": 30
     },
     {
       "slug": "kingscliff-community-workshop-2026-11-24",
@@ -226,7 +73,7 @@
       "event_date": "2026-11-24T09:00:00+11:00",
       "event_end_date": "2026-11-24T13:00:00+11:00",
       "external_key": "visit-tweed-community-workshop-kingscliff-20261124",
-      "sort_order": 130
+      "sort_order": 40
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -243,7 +90,7 @@
       "event_date": "2026-11-27T10:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 140
+      "sort_order": 50
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -260,7 +107,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 150
+      "sort_order": 60
     },
     {
       "slug": "tweed-gallery-summer-opening-2026-11-27",
@@ -277,7 +124,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": "2026-11-27T20:00:00+11:00",
       "external_key": "tweed-gallery-summer-opening-20261127",
-      "sort_order": 160
+      "sort_order": 70
     },
     {
       "slug": "ultra-nate-arts-factory-byron-2026-11-27",
@@ -294,7 +141,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "ultra-nate-arts-factory-byron-2026-11-27",
-      "sort_order": 170
+      "sort_order": 80
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -311,7 +158,7 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 180
+      "sort_order": 90
     },
     {
       "slug": "coastal-markets-burleigh-2026-11-29",
@@ -328,7 +175,7 @@
       "event_date": "2026-11-29T08:00:00+10:00",
       "event_end_date": null,
       "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
-      "sort_order": 190
+      "sort_order": 100
     },
     {
       "slug": "byron-community-market-2026-12-06",
@@ -345,7 +192,7 @@
       "event_date": "2026-12-06T08:00:00+11:00",
       "event_end_date": "2026-12-06T14:00:00+11:00",
       "external_key": "costacams-byron-community-market-2026-12-06",
-      "sort_order": 200
+      "sort_order": 110
     },
     {
       "slug": "broadwater-christmas-twilight-2026-12-12",
@@ -362,7 +209,7 @@
       "event_date": "2026-12-12T15:00:00+10:00",
       "event_end_date": "2026-12-12T21:00:00+10:00",
       "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
-      "sort_order": 210
+      "sort_order": 120
     },
     {
       "slug": "kingscliff-carols-by-coast-2026-12-15",
@@ -379,7 +226,7 @@
       "event_date": "2026-12-15T18:30:00+11:00",
       "event_end_date": "2026-12-15T20:30:00+11:00",
       "external_key": "visit-tweed-carols-by-coast-20261215",
-      "sort_order": 220
+      "sort_order": 130
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -396,7 +243,7 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 230
+      "sort_order": 140
     },
     {
       "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
@@ -413,7 +260,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 240
+      "sort_order": 150
     },
     {
       "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
@@ -430,7 +277,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
-      "sort_order": 250
+      "sort_order": 160
     },
     {
       "slug": "the-spit-north-beach-closure-erosion-2026",
@@ -447,7 +294,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
-      "sort_order": 260
+      "sort_order": 170
     },
     {
       "slug": "the-spit-south-beach-closure-erosion-2026",
@@ -464,7 +311,41 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "gold-coast-spit-south-erosion-closure-2026",
-      "sort_order": 270
+      "sort_order": 180
+    },
+    {
+      "slug": "hota-farmers-artisan-market-2026-11-22",
+      "category": "event",
+      "event_type": "market",
+      "region": "Gold Coast",
+      "locality": "Surfers Paradise",
+      "title": "HOTA Farmers and Artisan Market – 22 November",
+      "summary": "Sunday farmers and artisan market at HOTA, 6am–11:30am, with local produce, food and makers.",
+      "body": "The HOTA Farmers and Artisan Market is scheduled for Sunday 22 November 2026, 6am to 11:30am at HOTA, 135 Bundall Road, Surfers Paradise. The council event listing describes farm-fresh produce, artisan food, handcrafted goods and local artists. Entry is free.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/HOTA-Farmers-and-Artisan-Market-60deb811cdcec11c46c40065",
+      "published_at": "2026-11-22T06:11:00+10:00",
+      "event_date": "2026-11-22T06:00:00+10:00",
+      "event_end_date": "2026-11-22T11:30:00+10:00",
+      "external_key": "goldcoast-hota-farmers-artisan-20261122",
+      "sort_order": 190
+    },
+    {
+      "slug": "southport-live-music-sunday-2026-11-22",
+      "category": "event",
+      "event_type": "music",
+      "region": "Gold Coast",
+      "locality": "Southport",
+      "title": "Live Music Sunday – Harley & Hudson",
+      "summary": "Free Sunday morning live music at Harley & Hudson in Broadwater Parklands, 7:30–10:30am.",
+      "body": "City of Gold Coast lists free live music at Harley & Hudson Coffee Bar, Broadwater Parklands, Marine Parade, Southport, on Sunday 22 November 2026 from 7:30am to 10:30am.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Live-Music-Sunday",
+      "published_at": "2026-11-22T06:11:00+10:00",
+      "event_date": "2026-11-22T07:30:00+10:00",
+      "event_end_date": "2026-11-22T10:30:00+10:00",
+      "external_key": "goldcoast-harley-hudson-live-music-20261122",
+      "sort_order": 200
     }
   ],
   "shark_alerts": [
