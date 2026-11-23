@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T05:50:16+10:00",
+  "generated_at": "2026-11-24T05:52:38+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
@@ -48,12 +48,12 @@
       "region": "Byron Shire",
       "locality": "Byron Bay",
       "title": "Byron Wellness Festival 2026",
-      "summary": "Three-day Byron Bay wellness festival with live music, yoga, breathwork, sound healing and workshops, 27–29 November.",
-      "body": "Byron Magazine's November events calendar lists Byron Wellness Festival from Friday 27 November at 10am through Sunday 29 November at 10pm. The program is described as three days of live music, yoga, breathwork, sound healing and workshops in Byron Bay.",
-      "source_name": "Byron Magazine / What's On",
-      "source_url": "https://www.byronmagazine.com/whats-on",
+      "summary": "Three-day festival of music, movement and wellness at Red Devil Park, 27–29 November.",
+      "body": "The official festival schedule begins at 4pm Friday and lists Sunday's final main-stage performance ending at 10pm. Saturday and Sunday programs include morning movement sessions, workshops and evening music. Check the organiser's timetable for individual sessions.",
+      "source_name": "Byron Wellness Festival",
+      "source_url": "https://byronwellnessfestival.com/schedule/",
       "published_at": "2026-11-06T05:55:41+10:00",
-      "event_date": "2026-11-27T10:00:00+11:00",
+      "event_date": "2026-11-27T16:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
       "sort_order": 30
@@ -110,6 +110,23 @@
       "sort_order": 60
     },
     {
+      "slug": "kingscliff-lions-beachside-market-2026-11-28",
+      "category": "event",
+      "event_type": "market",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Kingscliff Lions Beachside Market",
+      "summary": "Saturday beachfront market with local makers and food stalls.",
+      "body": "The organiser confirms 28 November, 8am–1pm, at the northern end of Jack Bayliss Park on Marine Parade, between Terrace and Ocean streets. Browse art, jewellery, food and produce.",
+      "source_name": "Kingscliff Lions Beachside Market",
+      "source_url": "https://www.kingscliffmarkets.com/",
+      "published_at": null,
+      "event_date": "2026-11-28T08:00:00+11:00",
+      "event_end_date": "2026-11-28T13:00:00+11:00",
+      "external_key": "kingscliff-lions-beachside-market-2026-11-28",
+      "sort_order": 70
+    },
+    {
       "slug": "rolling-sets-tweed-heads-2026-11-28",
       "category": "event",
       "event_type": "festival",
@@ -124,7 +141,7 @@
       "event_date": "2026-11-28T10:30:00+11:00",
       "event_end_date": "2026-11-28T22:00:00+11:00",
       "external_key": "rolling-sets-tweed-heads-20261128",
-      "sort_order": 70
+      "sort_order": 80
     },
     {
       "slug": "byron-twilight-market-2026-11-28",
@@ -141,7 +158,24 @@
       "event_date": "2026-11-28T16:00:00+11:00",
       "event_end_date": "2026-11-28T21:00:00+11:00",
       "external_key": "byron-twilight-market-20261128",
-      "sort_order": 80
+      "sort_order": 90
+    },
+    {
+      "slug": "byron-landcare-conservation-panel-2026-11-28",
+      "category": "event",
+      "event_type": "community",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "50 years of Conservation & Landcare",
+      "summary": "Community conservation panel at Byron Theatre.",
+      "body": "Brunswick Valley Landcare hosts a discussion on forest protection, ecological restoration and the future of community conservation at Byron Theatre, 69 Jonson Street. Venue doors open at 3pm; the panel begins at 4pm and finishes at 5:30pm.",
+      "source_name": "Byron Community Centre / Byron Theatre",
+      "source_url": "https://www.byroncentre.com.au/theatre-events/brunswick-valley-landcare-presents-50-years-of-conservation-landcare",
+      "published_at": null,
+      "event_date": "2026-11-28T16:00:00+11:00",
+      "event_end_date": "2026-11-28T17:30:00+11:00",
+      "external_key": "byron-landcare-conservation-panel-2026-11-28",
+      "sort_order": 100
     },
     {
       "slug": "bulletproof-hotel-brunswick-2026-11-28",
@@ -158,7 +192,7 @@
       "event_date": "2026-11-28T16:30:00+11:00",
       "event_end_date": "2026-11-28T22:00:00+11:00",
       "external_key": "hotel-brunswick-bulletproof-20261128",
-      "sort_order": 90
+      "sort_order": 110
     },
     {
       "slug": "runaway-bay-carols-2026-11-28",
@@ -175,7 +209,7 @@
       "event_date": "2026-11-28T17:00:00+10:00",
       "event_end_date": "2026-11-28T20:00:00+10:00",
       "external_key": "goldcoast-runaway-bay-carols-20261128",
-      "sort_order": 100
+      "sort_order": 120
     },
     {
       "slug": "mayors-christmas-carols-hota-2026-11-28-29",
@@ -192,7 +226,24 @@
       "event_date": "2026-11-28T18:00:00+10:00",
       "event_end_date": "2026-11-29T20:30:00+10:00",
       "external_key": "goldcoast-mayors-christmas-carols-20261128-29",
-      "sort_order": 110
+      "sort_order": 130
+    },
+    {
+      "slug": "mermaid-beach-made-of-metal-bingo-2026-11-28",
+      "category": "event",
+      "event_type": "culture",
+      "region": "Gold Coast",
+      "locality": "Mermaid Beach",
+      "title": "Made of Metal x Drag Bingo Fundraiser",
+      "summary": "Comedy and bingo fundraiser at Hairy Mary's.",
+      "body": "The city events calendar lists a fundraising bingo evening hosted by BeBe Gunn at 7 Surfers Avenue, supporting the local Made of Metal comedy-drama web series. Tickets are listed at $30.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Made-of-Metal-x-Drag-Bingo-Fundraiser",
+      "published_at": null,
+      "event_date": "2026-11-28T18:00:00+10:00",
+      "event_end_date": "2026-11-28T20:00:00+10:00",
+      "external_key": "mermaid-beach-made-of-metal-bingo-2026-11-28",
+      "sort_order": 140
     },
     {
       "slug": "movies-under-stars-surfers-paradise-2026-11-28",
@@ -209,7 +260,24 @@
       "event_date": "2026-11-28T19:00:00+10:00",
       "event_end_date": "2026-11-28T20:30:00+10:00",
       "external_key": "experience-gold-coast-polar-express-20261128",
-      "sort_order": 120
+      "sort_order": 150
+    },
+    {
+      "slug": "the-vampires-skydancer-brunswick-2026-11-28",
+      "category": "event",
+      "event_type": "music",
+      "region": "Byron Shire",
+      "locality": "Brunswick Heads",
+      "title": "The Vampires: Skydancer Tour",
+      "summary": "Contemporary Australian jazz at Brunswick Picture House.",
+      "body": "The venue confirms the quartet's anniversary album tour at 30 Fingal Street, with doors at 6:40pm and a scheduled performance from 7pm to 9:15pm. Ages 15 and over; ticketed.",
+      "source_name": "Brunswick Picture House",
+      "source_url": "https://brunswickpicturehouse.com/the-vampires-skydance-tour-28-nov/",
+      "published_at": null,
+      "event_date": "2026-11-28T19:00:00+11:00",
+      "event_end_date": "2026-11-28T21:15:00+11:00",
+      "external_key": "the-vampires-skydancer-brunswick-2026-11-28",
+      "sort_order": 160
     },
     {
       "slug": "hota-farmers-artisan-market-2026-11-29",
@@ -226,7 +294,7 @@
       "event_date": "2026-11-29T06:00:00+10:00",
       "event_end_date": "2026-11-29T11:30:00+10:00",
       "external_key": "goldcoast-hota-farmers-artisan-20261129",
-      "sort_order": 130
+      "sort_order": 170
     },
     {
       "slug": "tweed-heads-market-2026-11-29",
@@ -243,7 +311,7 @@
       "event_date": "2026-11-29T07:00:00+11:00",
       "event_end_date": null,
       "external_key": "visit-tweed-tweed-heads-market-20261129",
-      "sort_order": 140
+      "sort_order": 180
     },
     {
       "slug": "coastal-markets-burleigh-2026-11-29",
@@ -260,7 +328,7 @@
       "event_date": "2026-11-29T08:00:00+10:00",
       "event_end_date": null,
       "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
-      "sort_order": 150
+      "sort_order": 190
     },
     {
       "slug": "mood-swing-chevy-bass-brunswick-2026-11-29",
@@ -277,7 +345,7 @@
       "event_date": "2026-11-29T16:00:00+11:00",
       "event_end_date": "2026-11-29T20:00:00+11:00",
       "external_key": "hotel-brunswick-mood-swing-chevy-bass-20261129",
-      "sort_order": 160
+      "sort_order": 200
     },
     {
       "slug": "ministry-of-sound-summer-dance-hota-2026-12-04",
@@ -294,7 +362,58 @@
       "event_date": "2026-12-04T16:00:00+10:00",
       "event_end_date": "2026-12-04T22:00:00+10:00",
       "external_key": "goldcoast-ministry-of-sound-hota-20261204",
-      "sort_order": 170
+      "sort_order": 210
+    },
+    {
+      "slug": "brunswick-heads-market-2026-12-05",
+      "category": "event",
+      "event_type": "market",
+      "region": "Byron Shire",
+      "locality": "Brunswick Heads",
+      "title": "Brunswick Heads Market – 5 December",
+      "summary": "Monthly riverside market in Memorial Park.",
+      "body": "The NSW Government events calendar confirms the 5 December market date. Stalls include craft, produce and food beside Brunswick River on Fawcett Street. The specific day's opening hours are not confirmed.",
+      "source_name": "NSW Government",
+      "source_url": "https://www.nsw.gov.au/visiting-and-exploring-nsw/nsw-events/brunswick-heads-market",
+      "published_at": null,
+      "event_date": "2026-12-05",
+      "event_end_date": null,
+      "external_key": "brunswick-heads-market-2026-12-05",
+      "sort_order": 220
+    },
+    {
+      "slug": "queensland-interbranch-championships-2026-12-05-06",
+      "category": "event",
+      "event_type": "sport",
+      "region": "Gold Coast",
+      "locality": "Burleigh Heads / Palm Beach",
+      "title": "Queensland Interbranch Championships",
+      "summary": "Two days of regional surf lifesaving competition.",
+      "body": "Surf Life Saving Queensland confirms the championships on 5–6 December. Saturday's surf competition is at Burleigh Heads Mowbray Park Surf Life Saving Club; Sunday's pool competition is at Palm Beach Currumbin Aquatic Centre. The organiser lists 8am–5pm as the event hours.",
+      "source_name": "Surf Life Saving Queensland",
+      "source_url": "https://lifesaving.com.au/events/2026-interbranch-championships",
+      "published_at": null,
+      "event_date": "2026-12-05T08:00:00+10:00",
+      "event_end_date": "2026-12-06T17:00:00+10:00",
+      "external_key": "queensland-interbranch-championships-2026-12-05-06",
+      "sort_order": 230
+    },
+    {
+      "slug": "pottsville-beach-market-2026-12-06",
+      "category": "event",
+      "event_type": "market",
+      "region": "Tweed Coast",
+      "locality": "Pottsville",
+      "title": "Pottsville Beach Community Market – 6 December",
+      "summary": "Community market with produce and crafts at Philip Street Reserve.",
+      "body": "The neighbourhood centre operates the market from 7am to 1pm on the first and third Sunday of each month; NSW Government confirms 6 December. Proceeds support community development.",
+      "source_name": "Pottsville Beach Neighbourhood Centre",
+      "source_url": "https://www.pbnc.org.au/markets/",
+      "published_at": null,
+      "event_date": "2026-12-06T07:00:00+11:00",
+      "event_end_date": "2026-12-06T13:00:00+11:00",
+      "external_key": "pottsville-beach-market-2026-12-06",
+      "sort_order": 240
     },
     {
       "slug": "byron-community-market-2026-12-06",
@@ -311,7 +430,7 @@
       "event_date": "2026-12-06T08:00:00+11:00",
       "event_end_date": "2026-12-06T14:00:00+11:00",
       "external_key": "costacams-byron-community-market-2026-12-06",
-      "sort_order": 180
+      "sort_order": 250
     },
     {
       "slug": "tweed-christmas-gala-community-carols-2026-12-06",
@@ -328,7 +447,7 @@
       "event_date": "2026-12-06T14:30:00+11:00",
       "event_end_date": "2026-12-06T16:30:00+11:00",
       "external_key": "visit-tweed-christmas-gala-carols-20261206",
-      "sort_order": 190
+      "sort_order": 260
     },
     {
       "slug": "surfers-christmas-flicks-fireworks-2026-12-06",
@@ -345,7 +464,7 @@
       "event_date": "2026-12-06T19:00:00+10:00",
       "event_end_date": "2026-12-06T20:30:00+10:00",
       "external_key": "goldcoast-surfers-christmas-flicks-20261206",
-      "sort_order": 200
+      "sort_order": 270
     },
     {
       "slug": "broadwater-christmas-twilight-2026-12-12",
@@ -362,7 +481,7 @@
       "event_date": "2026-12-12T15:00:00+10:00",
       "event_end_date": "2026-12-12T21:00:00+10:00",
       "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
-      "sort_order": 210
+      "sort_order": 280
     },
     {
       "slug": "pottsville-festive-supper-session-2026-12-12",
@@ -379,7 +498,7 @@
       "event_date": "2026-12-12T18:00:00+11:00",
       "event_end_date": "2026-12-12T21:00:00+11:00",
       "external_key": "visit-tweed-pottsville-supper-festive-20261212",
-      "sort_order": 220
+      "sort_order": 290
     },
     {
       "slug": "kingscliff-carols-by-coast-2026-12-15",
@@ -396,7 +515,7 @@
       "event_date": "2026-12-15T18:30:00+11:00",
       "event_end_date": "2026-12-15T20:30:00+11:00",
       "external_key": "visit-tweed-carols-by-coast-20261215",
-      "sort_order": 230
+      "sort_order": 300
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -413,7 +532,24 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 240
+      "sort_order": 310
+    },
+    {
+      "slug": "surfers-paradise-schoolies-public-safety-2026-11-22",
+      "category": "news",
+      "event_type": "coast_news",
+      "region": "Gold Coast",
+      "locality": "Surfers Paradise",
+      "title": "Police step up public safety presence for Schoolies in Surfers Paradise",
+      "summary": "Queensland Government announces targeted police operations during Schoolies celebrations.",
+      "body": "A Queensland Government statement on 22 November confirms additional public safety activity in the Surfers Paradise entertainment precinct during Schoolies. Police said officers would remain visible throughout the celebrations and engage with school leavers. This is a precinct safety update, not a beach closure.",
+      "source_name": "Queensland Government",
+      "source_url": "https://statements.qld.gov.au/statements/106472",
+      "published_at": "2026-11-22T07:00:00+10:00",
+      "event_date": null,
+      "event_end_date": null,
+      "external_key": "surfers-paradise-schoolies-public-safety-2026-11-22",
+      "sort_order": 320
     },
     {
       "slug": "mermaid-beach-north-oceanway-draft-designs-2026-11-18",
@@ -430,7 +566,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-oceanway-mermaid-north-designs-20261118",
-      "sort_order": 250
+      "sort_order": 330
     },
     {
       "slug": "the-spit-south-beach-closure-erosion-2026",
@@ -447,7 +583,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "gold-coast-spit-south-erosion-closure-2026",
-      "sort_order": 260
+      "sort_order": 340
     },
     {
       "slug": "the-spit-north-beach-closure-erosion-2026",
@@ -464,7 +600,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
-      "sort_order": 270
+      "sort_order": 350
     },
     {
       "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
@@ -472,16 +608,16 @@
       "event_type": "coast_news",
       "region": "Gold Coast",
       "locality": "Snapper Rocks",
-      "title": "Gold Coast considers trial of night surfing lights at Snapper Rocks",
-      "summary": "Gold Coast councillors are considering a proposal to trial artificial beach lighting during the 2027 World Surf League Championship Tour at Snapper Rocks.",
-      "body": "ABC Gold Coast reported on 2 November 2026 that councillors would consider a proposal to trial artificial lighting at beaches to extend surfing time, with the recommended trial linked to the 2027 World Surf League Championship Tour at Snapper Rocks. The report also records an environmental scientist's warning that night lighting could attract prey species and potentially affect shark activity.",
-      "source_name": "ABC Gold Coast",
-      "source_url": "https://www.abc.net.au/news/2026-11-02/gold-coast-local-news-briefing/107335180",
-      "published_at": "2026-11-02T09:52:00+10:00",
+      "title": "Gold Coast endorses proposed night surfing trial at Snapper Rocks",
+      "summary": "Council backs temporary lighting trial for the 2027 world surfing event; permits are still required.",
+      "body": "The Guardian reported on 11 November that council endorsed a temporary lighting trial at Snapper Rocks. The proposal remains subject to permits; environmental and shark-risk concerns have been raised.",
+      "source_name": "The Guardian",
+      "source_url": "https://www.theguardian.com/australia-news/2026/nov/11/surfs-up-lights-up-floodlight-lit-night-surfing-could-be-coming-to-the-gold-coast-but-could-it-bring-unwanted-fins",
+      "published_at": "2026-11-11",
       "event_date": null,
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
-      "sort_order": 280
+      "sort_order": 360
     },
     {
       "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
@@ -498,7 +634,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 290
+      "sort_order": 370
     }
   ],
   "shark_alerts": [
