@@ -1,29 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T05:52:38+10:00",
+  "generated_at": "2026-11-25T06:14:04+10:00",
   "coverage": [
     "Gold Coast",
     "Tweed Coast",
     "Byron Shire"
   ],
   "items": [
-    {
-      "slug": "kingscliff-community-workshop-2026-11-24",
-      "category": "event",
-      "event_type": "community",
-      "region": "Tweed Coast",
-      "locality": "Kingscliff",
-      "title": "Free Community Mental Health Response Workshop",
-      "summary": "Free adult community workshop at Kingscliff Beach Bowling Club on 24 November, 9am–1pm.",
-      "body": "Visit The Tweed lists a free community mental health response workshop at Kingscliff Beach Bowling Club, 131 Marine Parade, on Tuesday 24 November 2026 from 9am to 1pm. Topics include recognising warning signs, supportive conversations and practical response techniques. Organised with Mongrels Men Health and Wellbeing; intended for adults aged over 18.",
-      "source_name": "Visit The Tweed",
-      "source_url": "https://www.visitthetweed.com.au/event/community-workshop-kingscliff/",
-      "published_at": "2026-11-16T05:47:00+10:00",
-      "event_date": "2026-11-24T09:00:00+11:00",
-      "event_end_date": "2026-11-24T13:00:00+11:00",
-      "external_key": "visit-tweed-community-workshop-kingscliff-20261124",
-      "sort_order": 10
-    },
     {
       "slug": "surfers-paradise-beachfront-markets-2026-11-25",
       "category": "event",
@@ -39,7 +22,7 @@
       "event_date": "2026-11-25T16:00:00+10:00",
       "event_end_date": "2026-11-25T21:00:00+10:00",
       "external_key": "goldcoast-surfers-beachfront-markets-20261125",
-      "sort_order": 20
+      "sort_order": 10
     },
     {
       "slug": "byron-wellness-festival-2026",
@@ -56,7 +39,7 @@
       "event_date": "2026-11-27T16:00:00+11:00",
       "event_end_date": "2026-11-29T22:00:00+11:00",
       "external_key": "byron-shire-byron-wellness-festival-2026",
-      "sort_order": 30
+      "sort_order": 20
     },
     {
       "slug": "ultra-nate-arts-factory-byron-2026-11-27",
@@ -73,7 +56,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "ultra-nate-arts-factory-byron-2026-11-27",
-      "sort_order": 40
+      "sort_order": 30
     },
     {
       "slug": "peter-garrett-hotel-brunswick-2026-11-27",
@@ -90,7 +73,7 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": null,
       "external_key": "moshtix-peter-garrett-hotel-brunswick-197046",
-      "sort_order": 50
+      "sort_order": 40
     },
     {
       "slug": "tweed-gallery-summer-opening-2026-11-27",
@@ -107,6 +90,23 @@
       "event_date": "2026-11-27T18:00:00+11:00",
       "event_end_date": "2026-11-27T20:00:00+11:00",
       "external_key": "tweed-gallery-summer-opening-20261127",
+      "sort_order": 50
+    },
+    {
+      "slug": "burleigh-market-2026-11-28",
+      "category": "event",
+      "event_type": "market",
+      "region": "Gold Coast",
+      "locality": "Burleigh Heads",
+      "title": "Burleigh Market – 28 November",
+      "summary": "Saturday morning farmers market with local produce, crafts and live entertainment.",
+      "body": "The city calendar confirms the Saturday market runs from 7am to noon on 28 November. Browse fresh produce, artisan foods, plants and crafts while local musicians perform.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Burleigh-Market",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-11-28T07:00:00+10:00",
+      "event_end_date": "2026-11-28T12:00:00+10:00",
+      "external_key": "burleigh-market-2026-11-28",
       "sort_order": 60
     },
     {
@@ -263,6 +263,23 @@
       "sort_order": 150
     },
     {
+      "slug": "cascada-burleigh-2026-11-28",
+      "category": "event",
+      "event_type": "music",
+      "region": "Gold Coast",
+      "locality": "Burleigh Heads",
+      "title": "Cascada – Australian Headline Tour",
+      "summary": "Eurodance concert at Burleigh Town Hotel, 7–11pm.",
+      "body": "Cascada is scheduled to perform at Burleigh Town Hotel in West Burleigh on 28 November, with Darren Bailie and Nick Skitz. The council event listing confirms the evening concert and ticketed entry.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Cascada-Gold-Coast-6a57039f430c82177953c5e6",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-11-28T19:00:00+10:00",
+      "event_end_date": "2026-11-28T23:00:00+10:00",
+      "external_key": "cascada-burleigh-2026-11-28",
+      "sort_order": 160
+    },
+    {
       "slug": "the-vampires-skydancer-brunswick-2026-11-28",
       "category": "event",
       "event_type": "music",
@@ -277,7 +294,7 @@
       "event_date": "2026-11-28T19:00:00+11:00",
       "event_end_date": "2026-11-28T21:15:00+11:00",
       "external_key": "the-vampires-skydancer-brunswick-2026-11-28",
-      "sort_order": 160
+      "sort_order": 170
     },
     {
       "slug": "hota-farmers-artisan-market-2026-11-29",
@@ -294,7 +311,7 @@
       "event_date": "2026-11-29T06:00:00+10:00",
       "event_end_date": "2026-11-29T11:30:00+10:00",
       "external_key": "goldcoast-hota-farmers-artisan-20261129",
-      "sort_order": 170
+      "sort_order": 180
     },
     {
       "slug": "tweed-heads-market-2026-11-29",
@@ -311,7 +328,7 @@
       "event_date": "2026-11-29T07:00:00+11:00",
       "event_end_date": null,
       "external_key": "visit-tweed-tweed-heads-market-20261129",
-      "sort_order": 180
+      "sort_order": 190
     },
     {
       "slug": "coastal-markets-burleigh-2026-11-29",
@@ -326,9 +343,9 @@
       "source_url": "https://www.whatsongoldcoast.au/All-events/The-Coastal-Markets-Burleigh-Heads",
       "published_at": "2026-11-11T05:35:38+10:00",
       "event_date": "2026-11-29T08:00:00+10:00",
-      "event_end_date": null,
+      "event_end_date": "2026-11-29T14:00:00+10:00",
       "external_key": "costacams-coastal-markets-burleigh-2026-11-29",
-      "sort_order": 190
+      "sort_order": 200
     },
     {
       "slug": "mood-swing-chevy-bass-brunswick-2026-11-29",
@@ -345,7 +362,24 @@
       "event_date": "2026-11-29T16:00:00+11:00",
       "event_end_date": "2026-11-29T20:00:00+11:00",
       "external_key": "hotel-brunswick-mood-swing-chevy-bass-20261129",
-      "sort_order": 200
+      "sort_order": 210
+    },
+    {
+      "slug": "north-burleigh-carols-2026-12-03",
+      "category": "event",
+      "event_type": "community",
+      "region": "Gold Coast",
+      "locality": "Miami",
+      "title": "North Burleigh Carols by the Sea",
+      "summary": "Free beachfront Christmas celebration at Ed Hardy Park, 4–8pm.",
+      "body": "Ed Hardy Park hosts a free community evening on 3 December. Food vendors, markets and children's activities begin at 4pm, followed by carols and local live performances from 6pm.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/North-Burleigh-Carols-by-the-Sea",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-03T16:00:00+10:00",
+      "event_end_date": "2026-12-03T20:00:00+10:00",
+      "external_key": "north-burleigh-carols-2026-12-03",
+      "sort_order": 220
     },
     {
       "slug": "ministry-of-sound-summer-dance-hota-2026-12-04",
@@ -362,7 +396,24 @@
       "event_date": "2026-12-04T16:00:00+10:00",
       "event_end_date": "2026-12-04T22:00:00+10:00",
       "external_key": "goldcoast-ministry-of-sound-hota-20261204",
-      "sort_order": 210
+      "sort_order": 230
+    },
+    {
+      "slug": "karnivool-brunswick-2026-12-04",
+      "category": "event",
+      "event_type": "music",
+      "region": "Byron Shire",
+      "locality": "Brunswick Heads",
+      "title": "Karnivool at Hotel Brunswick",
+      "summary": "Live music at Hotel Brunswick, doors open 6pm.",
+      "body": "Hotel Brunswick lists Karnivool for Friday 4 December, with doors opening at 6pm and tickets advertised for sale. An end time is not published.",
+      "source_name": "Hotel Brunswick",
+      "source_url": "https://hotelbrunswick.com.au/",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-04T18:00:00+11:00",
+      "event_end_date": null,
+      "external_key": "karnivool-brunswick-2026-12-04",
+      "sort_order": 240
     },
     {
       "slug": "brunswick-heads-market-2026-12-05",
@@ -379,7 +430,24 @@
       "event_date": "2026-12-05",
       "event_end_date": null,
       "external_key": "brunswick-heads-market-2026-12-05",
-      "sort_order": 220
+      "sort_order": 250
+    },
+    {
+      "slug": "powderfinger-silverchair-tribute-kingscliff-2026-12-05",
+      "category": "event",
+      "event_type": "music",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "Powderfinger & Silverchair Tribute",
+      "summary": "Free tribute show at Kingscliff Beach Hotel.",
+      "body": "The beachfront hotel lists a free Powderfinger and Silverchair tribute show on Saturday 5 December. The venue's calendar does not specify performance times.",
+      "source_name": "Kingscliff Beach Hotel",
+      "source_url": "https://kingscliffbeachhotel.com.au/whats-happening/",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-05",
+      "event_end_date": null,
+      "external_key": "powderfinger-silverchair-tribute-kingscliff-2026-12-05",
+      "sort_order": 260
     },
     {
       "slug": "queensland-interbranch-championships-2026-12-05-06",
@@ -396,7 +464,24 @@
       "event_date": "2026-12-05T08:00:00+10:00",
       "event_end_date": "2026-12-06T17:00:00+10:00",
       "external_key": "queensland-interbranch-championships-2026-12-05-06",
-      "sort_order": 230
+      "sort_order": 270
+    },
+    {
+      "slug": "fischer-z-tweed-2026-12-05",
+      "category": "event",
+      "event_type": "music",
+      "region": "Tweed Coast",
+      "locality": "Tweed Heads",
+      "title": "Fischer-Z at Twin Towns",
+      "summary": "Anniversary tour concert at The Showroom, 8pm Queensland time.",
+      "body": "Twin Towns confirms Fischer-Z will play The Showroom on 5 December as part of its 50th anniversary tour. The venue lists the start as 8pm Queensland time, equivalent to 9pm in Tweed Heads (NSW daylight saving time).",
+      "source_name": "Twin Towns Clubs & Resorts",
+      "source_url": "https://twintowns.com.au/events/fischer-z/",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-05T21:00:00+11:00",
+      "event_end_date": null,
+      "external_key": "fischer-z-tweed-2026-12-05",
+      "sort_order": 280
     },
     {
       "slug": "pottsville-beach-market-2026-12-06",
@@ -413,7 +498,7 @@
       "event_date": "2026-12-06T07:00:00+11:00",
       "event_end_date": "2026-12-06T13:00:00+11:00",
       "external_key": "pottsville-beach-market-2026-12-06",
-      "sort_order": 240
+      "sort_order": 290
     },
     {
       "slug": "byron-community-market-2026-12-06",
@@ -430,7 +515,7 @@
       "event_date": "2026-12-06T08:00:00+11:00",
       "event_end_date": "2026-12-06T14:00:00+11:00",
       "external_key": "costacams-byron-community-market-2026-12-06",
-      "sort_order": 250
+      "sort_order": 300
     },
     {
       "slug": "tweed-christmas-gala-community-carols-2026-12-06",
@@ -447,7 +532,7 @@
       "event_date": "2026-12-06T14:30:00+11:00",
       "event_end_date": "2026-12-06T16:30:00+11:00",
       "external_key": "visit-tweed-christmas-gala-carols-20261206",
-      "sort_order": 260
+      "sort_order": 310
     },
     {
       "slug": "surfers-christmas-flicks-fireworks-2026-12-06",
@@ -464,7 +549,24 @@
       "event_date": "2026-12-06T19:00:00+10:00",
       "event_end_date": "2026-12-06T20:30:00+10:00",
       "external_key": "goldcoast-surfers-christmas-flicks-20261206",
-      "sort_order": 270
+      "sort_order": 320
+    },
+    {
+      "slug": "miami-horror-brunswick-2026-12-11",
+      "category": "event",
+      "event_type": "music",
+      "region": "Byron Shire",
+      "locality": "Brunswick Heads",
+      "title": "Miami Horror DJs at Hotel Brunswick",
+      "summary": "Ticketed DJ show, doors open 6pm.",
+      "body": "Hotel Brunswick confirms Miami Horror DJs on Friday 11 December. Doors open at 6pm and the venue advertises tickets on sale. Finish time is not listed.",
+      "source_name": "Hotel Brunswick",
+      "source_url": "https://hotelbrunswick.com.au/",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-11T18:00:00+11:00",
+      "event_end_date": null,
+      "external_key": "miami-horror-brunswick-2026-12-11",
+      "sort_order": 330
     },
     {
       "slug": "broadwater-christmas-twilight-2026-12-12",
@@ -481,7 +583,24 @@
       "event_date": "2026-12-12T15:00:00+10:00",
       "event_end_date": "2026-12-12T21:00:00+10:00",
       "external_key": "costacams-broadwater-christmas-twilight-2026-12-12",
-      "sort_order": 280
+      "sort_order": 340
+    },
+    {
+      "slug": "movies-elf-burleigh-2026-12-12",
+      "category": "event",
+      "event_type": "culture",
+      "region": "Gold Coast",
+      "locality": "Burleigh Heads",
+      "title": "Movies Under the Stars – Elf",
+      "summary": "Free outdoor cinema on Burleigh Beach, 5–8:30pm.",
+      "body": "The city will screen Elf near the Burleigh surf lifesaving club on 12 December. Children's activities begin at 5pm, with the film at 7pm. Check organiser updates if the weather is unsettled.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Movies-Under-the-Stars-Elf-2",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-12T17:00:00+10:00",
+      "event_end_date": "2026-12-12T20:30:00+10:00",
+      "external_key": "movies-elf-burleigh-2026-12-12",
+      "sort_order": 350
     },
     {
       "slug": "pottsville-festive-supper-session-2026-12-12",
@@ -498,7 +617,41 @@
       "event_date": "2026-12-12T18:00:00+11:00",
       "event_end_date": "2026-12-12T21:00:00+11:00",
       "external_key": "visit-tweed-pottsville-supper-festive-20261212",
-      "sort_order": 290
+      "sort_order": 360
+    },
+    {
+      "slug": "hermitude-byron-2026-12-12",
+      "category": "event",
+      "event_type": "music",
+      "region": "Byron Shire",
+      "locality": "Byron Bay",
+      "title": "Hermitude – Eight Til Late Tour",
+      "summary": "Electronic music duo at the Beach Hotel, from 8pm.",
+      "body": "The official ticket listing confirms Hermitude's summer tour stop at the Beach Hotel on Saturday 12 December, starting at 8pm. The event is for ages 18 and over; no finishing time is specified.",
+      "source_name": "Moshtix / Event organisers",
+      "source_url": "https://www.moshtix.com.au/v2/event/hermitude-eight-til-late-tour/200576",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-12T20:00:00+11:00",
+      "event_end_date": null,
+      "external_key": "hermitude-byron-2026-12-12",
+      "sort_order": 370
+    },
+    {
+      "slug": "cooly-carols-2026-12-13",
+      "category": "event",
+      "event_type": "community",
+      "region": "Gold Coast",
+      "locality": "Coolangatta",
+      "title": "Cooly Carols",
+      "summary": "Free Christmas music and fireworks at Queen Elizabeth Park, 5:30–7:30pm.",
+      "body": "The city's beachside celebration returns on 13 December with Budjerah, local musicians, food vendors and a fireworks finale. A large screen on the beach provides another viewing area.",
+      "source_name": "City of Gold Coast – What's On",
+      "source_url": "https://www.whatsongoldcoast.au/All-events/Cooly-Carols",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-13T17:30:00+10:00",
+      "event_end_date": "2026-12-13T19:30:00+10:00",
+      "external_key": "cooly-carols-2026-12-13",
+      "sort_order": 380
     },
     {
       "slug": "kingscliff-carols-by-coast-2026-12-15",
@@ -515,7 +668,24 @@
       "event_date": "2026-12-15T18:30:00+11:00",
       "event_end_date": "2026-12-15T20:30:00+11:00",
       "external_key": "visit-tweed-carols-by-coast-20261215",
-      "sort_order": 300
+      "sort_order": 390
+    },
+    {
+      "slug": "kingscliff-weekend-before-christmas-2026-12-18",
+      "category": "event",
+      "event_type": "music",
+      "region": "Tweed Coast",
+      "locality": "Kingscliff",
+      "title": "'Twas the Weekend Before Christmas",
+      "summary": "Three days of live music and family activities at Kingscliff Beach Hotel.",
+      "body": "The venue confirms a festive weekend from 18 to 20 December: Raw Ordio plays Friday from 7pm to 10pm, Finojet and friends perform Saturday, and Sunday features family activities and acoustic music from 2pm to 5pm. A raffle follows at 6pm.",
+      "source_name": "Kingscliff Beach Hotel",
+      "source_url": "https://kingscliffbeachhotel.com.au/weekend-before-xmas/",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2026-12-18",
+      "event_end_date": "2026-12-20",
+      "external_key": "kingscliff-weekend-before-christmas-2026-12-18",
+      "sort_order": 400
     },
     {
       "slug": "mini-marketeers-hota-2026-12-20",
@@ -532,7 +702,41 @@
       "event_date": "2026-12-20T09:00:00+10:00",
       "event_end_date": "2026-12-20T12:00:00+10:00",
       "external_key": "gold-coast-mini-marketeers-hota-2026-12-20",
-      "sort_order": 310
+      "sort_order": 410
+    },
+    {
+      "slug": "world-club-championship-snapper-2027-02-12",
+      "category": "event",
+      "event_type": "surf",
+      "region": "Gold Coast",
+      "locality": "Coolangatta",
+      "title": "2027 World Club Championship – Snapper Rocks",
+      "summary": "International team surfing competition at Snapper Rocks, 12–14 February.",
+      "body": "The organiser confirms three days of team surfing at Snapper Rocks in February 2027, with 40 boardriders clubs and a format spanning open, junior and masters divisions. Check the organiser for schedule updates.",
+      "source_name": "World Club Championship",
+      "source_url": "https://worldclubchampionship.com.au/",
+      "published_at": "2026-11-25T06:14:04+10:00",
+      "event_date": "2027-02-12",
+      "event_end_date": "2027-02-14",
+      "external_key": "world-club-championship-snapper-2027-02-12",
+      "sort_order": 420
+    },
+    {
+      "slug": "tallebudgera-creek-drowning-2026-11-23",
+      "category": "news",
+      "event_type": "coast_news",
+      "region": "Gold Coast",
+      "locality": "Tallebudgera Creek",
+      "title": "Fatal drowning reported near Tallebudgera Creek",
+      "summary": "ABC Gold Coast reports a man died near Tallebudgera Creek on 23 November.",
+      "body": "ABC Gold Coast reported on 24 November that a 41-year-old visitor died after being pulled unconscious from the water near Tallebudgera Creek the previous day. Police said the death was not suspicious and will prepare a report for the coroner. Follow lifeguard advice and swim only in designated patrolled areas. This report is not a shark alert or beach closure.",
+      "source_name": "ABC Gold Coast",
+      "source_url": "https://www.abc.net.au/news/2026-11-24/gold-coast-local-news-briefing/107419622",
+      "published_at": "2026-11-24",
+      "event_date": null,
+      "event_end_date": null,
+      "external_key": "abc-tallebudgera-creek-drowning-20261123",
+      "sort_order": 430
     },
     {
       "slug": "surfers-paradise-schoolies-public-safety-2026-11-22",
@@ -549,7 +753,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "surfers-paradise-schoolies-public-safety-2026-11-22",
-      "sort_order": 320
+      "sort_order": 440
     },
     {
       "slug": "mermaid-beach-north-oceanway-draft-designs-2026-11-18",
@@ -566,7 +770,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-oceanway-mermaid-north-designs-20261118",
-      "sort_order": 330
+      "sort_order": 450
     },
     {
       "slug": "the-spit-south-beach-closure-erosion-2026",
@@ -583,7 +787,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "gold-coast-spit-south-erosion-closure-2026",
-      "sort_order": 340
+      "sort_order": 460
     },
     {
       "slug": "the-spit-north-beach-closure-erosion-2026",
@@ -600,7 +804,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "costacams-the-spit-north-beach-closure-erosion-2026",
-      "sort_order": 350
+      "sort_order": 470
     },
     {
       "slug": "gold-coast-night-surfing-lights-proposal-2026-11-02",
@@ -617,7 +821,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "abc-gold-coast-20261102-night-surfing-lights",
-      "sort_order": 360
+      "sort_order": 480
     },
     {
       "slug": "gold-coast-beach-nourishment-dredging-2026-10-08",
@@ -634,7 +838,7 @@
       "event_date": null,
       "event_end_date": null,
       "external_key": "goldcoast-council-dredge-update-20261008",
-      "sort_order": 370
+      "sort_order": 490
     }
   ],
   "shark_alerts": [
